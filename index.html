@@ -1,0 +1,504 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Chemistry U3&amp;4 Course Outline 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+
+:root{
+  --bg:#f3f4f1; --surface:#ffffff; --ink:#1b2430; --muted:#5d6672; --faint:#9aa3ad; --line:#d9ddd6; --tint:#eceeea;
+  --accent:#2c56c9; --accent-soft:#e3e9fa;
+  --a31:#c2571a; --a31-bg:#fbe9dc; --a32:#0f7a6c; --a32-bg:#ddf1ec; --a41:#4a47b8; --a41-bg:#e8e7fa; --a42:#8a3f86; --a42-bg:#f4e4f2; --a43:#6b5a2e; --a43-bg:#f1ecda;
+  --rev:#46525e; --rev-bg:#e7eaec;
+  --sac:#9a5a00; --sac-bg:#ffe7bd; --exam:#b3261e; --exam-bg:#fbe1de;
+  --on:#1f7a3d; --on-bg:#e1f2e6; --behind:#b4235a; --behind-bg:#fbe3ec; --ahead:#2c56c9; --ahead-bg:#e3e9fa;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1a2028; --ink:#e7ebf0; --muted:#9aa4b0; --faint:#6b7580; --line:#2c3440; --tint:#222830; --accent:#86a5ff; --accent-soft:#25304a;
+  --a31:#ff9d63; --a31-bg:#3a2416; --a32:#5fd1bf; --a32-bg:#15302c; --a41:#a7a4ff; --a41-bg:#24233f; --a42:#e29be0; --a42-bg:#3a2238; --a43:#d9c48a; --a43-bg:#2f2a1a;
+  --rev:#b9c3cd; --rev-bg:#262d35; --sac:#ffc46b; --sac-bg:#3d2c10; --exam:#ff9a92; --exam-bg:#3f1d1b; --on:#7fd69a; --on-bg:#183323; --behind:#ff8fb6; --behind-bg:#3d1a28; --ahead:#86a5ff; --ahead-bg:#25304a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1a2028; --ink:#e7ebf0; --muted:#9aa4b0; --faint:#6b7580; --line:#2c3440; --tint:#222830; --accent:#86a5ff; --accent-soft:#25304a;
+  --a31:#ff9d63; --a31-bg:#3a2416; --a32:#5fd1bf; --a32-bg:#15302c; --a41:#a7a4ff; --a41-bg:#24233f; --a42:#e29be0; --a42-bg:#3a2238; --a43:#d9c48a; --a43-bg:#2f2a1a;
+  --rev:#b9c3cd; --rev-bg:#262d35; --sac:#ffc46b; --sac-bg:#3d2c10; --exam:#ff9a92; --exam-bg:#3f1d1b; --on:#7fd69a; --on-bg:#183323; --behind:#ff8fb6; --behind-bg:#3d1a28; --ahead:#86a5ff; --ahead-bg:#25304a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px;display:grid;gap:30px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-size:clamp(28px,5vw,38px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+h2{font-family:var(--display);font-size:20px;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{display:grid;gap:12px}
+.em{font-style:normal;flex:none;width:1.4em;text-align:center;line-height:1}
+
+.next{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--sac);border-radius:12px;padding:18px 20px;display:grid;gap:4px}
+.next.exam{border-left-color:var(--exam)}
+.next .lab{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.next .big{font-family:var(--display);font-size:clamp(22px,4vw,28px);line-height:1.15}
+.next .sub{color:var(--muted)}
+.counts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}
+.counts span{display:inline-flex;gap:6px;align-items:center}
+.counts b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+.dates{list-style:none;margin:0;padding:0;display:grid}
+.dates li{display:grid;grid-template-columns:124px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.dates li:last-child{border-bottom:0}
+.dates .d{font-variant-numeric:tabular-nums;font-weight:600;color:var(--sac)}
+.dates li.exam .d{color:var(--exam)}
+.dates .w{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.dates li.past{color:var(--muted)} .dates li.past .d{font-weight:500;color:var(--muted)}
+.dates li.upcoming{background:var(--sac-bg);margin:0 -10px;padding:8px 10px;border-radius:8px;border-bottom-color:transparent}
+.dates li.upcoming.exam{background:var(--exam-bg)}
+.dates .t{display:inline-flex;gap:8px;align-items:center}
+.dates .aos{width:10px;height:10px;border-radius:3px;flex:none}
+
+.stripwrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px}
+.strip{display:grid;gap:14px}
+.term{display:grid;grid-template-columns:96px auto;gap:10px;align-items:center;padding-bottom:4px}
+@media (max-width:640px){.term{grid-template-columns:1fr;gap:4px}}
+.term .lab{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cells{display:flex;gap:3px}
+.cell{appearance:none;border:0;width:28px;height:40px;border-radius:5px;position:relative;cursor:pointer;font-family:var(--mono);font-size:10px;color:var(--ink);display:flex;align-items:flex-end;justify-content:center;padding:0 0 3px;background:var(--rev-bg);box-shadow:inset 0 4px 0 var(--rev)}
+.cell.a31{background:var(--a31-bg);box-shadow:inset 0 4px 0 var(--a31)} .cell.a32{background:var(--a32-bg);box-shadow:inset 0 4px 0 var(--a32)}
+.cell.a41{background:var(--a41-bg);box-shadow:inset 0 4px 0 var(--a41)} .cell.a42{background:var(--a42-bg);box-shadow:inset 0 4px 0 var(--a42)}
+.cell.a43{background:var(--a43-bg);box-shadow:inset 0 4px 0 var(--a43)}
+.cell .mk{position:absolute;top:10px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:var(--sac);border-radius:2px}
+.cell .mk.exam{background:var(--exam)} .cell .mk.check{background:transparent;border:2px solid var(--muted)}
+.cell .pr{position:absolute;bottom:-7px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ink)}
+.cell.now{outline:2px solid var(--ink);outline-offset:2px;font-weight:700}
+.term .lab .nowl{display:block;font-size:10px;color:var(--ink);font-weight:600;letter-spacing:0;text-transform:none}
+.cell.dim{opacity:.22}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.dia{width:10px;height:10px;transform:rotate(45deg);border-radius:2px;display:inline-block;margin:0 2px}
+
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flab{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.fchip{appearance:none;font:inherit;font-size:13.5px;display:inline-flex;gap:6px;align-items:center;padding:5px 10px 5px 8px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--faint);cursor:pointer}
+.fchip[aria-pressed="true"]{color:var(--ink);border-color:var(--ink);background:var(--tint)}
+.fchip.sac[aria-pressed="true"]{color:var(--sac);border-color:var(--sac);background:var(--sac-bg)}
+.fchip.exam[aria-pressed="true"]{color:var(--exam);border-color:var(--exam);background:var(--exam-bg)}
+.fchip[aria-pressed="false"] .em{filter:grayscale(1);opacity:.55}
+.freset{appearance:none;font:inherit;font-size:13px;background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;padding:5px 4px}
+.fnote{margin:0;font-size:13.5px;color:var(--muted)}
+
+.toolbar{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.btn{appearance:none;font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+details.term-d{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+details.term-d>summary{list-style:none;cursor:pointer;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:baseline}
+details.term-d>summary::-webkit-details-marker{display:none}
+summary .tn{font-family:var(--display);font-size:19px;font-weight:600}
+summary .tn small{font-family:var(--mono);font-size:12px;font-weight:400;color:var(--muted);margin-left:8px}
+summary .ts{grid-column:1/-1;font-size:13.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+summary .chev{font-family:var(--mono);color:var(--muted);transition:transform .2s}
+details[open] summary .chev{transform:rotate(90deg)}
+.nowtag{font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--tint);border-radius:4px;padding:1px 6px;margin-left:8px;font-weight:600}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;background:var(--rev-bg);color:var(--rev);font-weight:500}
+.pill.a31{background:var(--a31-bg);color:var(--a31)} .pill.a32{background:var(--a32-bg);color:var(--a32)} .pill.a41{background:var(--a41-bg);color:var(--a41)} .pill.a42{background:var(--a42-bg);color:var(--a42)} .pill.a43{background:var(--a43-bg);color:var(--a43)}
+.tbody{padding:0 18px 12px;display:grid}
+.aoshead{font-size:13.5px;padding:7px 12px;margin:12px 0 4px;border-radius:8px;background:var(--rev-bg);color:var(--rev)}
+.aoshead b{font-weight:600;margin-right:4px}
+.aoshead.a31{background:var(--a31-bg);color:var(--a31)} .aoshead.a32{background:var(--a32-bg);color:var(--a32)} .aoshead.a41{background:var(--a41-bg);color:var(--a41)} .aoshead.a42{background:var(--a42-bg);color:var(--a42)} .aoshead.a43{background:var(--a43-bg);color:var(--a43)}
+.wk{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:12px 0 12px 12px;border-bottom:1px solid var(--line);border-left:4px solid var(--rev);scroll-margin-top:16px}
+.wk.a31{border-left-color:var(--a31)} .wk.a32{border-left-color:var(--a32)} .wk.a41{border-left-color:var(--a41)} .wk.a42{border-left-color:var(--a42)} .wk.a43{border-left-color:var(--a43)}
+.wk:last-child{border-bottom:0}
+.wk.now{background:var(--tint)}
+.wk.flash{outline:2px solid var(--accent);outline-offset:-2px}
+.wk .when b{display:block;font-weight:600}
+.wk .when span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.wk .when .nowtag{display:inline-block;margin:4px 0 0}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.items li{display:flex;gap:8px;align-items:flex-start}
+.items .code{font-family:var(--mono);font-size:12.5px;color:var(--muted);min-width:44px}
+.items li.p .lbl,.items li.d .lbl{font-weight:600}
+.items li.sac,.items li.exam,.items li.ox{font-weight:600}
+.items li.sac{color:var(--sac)} .items li.exam{color:var(--exam)}
+.items li .o{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.items li.r,.items li.h{color:var(--muted)}
+.empty{color:var(--faint);font-style:italic}
+.ev{font-size:13px;color:var(--faint);margin-top:4px}
+.hol{font-family:var(--mono);font-size:12px;color:var(--faint);padding:10px 0 2px}
+
+.dates li{display:block;padding:0;border-bottom:1px solid var(--line)}
+.dates details>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:124px minmax(0,1fr) auto 16px;gap:12px;align-items:baseline;padding:8px 0}
+.dates details>summary::-webkit-details-marker{display:none}
+.dates .chev{font-family:var(--mono);color:var(--muted);transition:transform .2s}
+.dates details[open] .chev{transform:rotate(90deg)}
+.dates li.upcoming>details>summary{background:var(--sac-bg);margin:0 -10px;padding:8px 10px;border-radius:8px}
+.dates li.upcoming.exam>details>summary{background:var(--exam-bg)}
+.dates li.upcoming{background:none;margin:0;padding:0;border-radius:0}
+.cov{padding:4px 0 14px 136px;display:grid;gap:8px;font-size:14px}
+.cov .lead{font-weight:600}
+.cov .stmt{color:var(--muted);margin:0;max-width:65ch}
+.cov h4{margin:4px 0 0;font-size:12px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.cov ul{margin:0;padding-left:18px;display:grid;gap:5px;max-width:72ch}
+.cov ul ul{margin-top:4px;list-style:circle}
+.cov li{border:0;padding:0;display:list-item;line-height:1.45}
+.cov .q{margin:0;font-style:italic}
+.cov .src{margin:4px 0 0;font-size:12.5px;color:var(--faint)}
+.cov sub,.cov sup{line-height:0}
+.items li .cv{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+@media (max-width:640px){.dates details>summary{grid-template-columns:96px minmax(0,1fr) 16px}.dates .w{display:none}.cov{padding-left:0}}
+details.gaps{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+details.gaps summary{cursor:pointer;font-weight:600}
+details.gaps ul{margin:8px 0 0;padding-left:18px;display:grid;gap:4px}
+footer{font-size:13px;color:var(--muted);display:grid;gap:4px}
+@media (max-width:640px){
+  .wk{grid-template-columns:1fr;gap:6px}
+  .wk .when{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .dates li{grid-template-columns:100px minmax(0,1fr)}
+  .dates .w{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){summary .chev{transition:none}}
+</style>
+<style>
+:root{--ori:#5b6b7d;--ori-bg:#e6ebf0;--b23:#1f6f8b;--b23-bg:#dcedf3}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ori:#a9b8c8;--ori-bg:#232b34;--b23:#6fc3df;--b23-bg:#142c35}}
+:root[data-theme="dark"]{--ori:#a9b8c8;--ori-bg:#232b34;--b23:#6fc3df;--b23-bg:#142c35}
+.pill.ori{background:var(--ori-bg);color:var(--ori)} .aoshead.ori{background:var(--ori-bg);color:var(--ori)} .wk.ori{border-left-color:var(--ori)}
+.pill.b23{background:var(--b23-bg);color:var(--b23)} .aoshead.b23{background:var(--b23-bg);color:var(--b23)} .wk.b23{border-left-color:var(--b23)}
+.pill.rev{background:var(--rev-bg);color:var(--rev)} .aoshead.rev{background:var(--rev-bg);color:var(--rev)} .wk.rev{border-left-color:var(--rev)}
+.lede{margin:6px 0 0;color:var(--muted);font-size:14px;max-width:68ch}
+
+.now2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.nw{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.nw .lab{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.nw .ttl{font-weight:600}
+.nw ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:14px}
+.nw.sacbox{background:var(--sac-bg);border-color:transparent}
+.nw.sacbox.exam{background:var(--exam-bg)}
+.nw .big{font-family:var(--display);font-size:22px;font-weight:700;line-height:1.15}
+.nw .sub{font-size:14px;color:var(--muted)}
+
+.pacebox{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.phead,.prow{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.phead{padding:10px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pacelist{list-style:none;margin:0;padding:0}
+.pacelist>li{border-top:1px solid var(--line)}
+.prow{padding:12px 16px}
+.pacelist>li.now .prow{background:var(--accent-soft)}
+.pname{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tog{all:unset;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.tog:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.tog .sw{width:10px;height:10px;border-radius:2px;flex:none}
+.tog .chev{color:var(--muted);transition:transform .15s}
+.tog[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.pch,.pnote{font-size:13px;color:var(--muted);padding-left:18px}
+.pwhen{font-variant-numeric:tabular-nums;min-width:0}
+.pwhen a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.pwhen a:hover{text-decoration-color:currentColor}
+.pwhen .wks{color:var(--muted)}
+.pwhen .pnote{display:block;padding-left:0}
+.psac{font-variant-numeric:tabular-nums;min-width:0}
+.psac .none{color:var(--faint)}
+.pacelist>li.soon .psac b{color:var(--sac)}
+.pacelist .nowtag{margin-left:8px}
+.pacelist .cov{margin:0 16px 14px;border-radius:10px}
+@media (max-width:640px){.phead{display:none}.prow{grid-template-columns:1fr;gap:4px}.pwhen,.psac{padding-left:18px;font-size:14px}}
+
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{all:unset;cursor:pointer;padding:6px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--ink)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.calbox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 0}
+.cal{display:grid;grid-template-columns:170px repeat(var(--cols),minmax(16px,1fr));min-width:calc(170px + var(--cols)*16px);row-gap:6px;position:relative;padding-right:12px}
+.cal .lab{position:sticky;left:0;z-index:2;background:var(--surface);padding:0 10px 0 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;min-height:30px;line-height:1.2}
+.cal .lab .sw{width:10px;height:10px;border-radius:2px;flex:none}
+.cal .th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-left:2px solid var(--line);padding:0 6px;white-space:nowrap;overflow:hidden}
+.cal .wn{font-family:var(--mono);font-size:9.5px;color:var(--faint);text-align:center;border-left:1px solid var(--line)}
+.cal .wn.ts{border-left:2px solid var(--line)}
+.cal .wn.now{color:var(--accent);font-weight:600}
+.cal .gl{border-left:1px solid var(--tint);min-height:30px}
+.cal .gl.ts{border-left:2px solid var(--line)}
+.cal .gl.now{background:var(--accent-soft)}
+.cal .bar{align-self:center;height:22px;border-radius:5px;margin:0 1px;cursor:pointer;position:relative;z-index:1;border:0;padding:0}
+.cal .bar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cal .mk{align-self:center;justify-self:center;width:13px;height:13px;transform:rotate(45deg);border-radius:2px;background:var(--sac);z-index:3;box-shadow:0 0 0 2px var(--surface)}
+.cal .mk.exam{background:var(--exam)}
+.cal .mk.ox{background:var(--surface);border:2px solid var(--muted);width:11px;height:11px}
+.calkey{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:8px}
+.calkey i{display:inline-block;width:11px;height:11px;transform:rotate(45deg);border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+.ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cue{color:var(--accent);margin-right:6px;display:inline-flex}
+.nw .cue{margin-right:4px}
+.nw .sacl{color:var(--sac)}
+.aosb{display:flex;align-items:baseline;gap:8px;padding:14px 0 6px;font-size:13.5px;color:var(--muted)}
+.aosb .sw{width:10px;height:10px;border-radius:2px;flex:none;align-self:center}
+.aosb b{color:var(--ink);font-weight:600;white-space:nowrap}
+.tbody .wk{border-left:3px solid var(--c)}
+.items li{grid-template-columns:62px minmax(0,1fr)!important}
+.items li>.em{display:none}
+.items .code{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.items li.p .lbl,.items li.d .lbl{font-weight:500;color:var(--ink)}
+.items li.h .lbl,.items li.r .lbl{color:var(--muted)}
+.items li.as{background:var(--sac-bg);border-radius:6px;padding:3px 6px;margin:0 -6px}
+.items li.as.exam{background:var(--exam-bg)}
+.items li.as .code,.items li.as .lbl{color:var(--sac);font-weight:600}
+.items li.as.exam .code,.items li.as.exam .lbl{color:var(--exam)}
+.items .lbl a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.items .lbl a:hover{text-decoration-color:currentColor}
+.hwlab{margin:6px 0 2px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+summary .ts{color:var(--muted);font-size:13px}
+
+.items li.rline .lbl{color:var(--muted)}
+.hwl{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.items details summary{cursor:pointer;list-style:none}
+.items details summary::-webkit-details-marker{display:none}
+.items details summary .more{font-size:12.5px;color:var(--accent);margin-left:6px;white-space:nowrap}
+.items details ul{margin:6px 0 2px;padding-left:18px;font-size:13.5px;color:var(--ink);display:grid;gap:4px}
+.items details ul sub,.items details ul sup{font-size:.75em}
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;line-height:1;padding:3px 7px 3px 5px;border-radius:999px;margin-right:6px;vertical-align:1px;white-space:nowrap}
+.tag .ico{width:14px;height:14px;vertical-align:0}
+.tag.d{background:#fff1b8;color:#7a5600}
+.tag.p{background:#d8f2dc;color:#1d6b33}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.d{background:#3d3210;color:#ffd866}:root:not([data-theme="light"]) .tag.p{background:#173322;color:#86dca0}}
+:root[data-theme="dark"] .tag.d{background:#3d3210;color:#ffd866}
+:root[data-theme="dark"] .tag.p{background:#173322;color:#86dca0}
+.terms-wrap.hidepast .wk.past,.terms-wrap.hidepast .aosb.past,.terms-wrap.hidepast details.term-d.past{display:none}
+.pastbtn{appearance:none;font:inherit;font-size:13px;background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;padding:4px 0;justify-self:start}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sacstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px}
+.sc{appearance:none;font:inherit;text-align:left;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:10px;padding:8px 10px;display:grid;gap:2px;color:var(--ink)}
+.sc:hover{border-color:var(--muted);border-top-color:var(--c)}
+.sc .sct{font-weight:600;font-size:13px;line-height:1.25}
+.sc .scd{font-variant-numeric:tabular-nums;font-size:13.5px}
+.sc .scw{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.sc.exam .sct{color:var(--exam)}
+.sc.nx{background:var(--sac-bg);border-color:transparent;border-top-color:var(--c)}
+.sc.nx .scw{color:var(--ink);font-weight:600}
+.sc.past{opacity:.5}
+.sc[aria-expanded="true"]{outline:2px solid var(--ink);outline-offset:1px}
+.sackk{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.sackk .kkhead{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;font-size:14px;color:var(--muted);padding-bottom:6px}
+.sackk .kkhead b{color:var(--ink);font-size:15px}
+.sackk .kkx{margin-left:auto;appearance:none;border:0;background:none;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:0 4px}
+.sackk .cov{padding:0;margin:0;background:none}
+.vtabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:-14px}
+.vtabs button{appearance:none;font:inherit;font-weight:600;font-size:15px;background:none;border:0;border-bottom:3px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer}
+.vtabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.wkbar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+details.opts{margin-left:auto;font-size:14px}
+.wkbar .optbody{position:absolute;right:0;z-index:5;min-width:280px;box-shadow:0 8px 24px rgb(0 0 0/.12)}
+.wkbar details.opts{position:relative}
+details.opts>summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none;text-align:right}
+details.opts>summary::-webkit-details-marker{display:none}
+details.opts>summary::after{content:" ▾"}
+details.opts[open]>summary::after{content:" ▴"}
+.optbody{margin-top:8px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:10px}
+.optrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#panel-wk{display:grid;gap:10px}
+#panel-wk[hidden]{display:none}
+.items .cc{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-left:8px;white-space:nowrap}
+.astag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-right:8px;padding:1px 6px;border-radius:4px;background:var(--surface)}
+.hwline{display:flex;gap:8px;align-items:baseline;margin-top:6px;font-size:13.5px;color:var(--muted)}
+.hwlab2{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;flex:none}
+.hwitems{gap:2px}
+.hwitems li{color:var(--muted)}
+.items li{gap:0}
+#sachead.stlab{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 -4px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+#sachead.stlab span{font-family:var(--body);font-size:13px;letter-spacing:0;text-transform:none;color:var(--faint)}
+@media (max-width:640px){.sacstrip{grid-template-columns:repeat(2,minmax(0,1fr))}.hwline{flex-direction:column;gap:2px}details.opts{justify-self:stretch}details.opts>summary{text-align:left}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">VCE Chemistry · Course outline · read-only</div>
+    <h1>Chemistry Units 3&amp;4 · 2027</h1>
+    <p class="lede">Planned from how 12CHE1 ran in 2026, in 2027 school weeks. The exam day is to be confirmed.</p>
+  </header>
+
+  <section aria-labelledby="sachead">
+    <h2 id="sachead" class="stlab">SACs and exams <span>Tap one to see what it assesses</span></h2>
+    <div class="sacstrip" id="sacstrip"></div>
+    <div class="sackk" id="sackk" hidden></div>
+  </section>
+
+  <div class="vtabs" role="tablist" aria-label="View">
+    <button type="button" role="tab" id="vt-wk" data-tab="wk" aria-selected="true">Week by week</button>
+    <button type="button" role="tab" id="vt-yr" data-tab="yr" aria-selected="false">Year at a glance</button>
+  </div>
+
+  <section id="panel-yr" hidden>
+    <div class="toolbar"><h2>Pacing and SACs</h2><div class="seg" role="group" aria-label="View"><button type="button" data-view="list" aria-pressed="true">List</button><button type="button" data-view="cal" aria-pressed="false">Calendar</button></div></div>
+    <p class="lede" id="paceLede">Tap an area of study to see its key knowledge. Each SAC assesses all of it.</p>
+    <div class="calbox" id="calbox" hidden><div class="cal" id="cal"></div></div>
+    <div class="calkey" id="calkey" hidden><span><i style="background:var(--sac)"></i>SAC</span><span><i style="background:var(--exam)"></i>Exam (day TBC)</span><span>Tap a bar to open its first week</span></div>
+    <div class="pacebox" id="pacebox"><div class="phead" aria-hidden="true"><span>Area of study</span><span>When</span><span>Assessed</span></div><ul class="pacelist" id="pace"></ul></div>
+  </section>
+
+  <section id="panel-wk">
+    <div class="wkbar"><button class="pastbtn" id="pastBtn" type="button" hidden></button><details class="opts"><summary>View options</summary><div class="optbody">
+    <div class="optrow"><button class="btn" id="toggleAll" type="button">Open all terms</button></div>
+    <div class="filters" role="group" aria-label="Show only">
+      <span class="flab">Show only</span>
+      <button class="fchip" data-f="p" aria-pressed="false" type="button">Practicals and demos</button>
+      <button class="fchip sac" data-f="sac" aria-pressed="false" type="button">SACs and exams</button>
+      <button class="fchip" data-f="h" aria-pressed="false" type="button">Homework</button>
+      <button class="freset" id="freset" type="button" hidden>Show everything</button>
+    </div></div></details></div>
+    <p class="fnote" id="fnote" hidden></p>
+    <div id="terms" style="display:grid;gap:10px"></div>
+  </section>
+
+  <footer>
+    <span>Weeks are school weeks, so this fits any class's timetable. Chapter numbers refer to the class textbook. Term 1 is a week shorter and Term 2 a week longer in 2027 than in 2026. School events other than public holidays are not yet known for 2027. Homework covers a topic with no class time in 2026.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+const TERMS=[{"name": "Orientation", "start": "2026-11-23", "range": "Step-Up · from 24 Nov 2026", "after": "Summer holidays · orientation holiday homework", "weeks": [{"n": 1, "aos": "a31", "items": [{"c": "Ori", "t": "Welcome to Year 12 Chemistry", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F0%20Orientation%2FWelcome%20to%20Year%2012%20Chemistry"}, {"c": "Ori", "t": "Green chemistry principles and SDGs", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F0%20Orientation%2FGreen%20chemistry%20principles%20and%20SDGs"}, {"c": "1A", "t": "Fossil fuels", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F1A%20Fossil%20fuels"}, {"c": "1B", "t": "Biofuels", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F1B%20Biofuels"}, {"c": "1C", "t": "Fuel for the body", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F1C%20Fuel%20for%20the%20body"}, {"c": "1D", "t": "Enthalpy changes and combustion reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F1D%20Enthalpy%20changes%20and%20combustion%20reactions"}], "ev": ["Curriculum Day (Mon 23 Nov)", "Step-Up starts (Tue 24 Nov)"], "as": []}, {"n": 2, "aos": "a31", "items": [{"c": "Ori", "t": "Stoichiometry and limiting reactants", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F0%20Orientation%2FStoichiometry%20and%20limiting%20reactants"}, {"c": "2A", "t": "Calculating energy changes from combustion reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F2A%20Calculating%20energy%20changes%20from%20combustion%20reactions"}, {"c": "HW", "t": "Orientation holiday homework", "k": "h", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F0%20Orientation%2FHoliday%20homework"}], "ev": null, "as": [{"t": "Step-Up quiz: Chapter 1 and 2A", "d": "Step-Up", "check": true, "aos": "a31"}]}]}, {"name": "Term 1", "start": "2027-01-25", "range": "28 Jan – 25 Mar 2027", "after": "Term 1 holidays · holiday homework", "weeks": [{"n": 1, "aos": "a31", "items": [{"c": "2B", "t": "Calculating energy changes using water", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F2B%20Calculating%20energy%20changes%20using%20water"}, {"c": "2B", "t": "Calorimetry: finding a calibration factor", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F2B%20Prac%20Calorimetry%20and%20calibration%20factor"}], "ev": ["Australia Day (Tue 26 Jan)", "Students start (Thu 28 Jan)"], "as": [{"t": "Holiday homework retrieval quiz", "d": "Thu 28 Jan", "check": true, "aos": "a31"}]}, {"n": 2, "aos": "a31", "items": [{"c": "2C", "t": "Energy from fuels and food", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F2C%20Energy%20from%20fuels%20and%20food"}, {"c": "3A", "t": "Redox reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3A%20Redox%20reactions"}, {"c": "3B", "t": "Writing redox equations", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3B%20Writing%20redox%20equations"}, {"c": "3C", "t": "Primary galvanic cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3C%20Primary%20galvanic%20cells"}], "ev": null, "as": []}, {"n": 3, "aos": "a31", "items": [{"c": "3D", "t": "Designing galvanic cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3D%20Designing%20galvanic%20cells"}, {"c": "3C", "t": "How can half-cells turn chemical energy into electrical energy", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3C%20Prac%20Half-cells"}, {"c": "3E", "t": "Fuel cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3E%20Fuel%20cells"}], "ev": null, "as": []}, {"n": 4, "aos": "a31", "items": [{"c": "3F", "t": "Faraday's law in galvanic and fuel cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3F%20Faraday%27s%20law%20in%20galvanic%20and%20fuel%20cells"}, {"c": "4B", "t": "Catalysts", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F4B%20Catalysts"}, {"c": "4A", "t": "Factors affecting the rate of a chemical reaction", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F4A%20Factors%20affecting%20the%20rate%20of%20a%20chemical%20reaction"}, {"c": "4B.1", "t": "Which factor has the greatest impact on the rate of a reaction?", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F4B.1%20Prac%20Factors%20affecting%20reaction%20rate"}, {"c": "3G", "t": "Fuel cell challenges and innovations", "k": "h", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2F3G%20Fuel%20cell%20challenges%20and%20innovations%20%28HW%29"}], "ev": null, "as": []}, {"n": 5, "aos": "a31", "items": [{"c": "4B.1", "t": "Which factor has the greatest impact on the rate of a reaction?", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F4B.1%20Prac%20Factors%20affecting%20reaction%20rate"}, {"c": "Rev", "t": "U3 AOS 1 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F1%20U3%20AOS1%20Energy%2FRevision"}], "ev": null, "as": [{"t": "U3 AOS 1 checkpoint", "d": "Tue 23 Feb", "check": true, "aos": "a31"}]}, {"n": 6, "aos": "a32", "items": [{"c": "5A", "t": "Equilibrium reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5A%20Equilibrium%20reactions"}, {"c": "Demo", "t": "Equilibrium reactions demonstration", "k": "d", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5A%20Demo%20Equilibrium%20reactions"}, {"c": "5B", "t": "Calculating equilibrium constants", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5B%20Calculating%20equilibrium%20constants"}, {"c": "5C", "t": "Changes to equilibrium", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5C%20Changes%20to%20equilibrium"}], "ev": null, "as": [{"t": "U3 AOS 1 SAC", "d": "Tue 2 Mar", "iso": "2027-03-02", "aos": "a31", "o": "Problem-solving with calculations in real-world fuel contexts"}]}, {"n": 7, "aos": "a32", "items": [{"c": "5C", "t": "Changes to equilibrium", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5C%20Changes%20to%20equilibrium"}, {"c": "5C", "t": "Effect of concentration changes on equilibrium yields", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5C%20Prac%20Concentration%20changes%20and%20equilibrium%20yields"}], "ev": ["Labour Day (Mon 8 Mar)"], "as": []}, {"n": 8, "aos": "a32", "items": [{"c": "5D", "t": "Compromise equilibrium", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F5D%20Compromise%20equilibrium"}, {"c": "6A", "t": "Electrolytic reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F6A%20Electrolytic%20reactions"}, {"c": "6B", "t": "Electrolytic cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F6B%20Electrolytic%20cells"}], "ev": null, "as": []}, {"n": 9, "aos": "a32", "items": [{"c": "6C", "t": "Secondary cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F6C%20Secondary%20cells"}, {"c": "6D", "t": "Designing cells to produce green hydrogen", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F6D%20Designing%20cells%20to%20produce%20green%20hydrogen"}, {"c": "6E", "t": "Faraday's law in electrolytic cells", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2F6E%20Faraday%27s%20law%20in%20electrolytic%20cells"}, {"c": "Rev", "t": "U3 AOS 2 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2FRevision"}], "ev": ["Last day of term (Thu 25 Mar)", "Good Friday (26 Mar)"], "as": [], "note": "Term 1 is a week shorter in 2027: 2026 Weeks 9 and 10 are combined here."}]}, {"name": "Term 2", "start": "2027-04-12", "range": "12 Apr – 25 Jun 2027", "after": "Term 2 holidays", "weeks": [{"n": 1, "aos": "a32", "items": [{"c": "Rev", "t": "U3 AOS 2 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F2%20U3%20AOS2%20Rate%20and%20yield%2FRevision"}], "ev": null, "as": [{"t": "U3 AOS 2 checkpoint", "d": "Wed 14 Apr", "check": true, "aos": "a32"}]}, {"n": 2, "aos": "a41", "items": [{"c": "7A", "t": "Structures of organic compounds", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F7A%20Structures%20of%20organic%20compounds"}, {"c": "7B", "t": "Naming and properties of organic compounds", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F7B%20Naming%20and%20properties%20of%20organic%20compounds"}], "ev": null, "as": [{"t": "U3 AOS 2 SAC", "d": "Tue 20 Apr", "iso": "2027-04-20", "aos": "a32", "o": "Comparing and evaluating findings from at least two practicals"}]}, {"n": 3, "aos": "a41", "items": [{"c": "7B", "t": "Naming and properties of organic compounds", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F7B%20Naming%20and%20properties%20of%20organic%20compounds"}, {"c": "8A", "t": "Types of organic reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F8A%20Types%20of%20organic%20reactions"}], "ev": null, "as": []}, {"n": 4, "aos": "a41", "items": [{"c": "8A", "t": "Types of organic reactions", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F8A%20Types%20of%20organic%20reactions"}, {"c": "8B", "t": "Sustainability of the production of chemicals", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2F8B%20Sustainability%20of%20the%20production%20of%20chemicals"}, {"c": "Rev", "t": "U4 AOS 1 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2FRevision"}], "ev": null, "as": []}, {"n": 5, "aos": "a41", "items": [{"c": "Rev", "t": "U4 AOS 1 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F3%20U4%20AOS1%20Organic%20compounds%2FRevision"}], "ev": null, "as": []}, {"n": 6, "aos": "a43", "items": [{"c": "KSS", "t": "Key science skills", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FKey%20science%20skills"}, {"c": "Inv", "t": "Understanding the task", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FUnderstanding%20the%20task"}, {"c": "Inv", "t": "Preliminary research and planning", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FPreliminary%20research%20and%20planning"}], "ev": null, "as": [{"t": "U4 AOS 1 SAC", "d": "Week of 17 May", "iso": "2027-05-18", "aos": "a41", "o": "Analysis and evaluation of a contemporary issue · day to be set", "soft": true}]}, {"n": 7, "aos": "a43", "items": [{"c": "Inv", "t": "Preliminary research and planning", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FPreliminary%20research%20and%20planning"}, {"c": "KSS", "t": "Key science skills", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FKey%20science%20skills"}, {"c": "Inv", "t": "Investigation: introduction", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}], "ev": null, "as": []}, {"n": 8, "aos": "a43", "items": [{"c": "Inv", "t": "Investigation: method", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}, {"c": "Prac", "t": "Experiment 1: Biodiesel synthesis", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FPrac%20Experiment%201%20Biodiesel%20synthesis"}], "ev": null, "as": []}, {"n": 9, "aos": "a43", "items": [{"c": "Prac", "t": "Experiment 2: Combustion of biodiesel", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FPrac%20Experiment%202%20Combustion%20of%20biodiesel"}, {"c": "Inv", "t": "Investigation: results", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}], "ev": null, "as": []}, {"n": 10, "aos": "a43", "items": [{"c": "Inv", "t": "Investigation: results", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}, {"c": "Inv", "t": "Investigation: discussion", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}, {"c": "Inv", "t": "Investigation: conclusion", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F4%20U4%20AOS3%20Investigation%2FInvestigation%20write-up"}], "ev": ["King's Birthday (Mon 14 Jun)"], "as": [{"t": "U4 AOS 3 SAC", "d": "Wed 16 Jun", "iso": "2027-06-16", "aos": "a43", "o": "Student-designed investigation · report due"}]}, {"n": 11, "aos": "a43", "items": [], "ev": null, "as": [], "note": "Term 2 is a week longer in 2027. This week is spare."}]}, {"name": "Term 3", "start": "2027-07-12", "range": "12 Jul – 17 Sep 2027", "after": "Term 3 holidays · practice exams and revision program", "weeks": [{"n": 1, "aos": "a42", "items": [{"c": "9A", "t": "Testing for functional groups", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F9A%20Testing%20for%20functional%20groups"}, {"c": "9B", "t": "Analysis of consumer products", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F9B%20Analysis%20of%20consumer%20products"}], "ev": null, "as": []}, {"n": 2, "aos": "a42", "items": [{"c": "9C", "t": "Volumetric analysis using redox titrations", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F9C%20Volumetric%20analysis%20using%20redox%20titrations"}, {"c": "Prac", "t": "Redox titration practical", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F9C%20Prac%20Redox%20titration"}], "ev": null, "as": []}, {"n": 3, "aos": "a42", "items": [{"c": "10A", "t": "Mass spectrometry", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10A%20Mass%20spectrometry"}, {"c": "10B", "t": "Infrared spectroscopy", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10B%20Infrared%20spectroscopy"}, {"c": "10C", "t": "Low resolution C-13 NMR", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10C%20Low%20resolution%20C-13%20NMR"}], "ev": null, "as": []}, {"n": 4, "aos": "a42", "items": [{"c": "10D", "t": "Low and high resolution proton NMR", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10D%20Low%20and%20high%20resolution%20proton%20NMR"}, {"c": "10E", "t": "Chromatography", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10E%20Chromatography"}], "ev": null, "as": []}, {"n": 5, "aos": "a42", "items": [{"c": "10E", "t": "Chromatography", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F10E%20Chromatography"}, {"c": "11A", "t": "Extraction, purification and identification of medicinal molecules", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F11A%20Extraction%2C%20purification%20and%20identification%20of%20medicinal%20molecules"}, {"c": "11B", "t": "Enzymes and medicines", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F11B%20Enzymes%20and%20medicines"}], "ev": null, "as": []}, {"n": 6, "aos": "a42", "items": [{"c": "11B", "t": "Enzymes and medicines", "k": "t", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2F11B%20Enzymes%20and%20medicines"}, {"c": "Rev", "t": "U4 AOS 2 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2FRevision"}], "ev": null, "as": []}, {"n": 7, "aos": "a42", "items": [{"c": "Rev", "t": "U4 AOS 2 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2FRevision"}], "ev": null, "as": []}, {"n": 8, "aos": "a42", "items": [{"c": "Rev", "t": "U4 AOS 2 revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F5%20U4%20AOS2%20Analysis%20and%20medicines%2FRevision"}, {"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": [{"t": "U4 AOS 2 SAC", "d": "Tue 31 Aug", "iso": "2027-08-31", "aos": "a42", "o": "Analysis and evaluation of secondary data"}]}, {"n": 9, "aos": "rev", "items": [{"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}, {"c": "Prac", "t": "Practical: Electroplating", "k": "p", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FPrac%20Electroplating"}], "ev": null, "as": []}, {"n": 10, "aos": "rev", "items": [{"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": []}]}, {"name": "Term 4", "start": "2027-10-04", "range": "4 Oct – exams", "after": null, "weeks": [{"n": 1, "aos": "rev", "items": [{"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": []}, {"n": 2, "aos": "rev", "items": [{"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": []}, {"n": 3, "aos": "rev", "items": [{"c": "Rev", "t": "Exam revision", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": []}, {"n": 4, "aos": "rev", "items": [{"c": "Rev", "t": "Exam preparation", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": null, "as": []}, {"n": 5, "aos": "rev", "items": [{"c": "Rev", "t": "Exam preparation", "k": "r", "u": "https://eduvic.sharepoint.com/sites/ScienceFaculty567/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FScienceFaculty567%2FShared%20Documents%2FChemistry%20Units%203%2C4%2FStudent%2F6%20Exam%20revision%2FRevision"}], "ev": ["Melbourne Cup Day (Tue 2 Nov)"], "as": []}, {"n": 6, "aos": "rev", "items": [], "ev": null, "as": [{"t": "VCE Chemistry exam", "d": "Day TBC", "iso": "2027-11-09", "exam": true, "aos": "rev", "o": "VCAA timetable not yet released (2026: Tue 10 Nov)"}]}]}];
+const KK={"a31": {"label": "Unit 3 Outcome 1", "q": "What are the current and future options for supplying energy?", "ch": "Chapters 1–3", "stmt": "On completion of this unit the student should be able to compare fuels quantitatively with reference to combustion products and energy outputs, apply knowledge of the electrochemical series to design, construct and test primary cells and fuel cells, and evaluate the sustainability of electrochemical cells in producing energy for society.", "sec": [["Carbon-based fuels", [{"t": "the definition of a fuel, including the distinction between fossil fuels (coal, natural gas, petrol) and biofuels (biogas, bioethanol, biodiesel) with reference to their renewability (ability of a resource to be replaced by natural processes within a relatively short period of time)", "sub": []}, {"t": "fuel sources for the body measured in kJ g<sup>-1</sup>: carbohydrates, proteins and lipids (fats and oils)", "sub": []}, {"t": "photosynthesis as the process that converts light energy into chemical energy and as a source of glucose and oxygen for respiration in living things: 6CO<sub>2</sub>(g) + 6H<sub>2</sub>O(l) → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq)+ 6O<sub>2</sub>(g)", "sub": []}, {"t": "oxidation of glucose as the primary carbohydrate energy source, including the balanced equation for cellular respiration: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(g) → 6CO<sub>2</sub>(g) + 6H<sub>2</sub>O(l)", "sub": []}, {"t": "production of bioethanol by the fermentation of glucose and subsequent distillation to produce a more sustainable transport fuel: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) → 2C<sub>2</sub>H<sub>5</sub>OH(aq) + 2CO<sub>2</sub>(g)", "sub": []}, {"t": "comparison of exothermic and endothermic reactions, with reference to bond making and bond breaking, including enthalpy changes (∆H) measured in kJ, molar enthalpy changes measured in kJ mol<sup>-1</sup> and enthalpy changes for mixtures measured in kJ g<sup>-1</sup>, and their representations in energy profile diagrams", "sub": []}, {"t": "determination of limiting reactants or reagents in chemical reactions", "sub": []}, {"t": "combustion (complete and incomplete) reactions of fuels as exothermic reactions: the writing of balanced thermochemical equations, including states, for the complete and incomplete combustion of organic molecules using experimental data and data tables", "sub": []}]], ["Measuring changes in chemical reactions", [{"t": "calculations related to the application of stoichiometry to reactions involving the combustion of fuels, including mass-mass, mass-volume and volume-volume stoichiometry, to determine heat energy released, reactant and product amounts and net volume or mass of major greenhouse gases (CO<sub>2</sub>, CH<sub>4</sub> and H<sub>2</sub>O), limited to standard laboratory conditions (SLC) at 25 °C and 100 kPa", "sub": []}, {"t": "the use of specific heat capacity of water to approximate the quantity of heat energy released during the combustion of a known mass of fuel and food", "sub": []}, {"t": "the principles of solution calorimetry, including determination of calibration factor and consideration of the effects of heat loss; analysis of temperature-time graphs obtained from solution calorimetry", "sub": []}, {"t": "energy from fuels and food:", "sub": ["calculation of energy transformation efficiency during combustion as a percentage of chemical energy converted to useful energy", "comparison and calculations of energy values of foods containing carbohydrates, proteins and fats and oils"]}]], ["Primary galvanic cells and fuel cells as sources of energy", [{"t": "redox reactions as simultaneous oxidation and reduction processes, and the use of oxidation numbers to identify the reducing agent, oxidising agent and conjugate redox pairs", "sub": []}, {"t": "the writing of balanced half-equations (including states) for oxidation and reduction reactions, and the overall redox cell reaction in both acidic and basic conditions", "sub": []}, {"t": "the common design features and general operating principles of non-rechargeable (primary) galvanic cells converting chemical energy into electrical energy, including electrode polarities and the role of the electrodes (inert and reactive) and electrolyte solutions (details of specific cells not required)", "sub": []}, {"t": "the use and limitations of the electrochemical series in designing galvanic cells and as a tool for predicting the products of redox reactions, for deducing overall equations from redox half-equations and for determining maximum cell voltage under standard conditions", "sub": []}, {"t": "the common design features and general operating principles of fuel cells, including the use of porous electrodes for gaseous reactants to increase cell efficiency (details of specific cells not required)", "sub": []}, {"t": "the application of Faraday’s Laws and stoichiometry to determine the quantity of galvanic or fuel cell reactant and product, and the current or time required to either use a particular quantity of reactant or produce a particular quantity of product", "sub": []}, {"t": "contemporary responses to challenges and the role of innovation in the design of fuel cells to meet society’s energy needs, with reference to green chemistry principles: design for energy efficiency, and use of renewable feedstocks", "sub": []}]]], "n": 19}, "a32": {"label": "Unit 3 Outcome 2", "q": "How can the rate and yield of chemical reactions be optimised?", "ch": "Chapters 4–6", "stmt": "On completion of this unit the student should be able to experimentally analyse chemical systems to predict how the rate and extent of chemical reactions can be optimised, explain how electrolysis is involved in the production of chemicals, and evaluate the sustainability of electrolytic processes in producing useful materials for society.", "sec": [["Rates of chemical reactions", [{"t": "factors affecting the frequency and success of reactant particle collisions and the rate of a chemical reaction in open and closed systems, including temperature, surface area, concentration, gas pressures, presence of a catalyst, activation energy and orientation", "sub": []}, {"t": "the role of catalysts in increasing the rate of specific reactions, with reference to alternative reaction pathways of lower activation energies and represented using energy profile diagrams", "sub": []}]], ["Extent of chemical reactions", [{"t": "the distinction between reversible and irreversible reactions, and between rate and extent of a reaction", "sub": []}, {"t": "the dynamic nature of homogeneous equilibria involving aqueous solutions or gases, and their representation by balanced chemical or thermochemical equations (including states) and by concentration-time graphs", "sub": []}, {"t": "the change in position of equilibrium that can occur when changes in temperature or species or volume (concentration or pressure) are applied to a system at equilibrium, and the representation of these changes using concentration-time graphs", "sub": []}, {"t": "the application of Le Chatelier’s principle to identify factors that favour the yield of a chemical reaction", "sub": []}, {"t": "calculations involving equilibrium expressions (including units) for a closed homogeneous equilibrium system and the dependence of the equilibrium constant (K<sub>c</sub>) value on the system temperature and the equation used to represent the reaction", "sub": []}, {"t": "the reaction quotient (Q) as a quantitative measure of the extent of a chemical reaction: that is, the relative amounts of products and reactants present during a reaction at a given point in time", "sub": []}, {"t": "responses to the conflict between optimal rate and temperature considerations in producing equilibrium reaction products, with reference to the green chemistry principles of catalysis and designing for energy efficiency", "sub": []}]], ["Production of chemicals using electrolysis", [{"t": "the use and limitations of the electrochemical series to explain or predict the products of the electrolysis of particular chemicals, given their state (molten liquid or in aqueous solution) and the electrode materials used, including the writing of balanced equations (with states) for the reactions occurring at the anode and cathode and the overall redox reaction for the cell", "sub": []}, {"t": "the common design features and general operating principles of commercial electrolytic cells (including, where practicable, the removal of products as they form), and the selection of suitable electrode materials, the electrolyte (including its state) and any chemical additives that result in a desired electrolysis product (details of specific cells not required)", "sub": []}, {"t": "the common design features and general operating principles of rechargeable (secondary) cells, with reference to discharging as a galvanic cell and recharging as an electrolytic cell, including the conditions required for the cell reactions to be reversed and the electrode polarities in each mode (details of specific cells not required)", "sub": []}, {"t": "the role of innovation in designing cells to meet society’s energy needs in terms of producing ‘green’ hydrogen (including equations in acidic conditions) using the following methods:", "sub": ["polymer electrolyte membrane electrolysis powered by either photovoltaic (solar) or wind energy", "artificial photosynthesis using a water oxidation and proton reduction catalyst system"]}, {"t": "the application of Faraday’s Laws and stoichiometry to determine the quantity of electrolytic reactant and product, and the current or time required to either use a particular quantity of reactant or produce a particular quantity of product", "sub": []}]]], "n": 14}, "a41": {"label": "Unit 4 Outcome 1", "q": "How are organic compounds categorised and synthesised?", "ch": "Chapters 7–8", "stmt": "On completion of this unit the student should be able to analyse the general structures and reactions of the major organic families of compounds, design reaction pathways for organic synthesis, and evaluate the sustainability of the manufacture of organic compounds used in society.", "sec": [["Structure, nomenclature and properties of organic compounds", [{"t": "characteristics of the carbon atom that contribute to the diversity of organic compounds formed, with reference to valence electron number, relative bond strength, relative stability of carbon bonds with other elements, degree of unsaturation (carbon-carbon double bonds), and the formation of structural isomers", "sub": []}, {"t": "molecular, structural and semi-structural (condensed) formulas and skeletal structures of alkanes (including cyclohexane), alkenes, benzene, haloalkanes, primary amines, primary amides, alcohols (primary, secondary and tertiary), aldehydes, ketones, carboxylic acids and non-branched esters", "sub": []}, {"t": "the International Union of Pure and Applied Chemistry (IUPAC) systematic naming of organic compounds up to C8, with no more than two functional groups for a molecule, limited to non-cyclic hydrocarbons, haloalkanes, primary amines, alcohols (primary, secondary and tertiary), aldehydes, ketones, carboxylic acids and non-branched esters", "sub": []}, {"t": "trends in physical properties within and between homologous series (boiling point and melting point, viscosity), with reference to structure and bonding", "sub": []}]], ["Reactions of organic compounds", [{"t": "organic reactions and pathways, including equations, reactants, products, reaction conditions and catalysts (specific enzymes not required):", "sub": ["synthesis of primary haloalkanes and primary alcohols by substitution", "addition reactions of alkenes", "the esterification between an alcohol and a carboxylic acid", "hydrolysis of esters", "pathways for the synthesis of primary amines and carboxylic acids", "transesterification of plant triglycerides using alcohols to produce biodiesel", "hydrolytic reactions of proteins, carbohydrates and fats and oils to break down large biomolecules in food to produce smaller molecules", "condensation reactions to synthesise large biologically important molecules for storage as proteins, starch, glycogen and lipids (fats and oils)"]}, {"t": "calculations of percentage yield and atom economy of single-step or overall reaction pathways, and the advantages for society and for industry of developing chemical processes with a high atom economy", "sub": []}, {"t": "the sustainability of the production of chemicals, with reference to the green chemistry principles of use of renewable feedstocks, catalysis and designing safer chemicals", "sub": []}]]], "n": 7}, "a42": {"label": "Unit 4 Outcome 2", "q": "How are organic compounds analysed and used?", "ch": "Chapters 9–11", "stmt": "On completion of this unit the student should be able to apply qualitative and quantitative tests to analyse organic compounds and their structural characteristics, deduce structures of organic compounds using instrumental analysis data, explain how some medicines function, and experimentally analyse how some natural medicines can be extracted and purified.", "sec": [["Laboratory analysis of organic compounds", [{"t": "qualitative tests for the presence of carbon-carbon double bonds, hydroxyl and carboxyl functional groups", "sub": []}, {"t": "applications and principles of laboratory analysis techniques in verifying components and purity of consumer products, including melting point determination and distillation (simple and fractional)", "sub": []}, {"t": "measurement of the degree of unsaturation of compounds using iodine", "sub": []}, {"t": "volumetric analysis, including calculations of excess and limiting reactants using redox titrations (excluding back titrations)", "sub": []}]], ["Instrumental analysis of organic compounds", [{"t": "applications of mass spectrometry (excluding features of instrumentation and operation) and interpretation of qualitative and quantitative data, including identification of molecular ion peak, determination of molecular mass and identification of simple fragments", "sub": []}, {"t": "identification of bond types by qualitative infrared spectroscopy (IR) data analysis using characteristic absorption bands", "sub": []}, {"t": "structural determination of organic compounds by low resolution carbon-13 nuclear magnetic resonance (<sup>13</sup>C-NMR) spectral analysis, using chemical shift values to deduce the number and nature of different carbon environments", "sub": []}, {"t": "structural determination of organic compounds by low and high resolution proton nuclear magnetic resonance (<sup>1</sup>H-NMR) spectral analysis, using chemical shift values, integration curves (where the height is proportional to the area underneath a peak) and peak splitting patterns (excluding coupling constants), and application of the n+1 rule (where n is the number of neighbouring protons) to deduce the number and nature of different proton environments", "sub": []}, {"t": "the principles of chromatography, including high performance liquid chromatography (HPLC) and the use of retention times and the construction of a calibration curve to determine the concentration of an organic compound in a solution (excluding features of instrumentation and operation)", "sub": []}, {"t": "deduction of the structures of simple organic compounds using a combination of mass spectrometry (MS), infrared spectroscopy (IR), proton nuclear magnetic resonance (<sup>1</sup>H-NMR) and carbon-13 nuclear magnetic resonance (<sup>13</sup>C-NMR) (limited to data analysis)", "sub": []}, {"t": "the roles and applications of laboratory and instrumental analysis, with reference to product purity and the identification of organic compounds or functional groups in isolation or within a mixture", "sub": []}]], ["Medicinal chemistry", [{"t": "extraction and purification of natural plant compounds as possible active ingredients for medicines, using solvent extraction and distillation", "sub": []}, {"t": "identification of the structure and functional groups of organic molecules that are medicines", "sub": []}, {"t": "significance of isomers and the identification of chiral centres (carbon atom surrounded by four different groups) in the effectiveness of medicines", "sub": []}, {"t": "enzymes as protein-based catalysts in living systems: primary, secondary, tertiary and quaternary structures and changes in enzyme function in terms of structure and bonding as a result of increased temperature (denaturation), decreased temperature (lowered activity), or changes in pH (formation of zwitterions and denaturation)", "sub": []}, {"t": "medicines that function as competitive enzyme inhibitors: organic molecules that bind through lock-and-key mechanism to an active site preventing binding of the actual substrate", "sub": []}]]], "n": 16}, "a43": {"label": "Unit 4 Outcome 3", "q": "How is scientific inquiry used to investigate the sustainable production of energy and/or materials?", "ch": "Chapter 12 + investigation", "stmt": "On completion of this unit the student should be able to design and conduct a scientific investigation related to the production of energy and/or chemicals and/or the analysis or synthesis of organic compounds, and present an aim, methodology and method, results, discussion and conclusion in a scientific poster.", "sec": [["Investigation design", [{"t": "chemical concepts specific to the selected scientific investigation and their significance, including definitions of key terms", "sub": []}, {"t": "characteristics of the selected scientific methodology and method, and appropriateness of the use of independent, dependent and controlled variables in the selected scientific investigation", "sub": []}, {"t": "techniques of primary quantitative data generation relevant to the selected scientific investigation", "sub": []}, {"t": "the accuracy, precision, repeatability, reproducibility, resolution and validity of measurements", "sub": []}, {"t": "the health, safety and ethical guidelines relevant to the selected scientific investigation", "sub": []}]], ["Scientific evidence", [{"t": "the nature of evidence that supports or refutes a hypothesis, model or theory", "sub": []}, {"t": "ways of organising, analysing and evaluating primary data to identify patterns and relationships, including sources of error and uncertainty", "sub": []}, {"t": "authentication of generated primary data through the use of a logbook", "sub": []}, {"t": "assumptions and limitations of investigation methodology and/or data generation and/or analysis methods", "sub": []}]], ["Science communication", [{"t": "conventions of science communication: scientific terminology and representations, symbols, formulas, standard abbreviations and units of measurement", "sub": []}, {"t": "conventions of scientific poster presentation, including succinct communication of the selected scientific investigation, and acknowledgements and references", "sub": []}, {"t": "the key findings and implications of the selected scientific investigation", "sub": []}]]], "n": 12}};
+const HWK={"3G": {"kk": ["contemporary responses to challenges and the role of innovation in the design of fuel cells to meet society’s energy needs, with reference to green chemistry principles: design for energy efficiency, and use of renewable feedstocks"], "lab": "No class lesson in 2026", "aos": "a31"}};
+const PACE=[{"aos": "a31", "name": "U3 AOS 1 · Energy options", "short": "U3 AOS 1 Energy", "spans": [[0, 1, 2], [1, 1, 5]], "ch": "1–3", "sac": "Tue 2 Mar · T1 Wk 6", "note": "Starts in Step-Up (Ch 1 and 2A); 2B–2C in T1 Wk 1–2; rates (4A–4B) begin in T1 Wk 4"}, {"aos": "a32", "name": "U3 AOS 2 · Rate and yield", "short": "U3 AOS 2 Rate and yield", "spans": [[1, 6, 9], [2, 1, 1]], "ch": "4–6", "sac": "Tue 20 Apr · T2 Wk 2", "note": "T2 Wk 1 is revision"}, {"aos": "a41", "name": "U4 AOS 1 · Organic compounds", "short": "U4 AOS 1 Organic", "spans": [[2, 2, 5]], "ch": "7–8", "sac": "Week of 17 May · T2 Wk 6", "note": "SAC day to be set"}, {"aos": "a43", "name": "U4 AOS 3 · Investigation", "short": "U4 AOS 3 Investigation", "spans": [[2, 6, 10]], "ch": "Chapter 12 + investigation", "sac": "Wed 16 Jun · T2 Wk 10", "note": "T2 Wk 11 is spare"}, {"aos": "a42", "name": "U4 AOS 2 · Analysis and medicines", "short": "U4 AOS 2 Analysis", "spans": [[3, 1, 8]], "ch": "9–11", "sac": "Tue 31 Aug · T3 Wk 8"}, {"aos": "rev", "name": "VCE Chemistry exam revision", "short": "Exam revision", "spans": [[3, 9, 10], [4, 1, 6]], "ch": "1–11", "sac": "T4 Wk 6 · day TBC"}];
+const AOS={"a31": ["U3 AOS 1", "What are the current and future options for supplying energy?"], "a32": ["U3 AOS 2", "How can the rate and yield of chemical reactions be optimised?"], "a41": ["U4 AOS 1", "How are organic compounds categorised and synthesised?"], "a42": ["U4 AOS 2", "How are organic compounds analysed and used?"], "a43": ["U4 AOS 3", "Student-designed investigation"], "rev": ["Exam preparation", "Revision for the end-of-year exam"]};
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const today=new Date();today.setHours(0,0,0,0);
+const parse=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d);};
+const fmt=d=>`${d.getDate()} ${MON[d.getMonth()]}`;
+const ICON={p:`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 10.5c0-1.4 1.1-2.5 2.5-2.5h14c1.4 0 2.5 1.1 2.5 2.5v3.2c0 1.8-1.5 3.3-3.3 3.3h-2.4c-1 0-1.8-.6-2.2-1.5l-.4-.9c-.3-.7-1.2-.7-1.5 0l-.4.9c-.4.9-1.2 1.5-2.2 1.5H5.8c-1.8 0-3.3-1.5-3.3-3.3z"/><path d="M2.5 11H1M21.5 11H23"/></svg>`,
+  d:`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`};
+const TAG=k=>ICON[k]?`<span class="tag ${k}">${ICON[k]}${k==="d"?"Demo":"Practical"}</span>`:"";
+const TN=["Orientation","Term 1","Term 2","Term 3","Term 4"],TS=["Step-Up","T1","T2","T3","T4"];
+
+const weeks=[];
+TERMS.forEach((t,ti)=>{const s=parse(t.start);t.weeks.forEach(w=>{w.mon=new Date(s.getFullYear(),s.getMonth(),s.getDate()+7*(w.n-1));w.end=new Date(w.mon);w.end.setDate(w.end.getDate()+7);
+  w.ti=ti;w.now=today>=w.mon&&today<w.end;w.id=`t${ti}-w${w.n}`;(w.as||[]).forEach(a=>{a.k=a.exam?"exam":a.check?"ox":"sac";});weeks.push(w);});});
+const cur=weeks.findIndex(w=>w.now);const startIdx=cur>=0?cur:weeks.findIndex(w=>w.mon>today);
+
+const formal=[];weeks.forEach(w=>(w.as||[]).forEach(a=>{if(!a.check)formal.push({...a,w});}));
+const nextA=formal.find(a=>a.iso&&parse(a.iso)>=today);
+
+const wkBox=(w,lab)=>{if(!w)return "";const t=TERMS[w.ti];
+  const lines=[...(w.as||[]).map(a=>`<b class="sacl">${a.t} · ${a.d}</b>`),...w.items.map(x=>TAG(x.k)+(x.k==="h"?"HW: ":"")+x.t)];
+  return `<div class="nw"><span class="lab">${lab} · ${t.name} Week ${w.n} · from ${fmt(w.mon)}</span><span class="ttl">${AOS[w.aos][0]}${w.aos!=="rev"&&w.aos!=="ori"?" · "+AOS[w.aos][1]:""}</span>${lines.length?`<ul>${lines.map(l=>`<li>${l}</li>`).join("")}</ul>`:`<span class="sub">${(w.ev||[]).join(" · ")||"No lessons planned"}</span>`}</div>`;};
+let html="";
+if(startIdx>=0){html+=wkBox(weeks[startIdx],cur>=0?"This week":"Next up");html+=wkBox(weeks[startIdx+1],cur>=0?"Next week":"Then");}
+if(nextA){const days=Math.round((parse(nextA.iso)-today)/864e5);
+  html+=`<div class="nw sacbox${nextA.exam?" exam":""}"><span class="lab">Next assessment</span><span class="big">${nextA.t}</span><span class="sub">${nextA.d} · ${TN[nextA.w.ti]} Week ${nextA.w.n} · ${days===0?"today":days===1?"tomorrow":"in "+days+" days"}</span></div>`;}
+else html+=`<div class="nw"><span class="lab">2027</span><span class="big">All assessments complete</span></div>`;
+
+setTimeout(()=>{
+const sacs=document.getElementById("sacstrip"),kk=document.getElementById("sackk");
+sacs.innerHTML=formal.map((a,i)=>{const past=a.iso&&parse(a.iso)<today,nx=a===nextA;
+  const days=a.iso?Math.round((parse(a.iso)-today)/864e5):null;
+  const when=nx&&days!==null?(days===0?"today":days===1?"tomorrow":"in "+days+" days"):`${TS[a.w.ti]} Wk ${a.w.n}`;
+  return `<button type="button" class="sc${a.exam?" exam":""}${past?" past":""}${nx?" nx":""}" data-i="${i}" aria-expanded="false" style="--c:var(--${a.aos||"rev"})"><span class="sct">${a.t}</span><span class="scd">${a.exam?"Day TBC":a.d}</span><span class="scw">${when}</span></button>`;}).join("");
+const rowFor=a=>PACE.find(r=>a.exam?(r.aos==="rev"&&r.name.startsWith(a.t)):r.sac.startsWith(a.d));
+let openSac=-1;
+sacs.querySelectorAll(".sc").forEach(b=>b.onclick=()=>{const i=+b.dataset.i;sacs.querySelectorAll(".sc").forEach(x=>x.setAttribute("aria-expanded","false"));
+  if(openSac===i){openSac=-1;kk.hidden=true;return}
+  openSac=i;b.setAttribute("aria-expanded","true");const a=formal[i],r=rowFor(a);
+  kk.innerHTML=`<div class="kkhead"><b>${a.t}</b> · ${a.d} · ${TN[a.w.ti]} Week ${a.w.n}${a.u?` · <a href="${a.u}" target="_blank" rel="noopener">Teacher folder</a>`:""}<button type="button" class="kkx" aria-label="Close">×</button></div>${r?covHTML(r):""}`;
+  kk.hidden=false;kk.querySelector(".kkx").onclick=()=>b.click();});
+},0);
+
+
+const covHTML=r=>{
+  if(r.aos==="rev"){const ks=["a31","a32","a41","a42"];return `<div class="cov"><span class="lead">Covers all Unit 3 and Unit 4 key knowledge (Chapters ${r.ch})</span></div>`;}
+  const k=KK[r.aos];if(!k)return `<div class="cov"><span class="lead">Skills taught during Step-Up: significant figures, accuracy and precision, graphing, green chemistry and circular economies.</span></div>`;
+  return `<div class="cov"><span class="lead">${k.label} · all ${k.n} key knowledge points</span><p class="q">${k.q}</p><p class="stmt">${k.stmt}</p>${k.sec.map(s=>`<h4>${s[0]}</h4><ul>${s[1].map(x=>`<li>${x.t}${x.sub.length?`<ul>${x.sub.map(y=>`<li>${y}</li>`).join("")}</ul>`:""}</li>`).join("")}</ul>`).join("")}</div>`;};
+const nextRow=nextA?PACE.findIndex(r=>r.sac.startsWith(nextA.d)||(nextA.exam&&r.aos==="rev"&&r.name.startsWith(nextA.t))):-1;
+document.getElementById("pace").innerHTML=PACE.map((r,i)=>{
+  let n=0,now=false;const parts=r.spans.map(([ti,a,b])=>{n+=b-a+1;TERMS[ti].weeks.forEach(w=>{if(w.now&&w.n>=a&&w.n<=b)now=true;});return `${TS[ti]} Wk ${a}${b>a?"–"+b:""}`;});
+  const go=`t${r.spans[0][0]}-w${r.spans[0][1]}`;
+  const ch=/^\d/.test(r.ch)?`Chapters ${r.ch}`:r.ch;
+  const kind=r.aos==="rev"?"Exam":"SAC";
+  const sac=r.sac==="None"?`<span class="none">Not assessed</span>`:`<b>${kind}</b> ${r.sac}`;
+  return `<li class="${now?"now ":""}${i===nextRow?"soon":""}"><div class="prow"><div class="pname"><button class="tog" type="button" aria-expanded="false" aria-controls="kk${i}"><i class="sw" style="background:var(--${r.aos})"></i>${r.name}<span class="chev">›</span></button><span class="pch">${ch}</span></div><div class="pwhen"><a href="#${go}" data-go="${go}">${parts.join(", ")}</a> <span class="wks">· ${n} wk${n>1?"s":""}</span>${now?`<span class="nowtag">Now</span>`:""}${r.note?`<span class="pnote">${r.note}</span>`:""}</div><div class="psac">${sac}</div></div><div class="kkrow" id="kk${i}" hidden>${covHTML(r)}</div></li>`;}).join("");
+document.querySelectorAll("#pace .tog").forEach(b=>b.onclick=()=>{const row=document.getElementById(b.getAttribute("aria-controls"));const open=b.getAttribute("aria-expanded")!=="true";b.setAttribute("aria-expanded",open);row.hidden=!open;});
+
+
+(function(){
+  const cols=[];TERMS.forEach((t,ti)=>t.weeks.forEach(w=>cols.push({ti,w})));
+  const colOf=(ti,n)=>cols.findIndex(c=>c.ti===ti&&c.w.n===n);
+  const cal=document.getElementById("cal");cal.style.setProperty("--cols",cols.length);
+  let h=`<div class="lab" style="grid-row:1;grid-column:1"></div>`;
+  TERMS.forEach((t,ti)=>{const a=colOf(ti,t.weeks[0].n),b=colOf(ti,t.weeks[t.weeks.length-1].n);h+=`<div class="th" style="grid-row:1;grid-column:${a+2}/${b+3}">${ti===0?"2026":t.name}</div>`;});
+  h+=`<div class="lab" style="grid-row:2;grid-column:1"></div>`;
+  cols.forEach((c,i)=>{const ts=c.w.n===TERMS[c.ti].weeks[0].n;h+=`<div class="wn${ts?" ts":""}${c.w.now?" now":""}" style="grid-row:2;grid-column:${i+2}" title="${TERMS[c.ti].name} Week ${c.w.n} · ${fmt(c.w.mon)}">${c.w.n}</div>`;});
+  const asOf=r=>{const out=[];cols.forEach((c,i)=>(c.w.as||[]).forEach(a=>{const ok=r.aos==="rev"?(a.exam&&r.name.startsWith(a.t)):(a.aos===r.aos);if(ok)out.push({a,i});}));return out;};
+  PACE.forEach((r,ri)=>{const row=ri+3;
+    h+=`<div class="lab" style="grid-row:${row};grid-column:1"><i class="sw" style="background:var(--${r.aos})"></i><span title="${r.name}">${r.short||r.name}</span></div>`;
+    cols.forEach((c,i)=>{const ts=c.w.n===TERMS[c.ti].weeks[0].n;h+=`<div class="gl${ts?" ts":""}${c.w.now?" now":""}" style="grid-row:${row};grid-column:${i+2}"></div>`;});
+    r.spans.forEach(([ti,a,b])=>{const s1=colOf(ti,a),s2=colOf(ti,b);h+=`<button type="button" class="bar" data-go="t${ti}-w${a}" style="grid-row:${row};grid-column:${s1+2}/${s2+3};background:var(--${r.aos})" title="${r.name}: ${TS[ti]} Wk ${a}${b>a?"–"+b:""}" aria-label="${r.name}, ${TERMS[ti].name} weeks ${a} to ${b}"></button>`;});
+    asOf(r).forEach(({a,i})=>{h+=`<span class="mk ${a.k==="sac"?"":a.k}" style="grid-row:${row};grid-column:${i+2}" title="${a.t} · ${a.d}"></span>`;});
+  });
+  cal.innerHTML=h;
+  cal.querySelectorAll("[data-go]").forEach(b=>b.onclick=e=>{const el=document.getElementById(b.dataset.go);if(!el)return;showTab("wk");revealPast(el);el.closest("details").open=true;el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.add("flash");setTimeout(()=>el.classList.remove("flash"),1800);});
+  const btns=[...document.querySelectorAll(".seg button")];
+  const setView=v=>{btns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.view===v?"true":"false"));
+    document.getElementById("calbox").hidden=v!=="cal";document.getElementById("calkey").hidden=v!=="cal";document.getElementById("pacebox").hidden=v==="cal";
+    document.getElementById("paceLede").textContent=v==="cal"?"Each lane is an area of study across the school year. Diamonds mark SACs and exams.":"Tap an area of study to see its key knowledge. Each SAC assesses all of it.";
+    try{localStorage.setItem("paceView",v);}catch(e){}};
+  btns.forEach(b=>b.onclick=()=>setView(b.dataset.view));
+  let v="list";try{v=localStorage.getItem("paceView")||"list";}catch(e){}
+  setView(v);
+})();
+
+const KIND={p:"Practical",d:"Demo"};
+const ttl=(x,t)=>x.u?`<a href="${x.u}" target="_blank" rel="noopener">${t}</a>`:t;
+const itemHTML=x=>{
+  if(x.k==="h"&&HWK[x.c]){const h=HWK[x.c];return `<li class="h" data-k="h"><span class="lbl"><details><summary>${ttl(x,x.c+" "+x.t)}<span class="more">Dot points</span></summary><p class="hwlab">${h.lab}</p><ul>${h.kk.map(y=>`<li>${y}</li>`).join("")}</ul></details></span></li>`;}
+  if(x.k==="h")return `<li class="h" data-k="h"><span class="lbl">${ttl(x,x.t)}</span></li>`;
+  const f=x.k==="d"?"p":x.k;const cue=TAG(x.k);
+  const cc=x.k==="r"||!x.c||/^(Ori|Rev|Prac|Demo)$/.test(x.c)?"":`<span class="cc">${x.c}</span>`;
+  return `<li class="${x.k}" data-k="${f}"><span class="lbl">${cue}${ttl(x,x.t)}${cc}</span></li>`;};
+const asHTML=a=>`<li class="${a.k} as" data-k="sac"><span class="lbl"><span class="astag">${a.k==="sac"?"SAC":a.k==="ox"?"Checkpoint":"Exam"}</span>${ttl(a,a.t+" · "+a.d)}${a.o?`<span class="o">${a.o}</span>`:""}</span></li>`;
+const cur2=cur>=0?weeks[cur]:null;
+document.getElementById("terms").innerHTML=TERMS.map((t,ti)=>{
+  const pills=[...new Set(t.weeks.map(w=>w.aos))].map(a=>AOS[a][0]).join(" · ");
+  const nAs=t.weeks.reduce((n,w)=>n+(w.as||[]).filter(a=>!a.check).length,0);
+  const isOpen=cur2?cur2.ti===ti:(startIdx>=0&&weeks[startIdx].ti===ti);let last=null;
+  const rows=t.weeks.map(w=>{
+    let head="";if(w.aos!==last){head=`<div class="aosb"><i class="sw" style="background:var(--${w.aos})"></i><b>${AOS[w.aos][0]}</b><span>${AOS[w.aos][1]}</span></div>`;last=w.aos;}
+    const revOnly=w.items.length&&w.items.every(x=>x.k==="r");
+    const hw=w.items.filter(x=>x.k==="h"),cls=w.items.filter(x=>x.k!=="h");
+    const its=revOnly?`<li class="r rline" data-k="r"><span class="lbl">${ttl(w.items[0],[...new Set(w.items.map(x=>x.t))].join("; "))}</span></li>`:cls.map(itemHTML).join("");
+    const hwh=hw.length&&!revOnly?`<div class="hwline"><span class="hwlab2">Homework</span><ul class="items hwitems">${hw.map(itemHTML).join("")}</ul></div>`:"";
+    const all=(w.as||[]).map(asHTML).join("")+its;
+    const ev=w.ev?`<div class="ev">${w.ev.join(" · ")}</div>`:"";
+    return head+`<article class="wk${w.now?" now":""}${w.end<=today?" past":""}" style="--c:var(--${w.aos})" id="${w.id}"><div class="when"><b>Week ${w.n}</b><span>${fmt(w.mon)}</span>${w.now?`<span class="nowtag">This week</span>`:""}</div><div>${all?`<ul class="items">${all}</ul>`:`<span class="empty">No lessons planned</span>`}${hwh}${ev}</div></article>`;}).join("");
+  return `<details class="term-d${t.weeks.every(w=>w.end<=today)?" past":""}" id="term-${ti}"${isOpen?" open":""}><summary><span class="tn">${t.name}<small>${t.range}</small></span><span class="chev">›</span><span class="ts"><span>${pills}${nAs?` · ${nAs} assessment${nAs>1?"s":""}`:""}</span></span></summary><div class="tbody">${rows}${t.after?`<div class="hol">${t.after}</div>`:""}</div></details>`;}).join("");
+
+
+const termsEl=document.getElementById("terms");termsEl.classList.add("terms-wrap");
+termsEl.querySelectorAll(".aosb").forEach(h=>{let n=h.nextElementSibling,all=true,any=false;while(n&&!n.classList.contains("aosb")){if(n.classList.contains("wk")){any=true;if(!n.classList.contains("past"))all=false;}n=n.nextElementSibling;}if(any&&all)h.classList.add("past");});
+const nPast=termsEl.querySelectorAll(".wk.past").length,pb=document.getElementById("pastBtn");
+let hidePast=true;try{hidePast=localStorage.getItem("showPast")!=="1";}catch(e){}
+const setPast=h=>{hidePast=h;termsEl.classList.toggle("hidepast",h);pb.textContent=h?`Show past weeks (${nPast})`:"Hide past weeks";try{localStorage.setItem("showPast",h?"0":"1");}catch(e){}};
+if(nPast){pb.hidden=false;pb.onclick=()=>setPast(!hidePast);setPast(hidePast);}
+function revealPast(el){if(el.classList.contains("past")&&hidePast)setPast(false);}
+function showTab(t){["wk","yr"].forEach(k=>{document.getElementById("panel-"+k).hidden=k!==t;document.getElementById("vt-"+k).setAttribute("aria-selected",k===t?"true":"false")});try{localStorage.setItem("outlineTab",t)}catch(e){}}
+document.querySelectorAll(".vtabs [data-tab]").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+{let t="wk";try{t=localStorage.getItem("outlineTab")||"wk"}catch(e){}showTab(t==="yr"?"yr":"wk");}
+const reduce=!!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches);
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=e=>{e.preventDefault();const el=document.getElementById(b.dataset.go);if(!el)return;showTab("wk");revealPast(el);el.closest("details").open=true;
+  el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});el.classList.add("flash");setTimeout(()=>el.classList.remove("flash"),1800);});
+const tg=document.getElementById("toggleAll");
+tg.onclick=()=>{const ds=[...document.querySelectorAll("details.term-d")];const open=!ds.every(d=>d.open);ds.forEach(d=>d.open=open);tg.textContent=open?"Close all terms":"Open all terms";};
+
+let active=new Set();const chips=[...document.querySelectorAll(".fchip")];
+function apply(){const all=active.size===0;chips.forEach(c=>c.setAttribute("aria-pressed",active.has(c.dataset.f)?"true":"false"));document.getElementById("freset").hidden=all;let shown=0;
+  document.querySelectorAll("details.term-d").forEach(d=>{let any=false;const kids=[...d.querySelectorAll(".tbody > *")];
+    kids.forEach(el=>{if(!el.classList.contains("wk"))return;let m=false;el.querySelectorAll("li[data-k]").forEach(li=>{const on=all||active.has(li.dataset.k);li.hidden=!on;if(on)m=true;});
+      el.hidden=!all&&!m;if(!el.hidden){any=true;if(m)shown++;}});
+    kids.forEach((el,i)=>{if(el.classList.contains("aosb")){let vis=false;for(let j=i+1;j<kids.length&&!kids[j].classList.contains("aosb");j++){if(kids[j].classList.contains("wk")&&!kids[j].hidden){vis=true;break;}}el.hidden=!vis;}if(el.classList.contains("hol"))el.hidden=!all;});
+    d.hidden=!any;if(!all&&any)d.open=true;});
+  const fn=document.getElementById("fnote");fn.hidden=all;if(!all)fn.textContent=shown?`${shown} week${shown>1?"s":""} match.`:"Nothing matches.";}
+chips.forEach(c=>c.onclick=()=>{const f=c.dataset.f;active.has(f)?active.delete(f):active.add(f);apply();});
+document.getElementById("freset").onclick=()=>{active=new Set();apply();};
+apply();
+})();
+</script>
+
+</body></html>
