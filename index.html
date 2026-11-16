@@ -307,10 +307,51 @@ details.opts[open]>summary::after{content:" ▴"}
 #sachead.stlab{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 -4px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
 #sachead.stlab span{font-family:var(--body);font-size:13px;letter-spacing:0;text-transform:none;color:var(--faint)}
 @media (max-width:640px){.sacstrip{grid-template-columns:repeat(2,minmax(0,1fr))}.hwline{flex-direction:column;gap:2px}details.opts{justify-self:stretch}details.opts>summary{text-align:left}}
+
+/* chemistry banner */
+header.banner{position:relative;overflow:hidden;isolation:isolate;border-radius:16px;padding:30px 26px 28px;color:#fff;
+  background:radial-gradient(120% 140% at 100% 0%,#1b7a72 0%,transparent 55%),linear-gradient(120deg,#16304f 0%,#174a66 60%,#11605f 100%)}
+header.banner .art{position:absolute;top:0;right:0;height:100%;width:min(52%,500px);z-index:-1;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%);mask-image:linear-gradient(to right,transparent 0,#000 28%)}
+header.banner .eyebrow{color:rgba(255,255,255,.72)}
+header.banner h1{color:#fff;max-width:62%}
+header.banner .lede{color:rgba(255,255,255,.86);max-width:52ch}
+header.banner a{color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) header.banner{box-shadow:inset 0 0 0 1px var(--line);
+  background:radial-gradient(120% 140% at 100% 0%,#145a55 0%,transparent 55%),linear-gradient(120deg,#0f233b 0%,#11364b 60%,#0d4746 100%)}}
+:root[data-theme="dark"] header.banner{box-shadow:inset 0 0 0 1px var(--line);
+  background:radial-gradient(120% 140% at 100% 0%,#145a55 0%,transparent 55%),linear-gradient(120deg,#0f233b 0%,#11364b 60%,#0d4746 100%)}
+@media (max-width:640px){header.banner{padding:24px 18px 22px}header.banner h1{max-width:none}header.banner .art{width:100%;opacity:.32}}
 </style>
 
 <div class="wrap">
-  <header>
+  <header class="banner">
+    <svg class="art" viewBox="0 0 500 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="121.2,82 121.2,118 90,136 58.8,118 58.8,82 90,64"/>
+        <circle cx="90" cy="100" r="21"/>
+        <polyline points="121.2,82 152,64 183,82 214,64 245,82"/>
+        <line x1="242" y1="80" x2="242" y2="52"/><line x1="248" y1="80" x2="248" y2="52"/>
+        <line x1="245" y1="82" x2="270" y2="96"/>
+        <polyline points="401,88 380,76 350.6,93 350.6,127 380,144 409.4,127 409.4,102"/>
+        <polyline points="380,76 392,54 414,46"/>
+        <line x1="350.6" y1="127" x2="330" y2="140"/>
+        <line x1="380" y1="144" x2="380" y2="166"/>
+        <line x1="409.4" y1="127" x2="430" y2="140"/>
+        <line x1="350.6" y1="93" x2="330" y2="80"/>
+      </g>
+      <path d="M140 182 C190 182 205 132 232 132 S270 186 330 188" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.6" stroke-dasharray="3 5"/>
+      <g font-family="IBM Plex Mono,ui-monospace,monospace" font-size="13" font-weight="500">
+        <text x="245" y="46" text-anchor="middle" fill="#ffb59a">O</text>
+        <text x="273" y="104" fill="#ffb59a">OH</text>
+        <text x="409.4" y="97" text-anchor="middle" fill="#ffb59a">O</text>
+        <text x="416" y="50" fill="#ffb59a">OH</text>
+        <text x="306" y="150" fill="#ffb59a">HO</text>
+        <text x="380" y="182" text-anchor="middle" fill="#ffb59a">OH</text>
+        <text x="432" y="150" fill="#ffb59a">OH</text>
+        <text x="306" y="80" fill="#ffb59a">HO</text>
+      </g>
+    </svg>
     <div class="eyebrow">VCE Chemistry · Course outline · read-only</div>
     <h1>Chemistry Units 3&amp;4 · 2027</h1>
     <p class="lede">Planned from how 12CHE1 ran in 2026, in 2027 school weeks. The exam day is to be confirmed.</p>
