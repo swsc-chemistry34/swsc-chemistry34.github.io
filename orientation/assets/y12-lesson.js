@@ -5,7 +5,6 @@ if(!C)return;
 const $=id=>document.getElementById(id);
 const root=document.documentElement;
 
-/* Theme */
 const TK="y12-theme";
 try{const t=localStorage.getItem(TK);if(t==="dark"||t==="light")root.setAttribute("data-theme",t);}catch(e){}
 const mq=window.matchMedia?matchMedia("(prefers-color-scheme: dark)"):null;
@@ -18,13 +17,11 @@ if(tb){tb.addEventListener("click",()=>{const n=isDark()?"light":"dark";root.set
 if(mq&&mq.addEventListener)mq.addEventListener("change",paintTheme);
 paintTheme();
 
-/* Saved progress */
 let S={};
 try{S=JSON.parse(localStorage.getItem(C.key)||"{}")||{};}catch(e){S={};}
 const save=()=>{try{localStorage.setItem(C.key,JSON.stringify(S));}catch(e){}};
 ["done","sort","quiz","txt","scen","goals","sent"].forEach(k=>{S[k]=S[k]||{};});
 
-/* Shared drawn illustrations */
 const ILL={
 magnifier:'<circle cx="40" cy="32" r="21" class="ss lsk" stroke-width="5"/><path d="M55 48l16 16" class="nf lsk" stroke-width="7" stroke-linecap="round"/><polygon points="40,19 51,25.5 51,38.5 40,45 29,38.5 29,25.5" class="w lr" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="14" r="5" class="r"/><circle cx="88" cy="30" r="4" class="sun"/><circle cx="78" cy="44" r="3.5" class="g"/>',
 bulb:'<g class="nf sunk" stroke-width="3.5" stroke-linecap="round"><path d="M48 4v7M22 14l5 5M74 14l-5 5M12 38h7M77 38h7"/></g><circle cx="48" cy="34" r="19" class="sun sunk" stroke-width="3"/><path d="M40 42c-2-12 6-18 17-16 1 11-6 18-17 16z" class="g"/><rect x="39" y="54" width="18" height="8" rx="3" class="smid"/><rect x="42" y="63" width="12" height="5" rx="2.5" class="s"/>',
@@ -33,7 +30,6 @@ balance:'<path d="M48 12v50" class="nf lsk" stroke-width="4" stroke-linecap="rou
 };
 document.querySelectorAll("[data-ill]").forEach(el=>{const k=el.dataset.ill;if(ILL[k])el.innerHTML='<svg viewBox="0 0 96 72" aria-hidden="true" focusable="false">'+ILL[k]+'</svg>';});
 
-/* Lesson parts as numbered pill tabs */
 const PARTS=C.parts;
 const TICK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 const tabs=$("tabs");
@@ -61,10 +57,8 @@ document.querySelectorAll("[data-finish]").forEach(b=>b.addEventListener("click"
   else{show(id);b.textContent="Lesson complete";}
 }));
 
-/* Text boxes remember what students type */
 document.querySelectorAll("textarea[data-keep]").forEach(t=>{t.value=S.txt[t.id]||"";t.addEventListener("input",()=>{S.txt[t.id]=t.value;save();});});
 
-/* Warm up choice */
 const PK=C.pick;
 function renderPick(){
   const y=$("yourPick");if(!y)return;
@@ -82,7 +76,6 @@ if(PK){
   paint();
 }else renderPick();
 
-/* Card sort */
 const SO=C.sort;
 if(SO){
   const el=$("cards"),cols=SO.cols,msgs=SO.msgs||{};
@@ -101,7 +94,6 @@ if(SO){
   });
 }
 
-/* Learn steps with Back and Next */
 const steps=[...document.querySelectorAll(".step")],dots=$("dots");
 if(steps.length&&dots){
   dots.innerHTML=steps.map(()=>"<i></i>").join("");
@@ -113,7 +105,6 @@ if(steps.length&&dots){
   go(st);
 }
 
-/* Apply: settings with a choice and working, or topics with SDG goals */
 const SC=C.scen;
 if(SC){
   const tEl=$("topics"),body=$("topicBody");
@@ -147,14 +138,12 @@ if(SC){
   }
 }
 
-/* Worked solution revealed one step at a time */
 const RV=C.reveal;
 if(RV){
   let k=0;const box=$(RV.box),btn=$(RV.btn);
   btn.addEventListener("click",()=>{if(k<RV.steps.length){box.insertAdjacentHTML("beforeend",`<div class="worked"><div class="line">${RV.steps[k]}</div></div>`);k++;}if(k>=RV.steps.length)btn.hidden=true;});
 }
 
-/* Check quiz */
 const Q=C.quiz;
 if(Q){
   const qEl=$("quiz");
@@ -167,19 +156,16 @@ if(Q){
   Object.entries(S.quiz).forEach(([id,j])=>{if(Q.find(q=>q.id===id))mark(id,j);});
 }
 
-/* Key words drawer */
 const dr=$("drawer"),sc=$("scrim");
 const openD=o=>{dr.hidden=!o;sc.hidden=!o;if(o)$("kwClose").focus();else $("kwBtn").focus();};
 $("kwBtn").addEventListener("click",()=>openD(true));$("kwClose").addEventListener("click",()=>openD(false));sc.addEventListener("click",()=>openD(false));
 
-/* Board view */
 const bd=$("board"),bsc=$("bSc"),bscBtn=$("bScBtn");
 const openB=o=>{bd.hidden=!o;document.body.style.overflow=o?"hidden":"";if(o)$("boardClose").focus();else $("boardBtn").focus();};
 $("boardBtn").addEventListener("click",()=>openB(true));$("boardClose").addEventListener("click",()=>openB(false));
 bscBtn.addEventListener("click",()=>{bsc.hidden=!bsc.hidden;bscBtn.textContent=bsc.hidden?"Show success criteria":"Hide success criteria";});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(!bd.hidden)openB(false);else if(!dr.hidden)openD(false);}});
 
-/* Open at the first unfinished part */
 progress();
 const first=PARTS.find(([p])=>!S.done[p]);
 const ids=PARTS.map(([p])=>p);
