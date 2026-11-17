@@ -3,448 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
 <title>Green Chemistry and the SDGs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&family=Public+Sans:wght@400;600;700&display=swap">
-<style>
-[hidden]:not([hidden=until-found i]){display:none!important}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
-.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:22px 72px;display:grid;gap:18px}
-h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
-h1{font-size:clamp(28px,4.6vw,40px)}
-h2{font-size:24px}
-h3{font-size:19px}
-p{margin:0}
-a{color:var(--leaf)}
-button{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--sdg);outline-offset:2px}
-.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
-
-/* header */
-.head{display:grid;gap:12px}
-.toprow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-.toolbtns{display:flex;gap:8px;flex-wrap:wrap}
-.tbtn{appearance:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px 6px 10px;font-size:14.5px;font-weight:700;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
-.tbtn:hover{border-color:var(--muted)}
-.tbtn.back{text-decoration:none;color:var(--ink)}
-.sub{font-family:var(--display);font-size:20px;color:var(--leaf);font-weight:600}
-.kq{display:flex;gap:10px;align-items:flex-start;font-size:18px;font-weight:700}
-.kq .ico{color:var(--sdg);margin-top:3px}
-.hgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px}
-@media (max-width:680px){.hgrid{grid-template-columns:1fr}}
-.hbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:grid;gap:6px;min-width:0}
-.hbox .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.hbox ol,.hbox ul{margin:0;padding-left:22px;display:grid;gap:3px}
-.hbox details summary{cursor:pointer;color:var(--leaf);font-weight:700;font-size:15px}
-.hbox details ul{margin-top:6px}
-
-/* progress and tabs */
-.prog{display:grid;gap:6px}
-.pbar{height:8px;background:var(--tint);border-radius:999px;overflow:hidden}
-.pbar i{display:block;height:100%;background:var(--leaf);width:0;transition:width .3s}
-.pmeta{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);gap:10px;flex-wrap:wrap}
-.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
-.tab{appearance:none;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;cursor:pointer;display:grid;gap:0;text-align:left;min-width:max-content}
-.tab b{font-size:15.5px}
-.tab span{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
-.tab[aria-selected="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
-.tab.done b::after{content:" \2713";color:var(--good)}
-
-/* panels */
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px clamp(16px,3vw,28px);display:grid;gap:16px}
-.panel[hidden]{display:none}
-.lead{color:var(--muted);max-width:66ch}
-.task{background:var(--tint);border-radius:10px;padding:12px 16px;display:grid;gap:4px;max-width:70ch}
-.task .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
-.finish{justify-self:start;appearance:none;border:0;background:var(--leaf);color:var(--surface);font-weight:700;border-radius:10px;padding:11px 18px;cursor:pointer;font-size:16px}
-.finish:hover{filter:brightness(1.08)}
-.btn{appearance:none;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 14px;font-weight:700;cursor:pointer;font-size:15px}
-.btn:hover{border-color:var(--muted)}
-.btn.primary{border-color:var(--leaf);color:var(--leaf)}
-.btn:disabled{opacity:.45;cursor:default}
-.note{font-size:15px;color:var(--muted)}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media (max-width:680px){.grid2{grid-template-columns:1fr}}
-textarea{width:100%;min-height:76px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);resize:vertical}
-select{font:inherit;font-size:15.5px;border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:var(--bg);color:var(--ink);max-width:100%}
-.fb{border-radius:10px;padding:10px 14px;font-size:15.5px;display:grid;gap:4px}
-.fb.ok{background:var(--good-soft);color:var(--ink)} .fb.ok b{color:var(--good)}
-.fb.no{background:var(--bad-soft);color:var(--ink)} .fb.no b{color:var(--bad)}
-.fb.info{background:var(--sdg-soft)}
-
-/* welcome */
-.aos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.aosc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:4px;align-content:start}
-.aosc .code{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.aosc b{font-size:16px;line-height:1.35}
-.aosc .ch{font-size:14px;color:var(--muted)}
-.score{display:flex;height:44px;border-radius:10px;overflow:hidden;font-weight:700;font-size:14.5px}
-.score div{display:flex;align-items:center;justify-content:center;padding:0 6px;text-align:center;line-height:1.2}
-.score .s1{flex:20;background:var(--b1-soft);color:var(--b1)} .score .s2{flex:30;background:var(--b2-soft);color:var(--b2)} .score .s3{flex:50;background:var(--b3-soft);color:var(--b3)}
-.stepup{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}
-.stepup li{display:flex;gap:10px;align-items:baseline;border-bottom:1px solid var(--line);padding:6px 0}
-.stepup .n{font-family:var(--mono);font-size:13px;color:var(--muted);flex:none;width:22px}
-.stepup li.today{background:var(--leaf-soft);border-radius:8px;padding:6px 8px;border-bottom-color:transparent}
-
-/* engage */
-.route{border:2px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:10px;align-content:start}
-.route.pick{border-color:var(--leaf);background:var(--leaf-soft)}
-.route h3{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.facts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.facts li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;font-size:15.5px;border-top:1px solid var(--line);padding-top:8px}
-.facts .k{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding-top:3px}
-@media (max-width:420px){.facts li{grid-template-columns:1fr;gap:2px}}
-.big{font-family:var(--display);font-size:26px;font-weight:700;line-height:1}
-
-/* principle chips */
-.pchips{display:flex;flex-wrap:wrap;gap:6px}
-.pchip{font-size:14px;border-radius:999px;padding:3px 11px;background:var(--leaf-soft);color:var(--leaf);font-weight:700}
-.sdgchip{font-size:14px;border-radius:8px;padding:3px 10px;background:var(--sdg-soft);color:var(--sdg);font-weight:700}
-
-/* card sort */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
-.card{border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:8px;align-content:start;background:var(--surface)}
-.card p{font-size:16px}
-.card .where{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.card.ok{border-color:var(--good);background:var(--good-soft)}
-.card.no{border-color:var(--bad);background:var(--bad-soft)}
-.card .why{font-size:14.5px}
-.card select{width:100%}
-
-/* explain steps */
-.steps{display:grid;gap:14px}
-.step[hidden]{display:none}
-.step{display:grid;gap:12px}
-.stepnav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
-.dots{display:flex;gap:6px}
-.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
-.dots i.on{background:var(--leaf)}
-.steplab{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-.ptable{width:100%;border-collapse:collapse;font-size:15.5px}
-.ptable th{text-align:left;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line)}
-.ptable td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
-.ptable td:first-child{font-weight:700;color:var(--leaf);white-space:nowrap}
-.tscroll{overflow-x:auto}
-.sdggrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
-.sdgt{border-radius:10px;background:var(--sdg-soft);padding:10px 12px;display:grid;gap:2px}
-.sdgt .num{font-family:var(--display);font-size:24px;font-weight:700;color:var(--sdg);line-height:1}
-.sdgt span{font-size:15px;font-weight:700}
-.defbox{border-left:4px solid var(--leaf);background:var(--leaf-soft);border-radius:0 10px 10px 0;padding:10px 14px;max-width:70ch}
-.econ{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media (max-width:680px){.econ{grid-template-columns:1fr}}
-.econ figure{margin:0;border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:6px}
-.econ svg{width:100%;height:auto;max-width:100%}
-.econ figcaption{font-size:15px}
-.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 4px;font-size:.95em;line-height:1.25}
-.frac>span:first-child{border-bottom:1.5px solid currentColor;padding:0 4px}
-.frac>span:last-child{padding:0 4px}
-.worked{display:grid;gap:6px;background:var(--tint);border-radius:10px;padding:12px 16px;max-width:70ch}
-.worked .line{display:block}
-.worked .why{font-size:14px;color:var(--muted)}
-
-/* extend */
-details.extend{border:1px dashed var(--line);border-radius:12px;padding:10px 14px}
-details.extend>summary{cursor:pointer;font-weight:700;color:var(--sdg)}
-details.extend[open]{display:grid;gap:10px}
-details.reveal summary{cursor:pointer;color:var(--leaf);font-weight:700;font-size:15px}
-details.reveal>div{margin-top:8px;display:grid;gap:6px;font-size:15.5px}
-
-/* elaborate */
-.topics{display:flex;flex-wrap:wrap;gap:8px}
-.topic{appearance:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-weight:700;cursor:pointer;font-size:15px}
-.topic[aria-pressed="true"]{border-color:var(--sdg);background:var(--sdg-soft);color:var(--sdg)}
-.goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px}
-.goals label{display:flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;cursor:pointer}
-.goals input{accent-color:var(--sdg);width:18px;height:18px}
-
-/* quiz */
-.q{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:14px}
-.q:first-of-type{border-top:0;padding-top:0}
-.opts{display:flex;flex-wrap:wrap;gap:6px}
-.opt{appearance:none;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:15px}
-.opt[aria-pressed="true"]{border-color:var(--ink);background:var(--tint);font-weight:700}
-.opt.right{border-color:var(--good);background:var(--good-soft)}
-.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
-
-/* drawer */
-.scrim{position:fixed;inset:0;background:rgb(0 0 0/.35);z-index:20}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:21;padding:calc(18px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) 18px;overflow-y:auto;display:grid;gap:12px;align-content:start}
-.drawer dl{margin:0;display:grid;gap:10px}
-.drawer dt{font-weight:700;color:var(--leaf)}
-.drawer dd{margin:0;font-size:15.5px}
-.drawer .rm{background:var(--amber-soft);border-radius:10px;padding:10px 12px;font-size:15px;display:grid;gap:4px}
-.drawer .rm b{color:var(--amber)}
-.x{appearance:none;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--muted);justify-self:end}
-
-/* board */
-.board{position:fixed;inset:0;z-index:30;background:var(--bg);display:grid;grid-template-rows:auto 1fr auto;gap:2.2vh;padding:calc(3vh + env(safe-area-inset-top,0px)) max(4vw,env(safe-area-inset-right,0px)) calc(3vh + env(safe-area-inset-bottom,0px)) max(4vw,env(safe-area-inset-left,0px));overflow:hidden}
-.board h2{font-size:clamp(24px,5.4vh,56px)}
-.board .bsub{font-family:var(--display);color:var(--leaf);font-size:clamp(18px,3.4vh,36px);font-weight:600}
-.bgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;gap:2vh 2vw;min-height:0}
-.bbox{border-radius:16px;padding:2vh 2vw;display:grid;gap:1vh;align-content:start;font-size:clamp(16px,3vh,32px);line-height:1.3;min-height:0}
-.bbox .bl{display:flex;gap:.5em;align-items:center;font-family:var(--mono);font-size:.55em;letter-spacing:.08em;text-transform:uppercase}
-.bbox .bl .ico{width:1.6em;height:1.6em}
-.bbox.li{background:var(--b1-soft)} .bbox.li .bl{color:var(--b1)}
-.bbox.kqb{background:var(--b2-soft)} .bbox.kqb .bl{color:var(--b2)}
-.bbox.tyw{background:var(--b3-soft);grid-column:1/-1} .bbox.tyw .bl{color:var(--b3)}
-.bbox ol{margin:0;padding-left:1.3em;display:grid;gap:.6vh}
-.bfoot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.bsc{font-size:clamp(14px,2.4vh,24px);display:grid;gap:.5vh}
-@media (max-width:640px){.bgrid{grid-template-columns:1fr}}
-
-
-/* figures */
-.fig{margin:0;border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:8px;background:var(--surface)}
-.fig svg{width:100%;height:auto;display:block}
-.fig figcaption{font-size:15px;color:var(--muted);max-width:70ch}
-.fig figcaption b{color:var(--ink)}
-svg .tx{fill:var(--ink);font-family:var(--body);font-size:13px}
-svg .tm{fill:var(--muted)}
-svg .tb{font-weight:700}
-svg .nb{fill:var(--tint);stroke:var(--line);stroke-width:1.2}
-svg .gb{fill:var(--leaf-soft);stroke:var(--leaf);stroke-width:1.4}
-svg .bb{fill:var(--sdg-soft);stroke:var(--sdg);stroke-width:1.4}
-svg .ab{fill:var(--amber-soft);stroke:var(--amber);stroke-width:1.4}
-svg .rb{fill:var(--bad-soft);stroke:var(--bad);stroke-width:1.4}
-svg .ln{stroke:var(--muted);stroke-width:1.8;fill:none}
-svg .lnd{stroke:var(--muted);stroke-width:1.2;fill:none;stroke-dasharray:4 4}
-svg .ah{fill:var(--muted)}
-svg .pt{fill:var(--tint)}
-svg .pl{stroke:var(--faint);stroke-width:2.5}
-svg .dia{fill:var(--amber);stroke:var(--amber)}
-.pi{display:inline-flex;gap:8px;align-items:center}
-.pi .ico{width:24px;height:24px;color:var(--leaf)}
-.pchip{display:inline-flex;align-items:center;gap:6px}
-.pchip .ico{width:17px;height:17px}
-.sdgt .sdgtop{display:flex;justify-content:space-between;align-items:center}
-.sdgt .sdgtop .ico{width:24px;height:24px;color:var(--sdg)}
-.chip2{display:inline-block;font-size:14px;font-weight:700;border-radius:999px;padding:2px 10px}
-.chip2.b{background:var(--leaf-soft);color:var(--leaf)}
-.chip2.m{background:var(--amber-soft);color:var(--amber)}
-.stack{display:grid;gap:12px}
-
-.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media (max-width:680px){.cmp{grid-template-columns:1fr}}
-.cmpc{border:2px solid var(--line);border-radius:16px;padding:12px 16px;display:grid;gap:6px;align-content:start;background:var(--surface)}
-.cmpc h4{margin:0;font-family:var(--display);font-size:19px}
-.cmpc.a{border-color:var(--sdg)} .cmpc.a h4{color:var(--sdg)}
-.cmpc.w{border-color:var(--leaf)} .cmpc.w h4{color:var(--leaf)}
-.cmpc p{font-size:16px}
-@media print{.fig{break-inside:avoid}}
-@media print{
-  .tabs,.toolbtns,.tbtn.back,.finish,.stepnav,.prog,.drawer,.scrim,.board{display:none!important}
-  .panel[hidden],.step[hidden]{display:grid!important}
-  body{background:#fff}
-}
-
-/* Rose and slate */
-:root{color-scheme:light;
-  --bg:#F8F1F4;--surface:#FFFFFF;--ink:#2D1E27;--muted:#65545D;--faint:#65545D;--line:#E3D5DC;--tint:#F8F1F4;--track:#EBDDE4;
-  --rose:#8A2E5C;--rose-light:#F6D3E4;--slate-mid:#7FA3C2;
-  --leaf:#8A2E5C;--leaf-soft:#F7E3EE;--sdg:#3A5C78;--sdg-soft:#E2EBF3;--amber:#6B4500;--amber-soft:#FDE7C3;
-  --good:#1B5E34;--good-soft:#DDF1E2;--bad:#A62A22;--bad-soft:#FBE3E0;
-  --green:#2F7A62;--green-soft:#DDF0E9;
-  --b1:#3A5C78;--b1-soft:#E2EBF3;--b2:#8A2E5C;--b2-soft:#F7E3EE;--b3:#6B4500;--b3-soft:#FDE7C3;
-  --display:"Literata",Georgia,"Times New Roman",serif;
-  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:var(--body)}
-body{font-size:16px}
-h1,h2,h3{font-family:var(--display);color:var(--rose)}
-h1{font-weight:700}
-h2,h3{font-weight:600}
-a{color:var(--sdg);text-underline-offset:3px}
-.eyebrow,.hbox .lab,.task .lab,.facts .k,.steplab,.ptable th,.bbox .bl,.card .where,.tab span,.aosc .code{text-transform:none;letter-spacing:0}
-.eyebrow{font-size:15px;font-weight:600;color:var(--muted)}
-.wrap{max-width:1040px;gap:20px}
-
-/* top row and header band */
-.toprow{justify-content:flex-start}
-.tbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 18px 8px 12px}
-.tbtn .ico{color:var(--sdg)}
-.hero{border-radius:28px;background:var(--rose);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:28px clamp(20px,3.4vw,38px) 26px;overflow:hidden;position:relative}
-.hero h1{color:#fff}
-.hero .eyebrow{color:var(--rose-light)}
-.hero .sub{color:var(--rose-light);font-size:22px;font-weight:600}
-.hero .kq{color:#fff;background:rgba(255,255,255,.14);border-radius:18px;padding:10px 16px;margin-top:6px;max-width:46ch}
-.hero .kq .ico{color:var(--rose-light)}
-.hero .art{width:min(280px,32vw);height:auto}
-.hero .txt{display:grid;gap:8px;align-content:center}
-@media (max-width:680px){.hero{grid-template-columns:1fr;border-radius:24px}.hero .art{width:200px;justify-self:end;margin-top:-6px}}
-.hbox{border-radius:24px;border:1px solid var(--line);padding:16px 20px;align-content:start}
-.hbox .lab{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--sdg)}
-.hbox .lab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hbox details summary{color:var(--sdg)}
-
-/* progress */
-.pbar{height:12px;background:var(--track)}
-.pbar i{background:var(--slate-mid)}
-
-/* lesson parts: numbered pills, on the left on wide screens */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;counter-reset:part}
-.tab{counter-increment:part;border-radius:999px;border:1px solid var(--line);background:var(--surface);padding:7px 18px 7px 8px;display:flex;align-items:center;gap:10px;min-width:max-content;text-align:left}
-.tab:hover{border-color:var(--muted)}
-.tab .ti{width:32px;height:32px;border-radius:50%;background:var(--sdg-soft);color:var(--sdg);display:grid;place-items:center;flex:none;font-weight:700;font-size:15px}
-.tab .ti svg{display:none}
-.tab .ti::before{content:counter(part)}
-.tab .tt{display:grid;line-height:1.2}
-.tab b{font-size:15.5px}
-.tab span{font-size:13px;color:var(--muted)}
-.tab[aria-selected="true"]{background:var(--leaf-soft);border-color:var(--rose)}
-.tab[aria-selected="true"] .ti{background:var(--rose);color:#fff}
-.tab[aria-selected="true"] b{color:var(--rose)}
-.tab.done b::after{content:"";display:inline-block;width:5px;height:9px;border:solid var(--good);border-width:0 2px 2px 0;transform:rotate(45deg);margin-left:9px;vertical-align:1px}
-@media (min-width:900px){
-  .wrap{grid-template-columns:216px minmax(0,1fr);column-gap:24px}
-  .head{display:contents}
-  .head>.toprow,.head>.hero,.head>.hgrid,.head>.prog{grid-column:1/-1}
-  .head>.tabs{grid-column:1;flex-direction:column;overflow:visible;align-self:start;position:sticky;top:16px}
-  .head>.tabs .tab{width:100%}
-  .wrap>.panel{grid-column:2}
-}
-
-/* panels */
-.panel{border-radius:24px;border:1px solid var(--line);padding:26px clamp(18px,3vw,32px)}
-.phead{display:flex;align-items:center;justify-content:space-between;gap:14px}
-.phead h2{font-size:clamp(24px,3.4vw,30px)}
-.phead svg{width:130px;height:auto;flex:none}
-@media (max-width:560px){.phead svg{width:80px}}
-.lead{font-size:18px}
-
-/* welcome */
-.aos{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.aosc{padding:0;overflow:hidden;border-radius:22px;border:1px solid var(--line);gap:0;background:var(--surface)}
-.aosc .band{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cs);color:#fff}
-.aosc .band .code{font-size:14.5px;font-weight:700;color:#fff}
-.aosc .badge{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;color:var(--cs)}
-.aosc .badge svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.aosc .body{padding:12px 14px 14px;display:grid;gap:6px}
-.aosc b{font-family:var(--display);font-size:17.5px;font-weight:600}
-.aosc .ch{font-size:15px}
-.c1{--cs:#B4501F}.c2{--cs:#2F7A62}.c3{--cs:#4A4DB0}.c4{--cs:#9A3C80}.c5{--cs:#7A6420}
-.score{height:54px;border-radius:18px;font-size:15.5px}
-.score .s1{background:#FBE9DD;color:#8F3E15}
-.score .s2{background:#E6E7F8;color:#3B3E96}
-.score .s3{background:var(--bad-soft);color:var(--bad)}
-.stepup{gap:10px}
-.stepup li{align-items:center;border:1px solid var(--line);border-radius:18px;padding:10px 12px;background:var(--surface)}
-.stepup .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--sdg-soft);color:var(--sdg);font-weight:700;font-size:15px}
-.stepup li.today{background:var(--leaf-soft);border-color:var(--rose)}
-.stepup li.today .n{background:var(--rose);color:#fff}
-.task{border-radius:18px;background:var(--amber-soft);border-left:6px solid var(--amber)}
-.task .lab{font-size:15px;font-weight:700;color:var(--amber)}
-.finish{border-radius:999px;padding:13px 28px;font-size:17px;box-shadow:0 4px 12px rgb(138 46 92/.25)}
-.finish::after{content:" \2192"}
-.btn{border-radius:999px;padding:8px 18px}
-.btn.primary{border-color:var(--rose);color:var(--rose)}
-textarea{border-radius:16px}
-select{border-radius:12px}
-.route{border-radius:22px}
-.route.pick{border-color:var(--rose);background:var(--leaf-soft)}
-.card{border-radius:20px}
-.fb{border-radius:16px}
-.defbox{border-left-color:var(--rose)}
-.worked{border-radius:16px}
-.sub{font-size:21px}
-
-/* chips, topics, quiz */
-.pchip{background:var(--green-soft);color:var(--green)}
-.pi .ico{color:var(--green)}
-.chip2.b{background:var(--green-soft);color:var(--green)}
-.sdgchip{border-radius:999px}
-.sdgt{border-radius:18px}
-.opt{border-radius:999px;padding:7px 16px}
-.goals label{border-radius:14px}
-.ptable th{font-size:14px;font-weight:700;color:var(--sdg)}
-.steplab{font-size:14px;font-weight:700;color:var(--sdg)}
-.facts .k{font-size:14px;font-weight:700;color:var(--sdg)}
-svg .gb{fill:var(--green-soft);stroke:var(--green)}
-
-/* board */
-.bbox{border-radius:24px}
-.bbox .bl{font-size:.6em;font-weight:700}
-.board h2{color:var(--rose)}
-.drawer{border-radius:24px 0 0 24px}
-.drawer dt{color:var(--sdg)}
-.x{border-radius:50%}
-
-@media print{
-  .wrap{display:block}
-  .head{display:grid;gap:12px}
-}
-@media (prefers-reduced-motion:reduce){.pbar i{transition:none}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/y12-lesson.css?v=1">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
-<div class="wrap">
-  <header class="head">
-    <div class="toprow"><a class="tbtn back" href="../"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Course outline</a><div class="toolbtns">
-        <button class="tbtn" id="kwBtn" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 13h6"/></svg>Key words</button>
-        <button class="tbtn" id="boardBtn" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Show on the board</button>
-      </div></div>
-    <div class="hero">
-      <div class="txt">
-        <div class="eyebrow">12CHE · Step-Up · Period 1 of 8</div>
-        <h1>Welcome to Year 12 Chemistry</h1>
-        <div class="sub">Green chemistry principles and SDGs</div>
-        <div class="kq"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 1c0 1.8-2.5 2.2-2.5 3.8"/><path d="M12 17.2h.01"/></svg><span>What makes one chemical process greener than another?</span></div>
-      </div>
-      <svg class="art" viewBox="0 0 280 190" aria-hidden="true" focusable="false">
-<circle cx="214" cy="46" r="30" fill="#ffd166"/><g stroke="#ffd166" stroke-width="5" stroke-linecap="round"><path d="M214 2v10M214 80v10M170 46h10M248 46h10M183 15l7 7M238 70l7 7M245 15l-7 7M183 77l7-7"/></g>
-<path d="M0 168 Q70 136 140 160 T280 150 V190 H0Z" fill="#3A5C78"/><path d="M0 178 Q90 156 170 174 T280 170 V190 H0Z" fill="#2B4760"/>
-<g stroke="#fff" stroke-linecap="round"><path d="M64 160V82" stroke-width="5"/><path d="M64 82V38M64 82L102 104M64 82L26 104" stroke-width="7"/></g><circle cx="64" cy="82" r="6" fill="#ffd166"/>
-<g stroke="#fff" stroke-linecap="round" opacity=".85"><path d="M128 164V122" stroke-width="4"/><path d="M128 122V92M128 122L154 137M128 122L102 137" stroke-width="5"/></g><circle cx="128" cy="122" r="4" fill="#ffd166"/>
-<path d="M186 120h22v26l26 36h-74l26-36z" fill="#9be8c3" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
-<path d="M163 168h68l-9-13h-50z" fill="#2fc48d"/><rect x="184" y="108" width="26" height="10" rx="3" fill="#fff"/>
-<circle cx="196" cy="150" r="5" fill="#fff" opacity=".9"/><circle cx="212" cy="140" r="3.5" fill="#fff" opacity=".9"/><circle cx="203" cy="130" r="3" fill="#fff" opacity=".9"/>
-<path d="M240 118c-18 2-26 14-24 30 18-2 26-14 24-30z" fill="#7be0a7"/><path d="M216 148c8-10 14-18 24-30" stroke="#8A2E5C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-</svg>
+<div class="page">
+  <div class="toprow">
+    <button class="pillbtn round" id="themeBtn" type="button" aria-label="Switch to dark mode"></button>
+    <button class="pillbtn" id="kwBtn" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6"/></svg>Key words</button>
+    <button class="pillbtn" id="boardBtn" type="button"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Show on the board</button>
+  </div>
+  <header class="band">
+    <div class="txt">
+      <div class="eyebrow">12CHE · Step-Up · Period 1 of 8</div>
+      <h1>Welcome to Year 12 Chemistry</h1>
+      <p class="sub">Green chemistry principles and SDGs</p>
+      <div class="kq"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg><span>What makes one chemical process greener than another?</span></div>
     </div>
-    <div class="hgrid">
-      <div class="hbox">
-        <div class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg>Today you will</div>
-        <ol>
-          <li>See what Year 12 Chemistry covers.</li>
-          <li>Decide which of two ways to make ibuprofen is greener.</li>
-          <li>Use green chemistry principles and the SDGs to map the year ahead.</li>
-        </ol>
-      </div>
-      <div class="hbox">
-        <div class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg>Learning intention</div>
-        <p>To understand how green chemistry principles and the SDGs are used to judge chemical processes across Units 3&amp;4.</p>
-        <div class="lab" style="margin-top:6px">I must be able to</div>
-        <ul>
+    <svg class="band-art" viewBox="0 0 250 190" aria-hidden="true" focusable="false"><path d="M0 170c40-26 80-26 120-8s80 18 130-10v38H0z" fill="#7FA3C2"/><path d="M0 182c50-18 90-14 130 0s80 6 120-6v14H0z" fill="#5E86A8"/><circle cx="196" cy="48" r="24" fill="#F9E7C0"/><g fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M78 70l22-13 22 13v26l-22 13-22-13z"/><path d="M122 96l22 13M100 109v22M78 70l-18-10"/></g><circle cx="60" cy="60" r="7" fill="#F6D3E4"/><circle cx="144" cy="109" r="7" fill="#F6D3E4"/><circle cx="100" cy="131" r="7" fill="#F6D3E4"/><path d="M170 140c12-26 40-34 56-28-3 26-28 46-56 28z" fill="#E2EBF3"/></svg>
+  </header>
+  <div class="layout">
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Lesson parts"></nav>
+    <main class="main">
+      <div class="intro">
+        <section class="icard"><h2><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>Learning intention</h2><p>To understand how green chemistry principles and the SDGs are used to judge chemical processes across Units 3&amp;4.</p><h3>I must be able to</h3><ul>
           <li>I can name the seven green chemistry principles used in VCE Chemistry.</li>
           <li>I can identify the principle at work in an example.</li>
           <li>I can link a Units 3&amp;4 topic to an SDG in one sentence.</li>
-        </ul>
-        <details><summary>Show the Should and Could criteria</summary>
+        </ul><details><summary>Show the Should and Could criteria</summary>
           <ul>
             <li><b>Should:</b> I can weigh two principles against each other to judge which process is greener.</li>
             <li><b>Could:</b> I can calculate the atom economy of a reaction.</li>
           </ul>
-        </details>
+        </details></section>
+        <section class="icard"><h2><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>Today you will</h2><ol>
+          <li>See what Year 12 Chemistry covers.</li>
+          <li>Decide which of two ways to make ibuprofen is greener.</li>
+          <li>Use green chemistry principles and the SDGs to map the year ahead.</li>
+        </ol></section>
       </div>
-    </div>
-    <div class="prog">
-      <div class="pbar" aria-hidden="true"><i id="pfill"></i></div>
-      <div class="pmeta"><span id="pdone">0 of 6 parts done</span><span id="pleft">About 60 min to go</span></div>
-    </div>
-    <div class="tabs" role="tablist" aria-label="Lesson parts" id="tabs"></div>
-  </header>
-
-  
-  <section class="panel" id="p-welcome" role="tabpanel">
-    <div class="phead"><h2>Year 12 Chemistry at a glance</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="74" cy="16" r="10" fill="#ffd166"/><g stroke="#3A5C78" stroke-linecap="round"><path d="M26 70V34" stroke-width="3"/></g><g stroke="#2b8fd9" stroke-width="4.5" stroke-linecap="round"><path d="M26 34V10M26 34l20 11M26 34L6 45"/></g><circle cx="26" cy="34" r="3.5" fill="#e0457b"/><path d="M62 38h10v12l12 18H50l12-18z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="66" cy="60" r="2.6" fill="#fff"/><circle cx="74" cy="54" r="2" fill="#fff"/></svg></div>
+      <div class="prog">
+        <div class="track" aria-hidden="true"><i id="pfill"></i></div>
+        <div class="pmeta"><span id="pdone">0 of 6 parts done</span></div>
+      </div>
+<section class="panel" id="p-welcome" role="tabpanel">
+    <div class="phead"><h2>Year 12 Chemistry at a glance</h2><span class="ill"><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="74" cy="16" r="10" class="sun"/><path d="M26 70V34" class="nf lsk" stroke-width="3" stroke-linecap="round"/><g class="nf lr" stroke-width="4.5" stroke-linecap="round"><path d="M26 34V10M26 34l20 11M26 34L6 45"/></g><circle cx="26" cy="34" r="3.5" class="s"/><path d="M62 38h10v12l12 18H50l12-18z" class="gs gk" stroke-width="2.5" stroke-linejoin="round"/><circle cx="66" cy="60" r="2.6" class="w"/><circle cx="74" cy="54" r="2" class="w"/></svg></span></div>
     <p class="lead">Each area of study is built around one big question. The SACs and the exam ask you to answer it.</p>
     <div class="aos">
-      <div class="aosc c1"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 13.5h6L10 22l9-12h-6.2z"/></svg></span><span class="code">Unit 3 · AOS 1 · Ch 1–3</span></div><div class="body"><b>What are the current and future options for supplying energy?</b><span class="ch">Fuels, food energy, calorimetry, galvanic and fuel cells</span></div></div>
-      <div class="aosc c2"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9M9.5 2.5h5M12 2.5v3"/></svg></span><span class="code">Unit 3 · AOS 2 · Ch 4–6</span></div><div class="body"><b>How can the rate and yield of chemical reactions be optimised?</b><span class="ch">Rates, equilibrium, electrolysis, green hydrogen</span></div></div>
-      <div class="aosc c3"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v8l-7 4-7-4V7z"/><path d="M12 8l3.5 2v4L12 16l-3.5-2v-4z"/></svg></span><span class="code">Unit 4 · AOS 1 · Ch 7–8</span></div><div class="body"><b>How are organic compounds categorised and synthesised?</b><span class="ch">Organic families, reaction pathways, atom economy</span></div></div>
-      <div class="aosc c4"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M7.5 12l1.5-3 1.5 4 1.5-2.5 1.5 1"/></svg></span><span class="code">Unit 4 · AOS 2 · Ch 9–11</span></div><div class="body"><b>How are organic compounds analysed and used?</b><span class="ch">Titrations, spectroscopy, chromatography, medicines</span></div></div>
-      <div class="aosc c5"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17v-4M12 17V8M16 17v-6"/></svg></span><span class="code">Unit 4 · AOS 3</span></div><div class="body"><b>How is scientific inquiry used to investigate the sustainable production of energy and/or materials?</b><span class="ch">Your own investigation, shown as a scientific poster</span></div></div>
+      <div class="aosc c1"><div class="bandlet"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 13.5h6L10 22l9-12h-6.2z"/></svg></span><span class="code">Unit 3 · AOS 1 · Ch 1–3</span></div><div class="body"><b>What are the current and future options for supplying energy?</b><span class="ch">Fuels, food energy, calorimetry, galvanic and fuel cells</span></div></div>
+      <div class="aosc c2"><div class="bandlet"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9M9.5 2.5h5M12 2.5v3"/></svg></span><span class="code">Unit 3 · AOS 2 · Ch 4–6</span></div><div class="body"><b>How can the rate and yield of chemical reactions be optimised?</b><span class="ch">Rates, equilibrium, electrolysis, green hydrogen</span></div></div>
+      <div class="aosc c3"><div class="bandlet"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v8l-7 4-7-4V7z"/><path d="M12 8l3.5 2v4L12 16l-3.5-2v-4z"/></svg></span><span class="code">Unit 4 · AOS 1 · Ch 7–8</span></div><div class="body"><b>How are organic compounds categorised and synthesised?</b><span class="ch">Organic families, reaction pathways, atom economy</span></div></div>
+      <div class="aosc c4"><div class="bandlet"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M7.5 12l1.5-3 1.5 4 1.5-2.5 1.5 1"/></svg></span><span class="code">Unit 4 · AOS 2 · Ch 9–11</span></div><div class="body"><b>How are organic compounds analysed and used?</b><span class="ch">Titrations, spectroscopy, chromatography, medicines</span></div></div>
+      <div class="aosc c5"><div class="bandlet"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17v-4M12 17V8M16 17v-6"/></svg></span><span class="code">Unit 4 · AOS 3</span></div><div class="body"><b>How is scientific inquiry used to investigate the sustainable production of energy and/or materials?</b><span class="ch">Your own investigation, shown as a scientific poster</span></div></div>
     </div>
     <h3>The year in order</h3>
     <figure class="fig"><svg viewBox="0 0 700 156" role="img" aria-label="The year in order, drawn to scale by teaching weeks: Unit 3 area of study 1 and 2, Unit 4 area of study 1, 3 and 2, then exam revision"><defs><marker id="ahw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="htw" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><rect x="10.0" y="34" width="125.3" height="50" rx="8" class="gb"/><text x="72.65" y="55.5" class="tx" text-anchor="middle" font-size="12">U3 AOS 1</text><text x="72.65" y="71.5" class="tx" text-anchor="middle" font-size="12">Energy</text><rect x="135.3" y="34" width="89.5" height="50" rx="8" class="bb"/><text x="180.05" y="55.5" class="tx" text-anchor="middle" font-size="12">U3 AOS 2</text><text x="180.05" y="71.5" class="tx" text-anchor="middle" font-size="12">Rate, yield</text><rect x="224.7" y="34" width="71.6" height="50" rx="8" class="ab"/><text x="260.5" y="55.5" class="tx" text-anchor="middle" font-size="12">U4 AOS 1</text><text x="260.5" y="71.5" class="tx" text-anchor="middle" font-size="12">Organic</text><rect x="296.3" y="34" width="107.4" height="50" rx="8" class="gb"/><text x="350.0" y="55.5" class="tx" text-anchor="middle" font-size="12">U4 AOS 3</text><text x="350.0" y="71.5" class="tx" text-anchor="middle" font-size="12">Investigation</text><rect x="403.7" y="34" width="143.2" height="50" rx="8" class="bb"/><text x="475.29999999999995" y="55.5" class="tx" text-anchor="middle" font-size="12">U4 AOS 2</text><text x="475.29999999999995" y="71.5" class="tx" text-anchor="middle" font-size="12">Analysis</text><rect x="546.8" y="34" width="143.2" height="50" rx="8" class="nb"/><text x="618.4" y="63.5" class="tx" text-anchor="middle" font-size="12">Exam revision</text><path d="M12.0 26 H222.7" class="ln"/><text x="117.4" y="18" class="tx tb" text-anchor="middle" font-size="12.5">Unit 3</text><path d="M226.7 26 H544.8" class="ln"/><text x="385.8" y="18" class="tx tb" text-anchor="middle" font-size="12.5">Unit 4</text><path d="M131.3 90 l6 6 -6 6 -6 -6z" class="dia"/><path d="M220.7 90 l6 6 -6 6 -6 -6z" class="dia"/><path d="M292.3 90 l6 6 -6 6 -6 -6z" class="dia"/><path d="M399.7 90 l6 6 -6 6 -6 -6z" class="dia"/><path d="M542.8 90 l6 6 -6 6 -6 -6z" class="dia"/><text x="696" y="104" class="tx tb" text-anchor="end" font-size="12">Exam</text><path d="M11.0 128 H44.8" class="lnd"/><text x="10.0" y="146" class="tx tm" text-anchor="start" font-size="12">Step-Up</text><path d="M46.8 128 H205.8" class="lnd"/><text x="126.3" y="146" class="tx tm" text-anchor="middle" font-size="12">Term 1</text><path d="M207.8 128 H402.7" class="lnd"/><text x="305.3" y="146" class="tx tm" text-anchor="middle" font-size="12">Term 2</text><path d="M404.7 128 H581.6" class="lnd"/><text x="493.2" y="146" class="tx tm" text-anchor="middle" font-size="12">Term 3</text><path d="M583.6 128 H689.0" class="lnd"/><text x="636.3" y="146" class="tx tm" text-anchor="middle" font-size="12">Term 4</text></svg><figcaption>Drawn to scale by teaching weeks. A diamond marks a SAC near the end of an area of study. Holidays are not shown.</figcaption></figure>
@@ -455,7 +70,7 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
     <p class="note">Half your score comes from SACs during the year, so every area of study counts.</p>
     <h3>Step-Up: 8 periods</h3>
     <ol class="stepup">
-      <li class="today"><span class="n">1</span><span><b>Today:</b> welcome, green chemistry and SDGs</span></li>
+      <li class="today"><span class="n">1</span><span class="t"><span class="label-pill today">Today</span>Welcome, green chemistry and SDGs</span></li>
       <li><span class="n">2</span><span>1A Fossil fuels and 1B Biofuels</span></li>
       <li><span class="n">3</span><span>1C Fuel for the body</span></li>
       <li><span class="n">4</span><span>1D Enthalpy changes and combustion</span></li>
@@ -464,13 +79,11 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
       <li><span class="n">7</span><span>2A practice</span></li>
       <li><span class="n">8</span><span>Step-Up quiz, then holiday homework</span></li>
     </ol>
-    <div class="task"><span class="lab">Now</span><p>Listen as your teacher goes through how the class runs. Then move on to Engage.</p></div>
+    <div class="task"><span class="lab">Now</span><p>Listen as your teacher goes through how the class runs. Then move on to Warm up.</p></div>
     <button class="finish" type="button" data-finish="welcome">I have finished Welcome</button>
   </section>
-
-  
-  <section class="panel" id="p-engage" role="tabpanel" hidden>
-    <div class="phead"><h2>Which is greener?</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="28" cy="36" r="17" fill="#ffd166" stroke="#e09f1f" stroke-width="3"/><path d="M17 36h22" stroke="#e09f1f" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-28 66 30)"><rect x="46" y="21" width="40" height="18" rx="9" fill="#fff" stroke="#8A2E5C" stroke-width="3"/><path d="M66 21h-11a9 9 0 0 0 0 18h11z" fill="#ef476f"/></g><text x="58" y="68" font-family="Literata,Georgia,serif" font-size="26" font-weight="700" fill="#7FA3C2">?</text></svg></div>
+<section class="panel" id="p-warmup" role="tabpanel" hidden>
+    <div class="phead"><h2>Which is greener?</h2><span class="ill"><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="28" cy="36" r="17" class="sun sunk" stroke-width="3"/><path d="M17 36h22" class="nf sunk" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-28 66 30)"><rect x="46" y="21" width="40" height="18" rx="9" class="w lr" stroke-width="3"/><path d="M66 21h-11a9 9 0 0 0 0 18h11z" class="r"/></g><text x="58" y="68" font-family="Literata,Georgia,serif" font-size="26" font-weight="700" class="s">?</text></svg></span></div>
     <p class="lead">Ibuprofen is one of the most used medicines in the world. Here are two real ways to make it. Both give the same pure ibuprofen.</p>
 <div class="stack"><figure class="fig"><svg viewBox="0 0 640 156" role="img" aria-label="Flow chart: Route A takes six reaction steps to make ibuprofen and Route B takes three"><defs><marker id="ahe1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="hte1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><text x="10" y="16" class="tx tb" text-anchor="start" font-size="14">Route A: 6 steps</text><rect x="10" y="24" width="70" height="36" rx="8" class="nb"/><text x="45.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 1</text><path d="M80 42 L92 42" class="ln" marker-end="url(#ahe1)"/><rect x="92" y="24" width="70" height="36" rx="8" class="nb"/><text x="127.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 2</text><path d="M162 42 L174 42" class="ln" marker-end="url(#ahe1)"/><rect x="174" y="24" width="70" height="36" rx="8" class="nb"/><text x="209.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 3</text><path d="M244 42 L256 42" class="ln" marker-end="url(#ahe1)"/><rect x="256" y="24" width="70" height="36" rx="8" class="nb"/><text x="291.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 4</text><path d="M326 42 L338 42" class="ln" marker-end="url(#ahe1)"/><rect x="338" y="24" width="70" height="36" rx="8" class="nb"/><text x="373.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 5</text><path d="M408 42 L420 42" class="ln" marker-end="url(#ahe1)"/><rect x="420" y="24" width="70" height="36" rx="8" class="nb"/><text x="455.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 6</text><path d="M490 42 L508 42" class="ln" marker-end="url(#ahe1)"/><rect x="508" y="24" width="122" height="36" rx="8" class="gb"/><text x="569.0" y="46.5" class="tx tb" text-anchor="middle" font-size="13">Ibuprofen</text><text x="10" y="100" class="tx tb" text-anchor="start" font-size="14">Route B: 3 steps</text><rect x="10" y="108" width="70" height="36" rx="8" class="nb"/><text x="45.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 1</text><path d="M80 126 L92 126" class="ln" marker-end="url(#ahe1)"/><rect x="92" y="108" width="70" height="36" rx="8" class="nb"/><text x="127.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 2</text><path d="M162 126 L174 126" class="ln" marker-end="url(#ahe1)"/><rect x="174" y="108" width="70" height="36" rx="8" class="nb"/><text x="209.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 3</text><path d="M244 126 L262 126" class="ln" marker-end="url(#ahe1)"/><rect x="262" y="108" width="122" height="36" rx="8" class="gb"/><text x="323.0" y="130.5" class="tx tb" text-anchor="middle" font-size="13">Ibuprofen</text></svg><figcaption>Each box is one reaction step. Both routes finish with the same ibuprofen.</figcaption></figure><figure class="fig"><svg viewBox="0 0 640 142" role="img" aria-label="Two bars showing how many of the reactant atoms end up in the product, ibuprofen: 40 per cent for Route A and 77 per cent for Route B"><defs><marker id="ahe2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="hte2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><text x="10" y="22" class="tx tb" text-anchor="start" font-size="14">Route A</text><rect x="10" y="30" width="248.0" height="34" rx="6" class="gb"/><text x="134.0" y="52" class="tx tb" text-anchor="middle" font-size="13">In the product 40%</text><rect x="258.0" y="30" width="372.0" height="34" rx="6" fill="url(#hte2)" stroke="var(--faint)" stroke-width="1.2"/><rect x="375.2" y="36" width="137.6" height="22" rx="5" class="pt" opacity=".95"/><text x="444.0" y="52" class="tx" text-anchor="middle" font-size="12">Not in the product 60%</text><text x="10" y="90" class="tx tb" text-anchor="start" font-size="14">Route B</text><rect x="10" y="98" width="477.4" height="34" rx="6" class="gb"/><text x="248.7" y="120" class="tx tb" text-anchor="middle" font-size="13">In the product 77%</text><rect x="487.4" y="98" width="142.6" height="34" rx="6" fill="url(#hte2)" stroke="var(--faint)" stroke-width="1.2"/><rect x="489.9" y="104" width="137.6" height="22" rx="5" class="pt" opacity=".95"/><text x="558.7" y="120" class="tx" text-anchor="middle" font-size="12">Not in the product 23%</text></svg><figcaption>Each bar shows all the atoms in the reactants. The green part ends up in the product and the hatched part does not.</figcaption></figure></div>
     <div class="grid2">
@@ -492,45 +105,38 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
       </div>
     </div>
     <div class="task"><span class="lab">Decide</span><p>With a partner, choose the route you think is greener. Write one reason. There is no penalty for changing your mind later.</p></div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn" type="button" id="pickA" aria-pressed="false">Route A is greener</button>
-      <button class="btn" type="button" id="pickB" aria-pressed="false">Route B is greener</button>
-    </div>
+    <div id="pickBtns" class="btnrow" role="group" aria-label="Choose a route"></div>
     <label for="engReason" class="note">My reason</label>
-    <textarea id="engReason" placeholder="Route __ is greener because..."></textarea>
-    <p class="note" id="engNote" hidden>Hold that thought. You will come back to it in Evaluate.</p>
-    <button class="finish" type="button" data-finish="engage">I have finished Engage</button>
+    <textarea id="engReason" data-keep placeholder="Route __ is greener because..."></textarea>
+    <p class="note" id="engNote" hidden>Hold that thought. You will come back to it in Check.</p>
+    <button class="finish" type="button" data-finish="warmup">I have finished Warm up</button>
   </section>
-
-  
-  <section class="panel" id="p-explore" role="tabpanel" hidden>
-    <div class="phead"><h2>Principle card sort</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="40" cy="32" r="21" fill="#E2EBF3" stroke="#3A5C78" stroke-width="5"/><path d="M55 48l16 16" stroke="#3A5C78" stroke-width="7" stroke-linecap="round"/><polygon points="40,19 51,25.5 51,38.5 40,45 29,38.5 29,25.5" fill="#fff" stroke="#0f8a5f" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="14" r="5" fill="#ef476f"/><circle cx="88" cy="30" r="4" fill="#ffd166"/><circle cx="78" cy="44" r="3.5" fill="#8A2E5C"/></svg></div>
+<section class="panel" id="p-tryit" role="tabpanel" hidden>
+    <div class="phead"><h2>Principle card sort</h2><span class="ill" data-ill="magnifier"></span></div>
     <p class="lead">You met green chemistry in Year 11. VCE Chemistry uses seven of its twelve principles. Each card below comes from a topic you will study this year.</p>
     <div class="pchips" aria-label="The seven principles">
       <span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12V3M12 12l7.8 4.5"/></svg>Atom economy</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M3 17c4 0 4-12 9-12s5 12 9 12" stroke-dasharray="3 3"/><path d="M3 17c4 0 4-6 9-6s5 6 9 6"/></svg>Catalysis</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19L14 10"/></svg>Design for degradation</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Design for energy efficiency</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Designing safer chemicals</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13"/><path d="M4 4l16 16"/></svg>Prevention of wastes</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 15c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg>Use of renewable feedstocks</span>
     </div>
     <div class="task"><span class="lab">Sort</span><p>For each card, choose the principle it shows best. Open Key words if you need a reminder of what each principle means. Then check your answers.</p></div>
     <div class="cards" id="cards"></div>
-    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <div class="btnrow">
       <button class="btn primary" type="button" id="checkSort">Check my answers</button>
       <span class="note" id="sortScore" aria-live="polite"></span>
     </div>
     <details class="extend">
       <summary>Finished the Core work? Try Extend</summary>
       <p>Some cards fit more than one principle. Choose one card and explain which second principle it also shows, and why.</p>
-      <textarea id="sortExtend" placeholder="The ___ card also shows ___ because..."></textarea>
+      <textarea id="sortExtend" data-keep placeholder="The ___ card also shows ___ because..."></textarea>
       <details class="reveal"><summary>Show possible answers</summary><div>
         <p><b>Fuel cell car:</b> if its hydrogen is made from water using solar power, it also shows use of renewable feedstocks.</p>
         <p><b>Green hydrogen:</b> the water it starts from is renewable, so it also shows use of renewable feedstocks.</p>
         <p><b>Artificial photosynthesis:</b> it runs on sunlight and water, so it also shows use of renewable feedstocks.</p>
       </div></details>
     </details>
-    <button class="finish" type="button" data-finish="explore">I have finished Explore</button>
+    <button class="finish" type="button" data-finish="tryit">I have finished Try it</button>
   </section>
-
-  
-  <section class="panel" id="p-explain" role="tabpanel" hidden>
-    <div class="phead"><h2>Judging sustainability</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><g stroke="#e09f1f" stroke-width="3.5" stroke-linecap="round"><path d="M48 4v7M22 14l5 5M74 14l-5 5M12 38h7M77 38h7"/></g><circle cx="48" cy="34" r="19" fill="#ffd166" stroke="#e09f1f" stroke-width="3"/><path d="M40 42c-2-12 6-18 17-16 1 11-6 18-17 16z" fill="#2fb87f"/><rect x="39" y="54" width="18" height="8" rx="3" fill="#9aa5b1"/><rect x="42" y="63" width="12" height="5" rx="2.5" fill="#6f7b88"/></svg></div>
+<section class="panel" id="p-learn" role="tabpanel" hidden>
+    <div class="phead"><h2>Judging sustainability</h2><span class="ill" data-ill="bulb"></span></div>
     <div class="steps" id="steps">
       <div class="step" data-step="1">
         <span class="steplab">Part 1 of 7</span>
@@ -540,7 +146,7 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
         <p>Limits can be land, water, energy or raw materials. For example, ethanol and biodiesel come from crops, and crops need land to grow.</p>
         <p>That land could grow food instead. So there is an ethical question as well. Should the land grow food for fuel, or food for food?</p>
         <p>Chemists use three tools to help answer these questions.</p>
-        <ol style="margin:0;padding-left:22px;display:grid;gap:6px;line-height:1.55">
+        <ol>
           <li><b>Green chemistry principles</b> judge the process itself (Parts 2 to 4).</li>
           <li><b>The Sustainable Development Goals</b> judge the effect on people and the planet (Part 5).</li>
           <li><b>The circular economy</b> judges what happens to materials after use (Part 6).</li>
@@ -620,7 +226,7 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
         <div class="econ">
           <figure>
             <svg viewBox="0 0 300 90" role="img" aria-label="Linear economy: take, make, use, dispose, in a straight line">
-              <g font-family="Public Sans,system-ui,sans-serif" font-size="13" text-anchor="middle">
+              <g font-family="Atkinson Hyperlegible, sans-serif" font-size="13" text-anchor="middle">
                 <rect x="4" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="35" y="50" fill="var(--ink)">Take</text>
                 <rect x="80" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="111" y="50" fill="var(--ink)">Make</text>
                 <rect x="156" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="187" y="50" fill="var(--ink)">Use</text>
@@ -632,7 +238,7 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
           </figure>
           <figure>
             <svg viewBox="0 0 300 150" role="img" aria-label="Circular economy: make, use, recover, remake, in a loop">
-              <g font-family="Public Sans,system-ui,sans-serif" font-size="13" text-anchor="middle">
+              <g font-family="Atkinson Hyperlegible, sans-serif" font-size="13" text-anchor="middle">
                 <ellipse cx="150" cy="75" rx="98" ry="52" fill="none" stroke="var(--leaf)" stroke-width="2" stroke-dasharray="5 5"/>
                 <rect x="112" y="8" width="76" height="30" rx="8" fill="var(--leaf-soft)" stroke="var(--leaf)"/><text x="150" y="28" fill="var(--ink)">Make</text>
                 <rect x="220" y="60" width="76" height="30" rx="8" fill="var(--leaf-soft)" stroke="var(--leaf)"/><text x="258" y="80" fill="var(--ink)">Use</text>
@@ -679,12 +285,10 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
       <details class="reveal"><summary>Show the worked solution one step at a time</summary><div id="aeSteps"></div>
         <button class="btn" type="button" id="aeNext">Show the next step</button></details>
     </details>
-    <button class="finish" type="button" data-finish="explain">I have finished Explain</button>
+    <button class="finish" type="button" data-finish="learn">I have finished Learn</button>
   </section>
-
-  
-  <section class="panel" id="p-elaborate" role="tabpanel" hidden>
-    <div class="phead"><h2>Map the year to the SDGs</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M20 40A28 28 0 0 1 66 20" fill="none" stroke="#8A2E5C" stroke-width="6" stroke-linecap="round"/><path d="M66 8l12 14-17 4z" fill="#8A2E5C"/><path d="M76 42A28 28 0 0 1 30 60" fill="none" stroke="#2fb87f" stroke-width="6" stroke-linecap="round"/><path d="M30 72l-12-14 17-4z" fill="#2fb87f"/><path d="M48 52V36" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/><path d="M48 38c-10 0-12-8-12-12 10 0 12 6 12 12zM48 38c10 0 12-8 12-12-10 0-12 6-12 12z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2"/></svg></div>
+<section class="panel" id="p-apply" role="tabpanel" hidden>
+    <div class="phead"><h2>Map the year to the SDGs</h2><span class="ill" data-ill="cycle"></span></div>
     <p class="lead">Each group takes one topic from this year. You will link it to the SDGs it helps with, then report back to the class in one sentence.</p>
     <div class="worked">
       <span class="steplab">Worked example</span>
@@ -695,7 +299,7 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
     <figure class="fig"><svg viewBox="0 0 640 244" role="img" aria-label="Loop: carbon dioxide in the air is taken in by sugarcane, which is made into bioethanol, which burns in an engine and releases carbon dioxide back to the air"><defs><marker id="ahl1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="htl1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><rect x="245" y="8" width="150" height="40" rx="8" class="nb"/><text x="320.0" y="32.5" class="tx" text-anchor="middle" font-size="13">CO<tspan baseline-shift="sub" font-size="9">2</tspan> in the air</text><rect x="450" y="98" width="180" height="44" rx="8" class="gb"/><text x="540.0" y="116.5" class="tx" text-anchor="middle" font-size="13">Sugarcane grows</text><text x="540.0" y="132.5" class="tx" text-anchor="middle" font-size="13">(photosynthesis)</text><rect x="205" y="190" width="230" height="44" rx="8" class="gb"/><text x="320.0" y="208.5" class="tx" text-anchor="middle" font-size="13">Bioethanol is made</text><text x="320.0" y="224.5" class="tx" text-anchor="middle" font-size="13">(fermentation and distillation)</text><rect x="10" y="98" width="180" height="44" rx="8" class="ab"/><text x="100.0" y="116.5" class="tx" text-anchor="middle" font-size="13">Bioethanol burns</text><text x="100.0" y="132.5" class="tx" text-anchor="middle" font-size="13">in an engine</text><path d="M395 28 Q540 28 540 94" class="ln" marker-end="url(#ahl1)"/><path d="M540 146 Q540 212 439 212" class="ln" marker-end="url(#ahl1)"/><path d="M201 212 Q100 212 100 146" class="ln" marker-end="url(#ahl1)"/><path d="M100 94 Q100 28 241 28" class="ln" marker-end="url(#ahl1)"/><text x="320" y="126" class="tx tm" text-anchor="middle" font-size="13">Carbon moves round a loop</text></svg><figcaption>The sugarcane takes in CO<sub>2</sub> as it grows, and burning the bioethanol releases it again. The loop only partly balances, because growing and processing the crop also use energy.</figcaption></figure>
     <div class="task"><span class="lab">Your turn</span><p>Choose your group's topic. Tick every goal it links to. Then write your best link as one sentence.</p></div>
     <div class="topics" id="topics"></div>
-    <div id="topicBody" hidden style="display:grid;gap:12px">
+    <div id="topicBody" hidden class="topicbody">
       <p id="topicDesc"></p>
       <div class="goals" id="goals"></div>
       <label for="sdgSentence" class="note">Our sentence</label>
@@ -705,17 +309,15 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
     <details class="extend">
       <summary>Finished the Core work? Try Extend</summary>
       <p>A topic can help one goal and harm another. Choose a topic and describe one way it could work against an SDG.</p>
-      <textarea id="sdgExtend" placeholder="___ could work against Goal __ because..."></textarea>
+      <textarea id="sdgExtend" data-keep placeholder="___ could work against Goal __ because..."></textarea>
       <details class="reveal"><summary>Show a possible answer</summary><div>
         <p>Growing crops for biofuels uses farmland that could grow food, which can work against <b>Goal 2 Zero hunger</b> and <b>Goal 15 Life on land</b>.</p>
       </div></details>
     </details>
-    <button class="finish" type="button" data-finish="elaborate">I have finished Elaborate</button>
+    <button class="finish" type="button" data-finish="apply">I have finished Apply</button>
   </section>
-
-  
-  <section class="panel" id="p-evaluate" role="tabpanel" hidden>
-    <div class="phead"><h2>Exit ticket</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M48 12v50" stroke="#3A5C78" stroke-width="4" stroke-linecap="round"/><rect x="32" y="62" width="32" height="6" rx="3" fill="#3A5C78"/><path d="M18 26L78 18" stroke="#3A5C78" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="22" r="4" fill="#ffd166"/><path d="M18 26L9 46M18 26l17 20M78 18L67 38M78 18l17 20" stroke="#3A5C78" stroke-width="2" fill="none"/><path d="M6 46h32a16 9 0 0 1-32 0z" fill="#2fb87f"/><path d="M64 38h32a16 9 0 0 1-32 0z" fill="#ef476f"/></svg></div>
+<section class="panel" id="p-check" role="tabpanel" hidden>
+    <div class="phead"><h2>Exit ticket</h2><span class="ill" data-ill="balance"></span></div>
     <div class="fb info" id="revealBox">
       <p><b>The routes revealed.</b> Route A was the original 1960s method. Route B replaced it in the 1990s and won a US green chemistry award in 1997.</p>
       <p id="yourPick"></p>
@@ -732,16 +334,17 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
       </tbody>
     </table></div>
     <p class="note">Mixed means each route has a hazard. A judgement weighs the principles against each other.</p>
-    <div class="task"><span class="lab">Last word</span><p>Look back at your Engage reason. Rewrite it using at least two principle names.</p></div>
-    <textarea id="evalReason" placeholder="Route B is greener because... However..."></textarea>
-    <button class="finish" type="button" data-finish="evaluate">I have finished Evaluate</button>
+    <div class="task"><span class="lab">Last word</span><p>Look back at your Warm up reason. Rewrite it using at least two principle names.</p></div>
+    <textarea id="evalReason" data-keep placeholder="Route B is greener because... However..."></textarea>
+    <button class="finish" type="button" data-finish="check">I have finished Check</button>
   </section>
+    </main>
+  </div>
 </div>
 
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" hidden aria-label="Key words">
-  <button class="x" type="button" id="kwClose" aria-label="Close key words">×</button>
-  <h2>Key words</h2>
+  <div class="dhead"><h2>Key words</h2><button class="x" type="button" id="kwClose" aria-label="Close key words"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <dl>
     <dt>Green chemistry</dt><dd>The design of chemical products and processes that are safer and more sustainable than the ones used before.</dd>
     <dt>Atom economy</dt><dd>The percentage of the reactants' mass that ends up in the product you want.</dd>
@@ -767,182 +370,19 @@ svg .gb{fill:var(--green-soft);stroke:var(--green)}
 </aside>
 
 <div class="board" id="board" hidden role="dialog" aria-label="Board view">
-  <div><div class="bsub">Welcome to Year 12 Chemistry</div><h2>Green chemistry principles and SDGs</h2></div>
+  <div class="bband"><div class="bsub">Welcome to Year 12 Chemistry</div><h2>Green chemistry principles and SDGs</h2></div>
   <div class="bgrid">
-    <div class="bbox li"><div class="bl"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg>Learning intention</div><p>To understand how green chemistry principles and the SDGs are used to judge chemical processes across Units 3&amp;4.</p></div>
-    <div class="bbox kqb"><div class="bl"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 1c0 1.8-2.5 2.2-2.5 3.8"/><path d="M12 17.2h.01"/></svg>Key question</div><p>What makes one chemical process greener than another?</p></div>
-    <div class="bbox tyw" id="bTyw"><div class="bl"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>Today you will</div>
-      <ol><li>See what Year 12 Chemistry covers.</li><li>Decide which of two ways to make ibuprofen is greener.</li><li>Use green chemistry principles and the SDGs to map the year ahead.</li></ol>
+    <div class="bbox li"><div class="bl"><span class="bi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>Learning intention</div><p>To understand how green chemistry principles and the SDGs are used to judge chemical processes across Units 3&amp;4.</p></div>
+    <div class="bbox kqb"><div class="bl"><span class="bi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/></svg></span>Key question</div><p>What makes one chemical process greener than another?</p></div>
+    <div class="bbox tyw" id="bTyw"><div class="bl"><span class="bi"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>Today you will</div><ol><li>See what Year 12 Chemistry covers.</li><li>Decide which of two ways to make ibuprofen is greener.</li><li>Use green chemistry principles and the SDGs to map the year ahead.</li></ol>
       <div class="bsc" id="bSc" hidden><b>Success criteria</b><span>I can name the seven green chemistry principles used in VCE Chemistry.</span><span>I can identify the principle at work in an example.</span><span>I can link a Units 3&amp;4 topic to an SDG in one sentence.</span></div>
     </div>
   </div>
   <div class="bfoot"><button class="btn" type="button" id="bScBtn">Show success criteria</button><button class="btn primary" type="button" id="boardClose">Close</button></div>
 </div>
 
-<script>
-(function(){
-const KEY="12che-ori-green-chem-v1";
-let S={};try{S=JSON.parse(localStorage.getItem(KEY)||"{}")||{};}catch(e){S={};}
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}};
-S.done=S.done||{};S.sort=S.sort||{};S.quiz=S.quiz||{};S.goals=S.goals||{};
-
-const PARTS=[["welcome","Welcome",8],["engage","Engage",8],["explore","Explore",11],["explain","Explain",14],["elaborate","Elaborate",12],["evaluate","Evaluate",7]];
-const TI={"welcome": "<path d=\"M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z\"/>", "engage": "<path d=\"M13 2L5 13.5h6L10 22l9-12h-6.2z\"/>", "explore": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15.5 8.5l-2 5-5 2 2-5z\"/>", "explain": "<path d=\"M9 18h6M10 21h4\"/><path d=\"M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z\"/>", "elaborate": "<path d=\"M4 17l5-5 4 4 7-8\"/><path d=\"M15 8h5v5\"/>", "evaluate": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12.5l3 3 5-6\"/>"};
-const tabs=document.getElementById("tabs");
-tabs.innerHTML=PARTS.map(([id,l,m])=>`<button class="tab" role="tab" type="button" id="t-${id}" aria-controls="p-${id}" data-part="${id}"><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true">${TI[id]}</svg></span><span class="tt"><b>${l}</b><span>${m} min</span></span></button>`).join("");
-function show(id){
-  PARTS.forEach(([p])=>{document.getElementById("p-"+p).hidden=p!==id;const t=document.getElementById("t-"+p);t.setAttribute("aria-selected",p===id);t.classList.toggle("done",!!S.done[p]);});
-  S.cur=id;save();
-}
-function progress(){
-  const n=PARTS.filter(([p])=>S.done[p]).length;
-  const left=PARTS.filter(([p])=>!S.done[p]).reduce((a,[,,m])=>a+m,0);
-  document.getElementById("pfill").style.width=(100*n/PARTS.length)+"%";
-  document.getElementById("pdone").textContent=`${n} of ${PARTS.length} parts done`;
-  document.getElementById("pleft").textContent=left?`About ${left} min to go (Core work)`:"All parts done";
-}
-tabs.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b){show(b.dataset.part);window.scrollTo({top:0});}});
-document.querySelectorAll("[data-finish]").forEach(b=>b.addEventListener("click",()=>{
-  const id=b.dataset.finish;S.done[id]=true;save();progress();
-  const i=PARTS.findIndex(([p])=>p===id);const nxt=PARTS[i+1];
-  if(nxt){show(nxt[0]);document.getElementById("t-"+nxt[0]).scrollIntoView({block:"nearest",inline:"center"});window.scrollTo({top:0});}
-  else{show(id);b.textContent="Lesson complete";}
-}));
-
-/* Engage */
-const pa=document.getElementById("pickA"),pb=document.getElementById("pickB"),reason=document.getElementById("engReason");
-function setPick(p){S.pick=p;save();pa.setAttribute("aria-pressed",p==="A");pb.setAttribute("aria-pressed",p==="B");
-  document.getElementById("routeA").classList.toggle("pick",p==="A");document.getElementById("routeB").classList.toggle("pick",p==="B");
-  document.getElementById("engNote").hidden=!p;renderPick();}
-pa.onclick=()=>setPick("A");pb.onclick=()=>setPick("B");
-reason.value=S.reason||"";reason.oninput=()=>{S.reason=reason.value;save();};
-
-/* Card sort */
-const PR=["Atom economy","Catalysis","Design for degradation","Design for energy efficiency","Designing safer chemicals","Prevention of wastes","Use of renewable feedstocks"];
-const CARDS=[
- ["c1","Bioethanol is made by fermenting sugarcane, instead of making petrol from crude oil.","1B Biofuels",6,"Sugarcane regrows each year. Crude oil took millions of years to form."],
- ["c2","A hydrogen fuel cell car turns about twice as much of its fuel's chemical energy into useful energy as a petrol engine does.","3E Fuel cells",3,"Less of the fuel's energy is lost as heat, so the car is more energy efficient."],
- ["c3","An iron catalyst lets the Haber process make ammonia quickly without using an even higher temperature.","5D Compromise equilibrium",1,"The catalyst lowers the activation energy, so the reaction is fast enough at a lower temperature."],
- ["c4","Ethanol is made by adding water to ethene. Every reactant atom ends up in the ethanol.","8A Organic reactions",0,"All the reactant atoms end up in the product, so the atom economy is 100%."],
- ["c5","Making hydrogen by splitting water gives only oxygen as a by-product, so there is no CO₂ to capture or treat.","6D Green hydrogen",5,"No harmful by-product forms in the first place, so there is nothing to clean up."],
- ["c6","A medicine is sold as just one mirror-image form of its molecule, because the other form can cause side effects.","11 Medicines",4,"The product still does its job, but with less risk of harm to the patient."],
- ["c7","Cutlery made from the bioplastic PLA breaks down in industrial compost after it is used.","Year 11 polymers",2,"The product is designed to break down into harmless substances after use."],
- ["c8","Biodiesel is made from used cooking oil collected from restaurants.","8A Biodiesel",6,"The oil comes from plants, so it is renewable. Using a waste oil is a bonus."],
- ["c9","Artificial photosynthesis uses catalysts to split water into hydrogen and oxygen using sunlight.","6D Green hydrogen",1,"Catalysts make the water-splitting reactions happen fast enough to be useful."]
-];
-const cardsEl=document.getElementById("cards");
-cardsEl.innerHTML=CARDS.map(([id,t,w])=>`<div class="card" id="card-${id}"><p>${t}</p><span class="where">Where you meet it: ${w}</span>
-<label class="note" for="sel-${id}">Principle</label><select id="sel-${id}" data-id="${id}"><option value="">Choose a principle</option>${PR.map((p,i)=>`<option value="${i}">${p}</option>`).join("")}</select><div class="why" hidden></div></div>`).join("");
-cardsEl.querySelectorAll("select").forEach(s=>{if(S.sort[s.dataset.id]!==undefined)s.value=S.sort[s.dataset.id];
-  s.onchange=()=>{S.sort[s.dataset.id]=s.value;save();const c=document.getElementById("card-"+s.dataset.id);c.classList.remove("ok","no");c.querySelector(".why").hidden=true;};});
-document.getElementById("checkSort").onclick=()=>{
-  let right=0,answered=0;
-  CARDS.forEach(([id,,,ans,why])=>{const s=document.getElementById("sel-"+id),c=document.getElementById("card-"+id),w=c.querySelector(".why");
-    c.classList.remove("ok","no");
-    if(s.value===""){w.hidden=true;return;}
-    answered++;const ok=+s.value===ans;if(ok)right++;
-    c.classList.add(ok?"ok":"no");w.hidden=false;
-    w.innerHTML=ok?`<b>Correct.</b> ${why}`:`<b>Not quite.</b> Best answer: ${PR[ans]}. ${why}`;});
-  document.getElementById("sortScore").textContent=answered?`${right} of ${CARDS.length} correct${answered<CARDS.length?` (${CARDS.length-answered} not answered yet)`:""}.`:"Choose a principle for at least one card first.";
-};
-const se=document.getElementById("sortExtend");se.value=S.sortExt||"";se.oninput=()=>{S.sortExt=se.value;save();};
-
-/* Explain steps */
-const steps=[...document.querySelectorAll(".step")],dots=document.getElementById("dots");
-dots.innerHTML=steps.map(()=>"<i></i>").join("");
-let st=Math.min(S.step||0,steps.length-1);
-function showStep(i){st=i;S.step=i;save();steps.forEach((s,j)=>s.hidden=j!==i);[...dots.children].forEach((d,j)=>d.classList.toggle("on",j===i));
-  document.getElementById("stepBack").disabled=i===0;const n=document.getElementById("stepNext");n.disabled=i===steps.length-1;}
-document.getElementById("stepBack").onclick=()=>showStep(Math.max(0,st-1));
-document.getElementById("stepNext").onclick=()=>showStep(Math.min(steps.length-1,st+1));
-showStep(st);
-const AE=[
- "Molar mass of ibuprofen, C<sub>13</sub>H<sub>18</sub>O<sub>2</sub> = (13 × 12.0) + (18 × 1.0) + (2 × 16.0) = 206.0 g mol<sup>−1</sup>",
- "Reactants: C<sub>10</sub>H<sub>14</sub> = 134.0, C<sub>4</sub>H<sub>6</sub>O<sub>3</sub> = 102.0, H<sub>2</sub> = 2.0, CO = 28.0. Total = 266.0 g mol<sup>−1</sup>",
- `Atom economy = <span class="frac"><span>206.0</span><span>266.0</span></span> × 100% = 77.4%`,
- "This matches the 77% in the Engage bar. The missing 22.6% is the acetic acid by-product.",
- `<figure class="fig"><svg viewBox="0 0 640 146" role="img" aria-label="Reactant masses add to 266.0; the ibuprofen is 206.0 and the remaining 60.0 is the acetic acid by-product"><defs><marker id="ahm2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="htm2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><text x="10" y="16" class="tx tb" text-anchor="start" font-size="13.5">Reactants: 266.0 g mol⁻¹ in total</text><rect x="10.0" y="24" width="312.3" height="42" rx="4" class="nb"/><text x="166.2" y="41" class="tx" text-anchor="middle" font-size="12">C<tspan baseline-shift="sub" font-size="9">10</tspan>H<tspan baseline-shift="sub" font-size="9">14</tspan></text><text x="166.2" y="58" class="tx tm" text-anchor="middle" font-size="11.5">134.0</text><rect x="322.3" y="24" width="237.7" height="42" rx="4" class="nb"/><text x="441.2" y="41" class="tx" text-anchor="middle" font-size="12">C<tspan baseline-shift="sub" font-size="9">4</tspan>H<tspan baseline-shift="sub" font-size="9">6</tspan>O<tspan baseline-shift="sub" font-size="9">3</tspan></text><text x="441.2" y="58" class="tx tm" text-anchor="middle" font-size="11.5">102.0</text><rect x="560.1" y="24" width="4.7" height="42" rx="4" class="nb"/><text x="562.4" y="41" class="tx" text-anchor="middle"></text><rect x="564.7" y="24" width="65.3" height="42" rx="4" class="nb"/><text x="597.4" y="41" class="tx" text-anchor="middle" font-size="12">CO</text><text x="597.4" y="58" class="tx tm" text-anchor="middle" font-size="11.5">28.0</text><text x="10" y="94" class="tx tb" text-anchor="start" font-size="13.5">Ibuprofen 206.0 and by-product 60.0</text><rect x="10" y="102" width="480.2" height="34" rx="6" class="gb"/><text x="250.1" y="124" class="tx tb" text-anchor="middle" font-size="13">Ibuprofen 206.0</text><rect x="490.2" y="102" width="139.8" height="34" rx="6" fill="url(#htm2)" stroke="var(--faint)" stroke-width="1.2"/><rect x="538.1" y="108" width="44" height="22" rx="5" class="pt" opacity=".95"/><text x="560.1" y="124" class="tx" text-anchor="middle" font-size="12.5">60.0</text></svg><figcaption>The green part is the ibuprofen. The hatched part is the acetic acid that is not in the product.</figcaption></figure>`
-];
-let ae=0;const aeEl=document.getElementById("aeSteps"),aeBtn=document.getElementById("aeNext");
-aeBtn.onclick=()=>{if(ae<AE.length){aeEl.insertAdjacentHTML("beforeend",`<div class="worked"><div class="line">${AE[ae]}</div></div>`);ae++;}if(ae>=AE.length)aeBtn.hidden=true;};
-
-/* Elaborate */
-const GOALS=[[2,"Zero hunger"],[6,"Clean water and sanitation"],[7,"Affordable and clean energy"],[9,"Industry, innovation and infrastructure"],[11,"Sustainable cities and communities"],[12,"Responsible consumption and production"],[13,"Climate action"],[14,"Life below water"],[15,"Life on land"]];
-const TOPICS=[
- ["fc","Fuel cells (3E)","Fuel cells turn the chemical energy of hydrogen straight into electricity. The only product is water.",
-  [[7,"they make electricity from hydrogen with water as the only product."],[13,"no CO₂ is released where the energy is used."],[11,"fuel cell buses give cleaner air in cities."]]],
- ["gh","Green hydrogen (6D)","Green hydrogen is made by splitting water using electricity from solar or wind.",
-  [[7,"it stores solar and wind energy as a clean fuel."],[13,"making it releases no CO₂, unlike hydrogen made from natural gas."],[9,"it needs new electrolysers, pipelines and industries."]]],
- ["hb","Haber process (5D)","The Haber process makes ammonia, which is used to make most of the world's fertiliser.",
-  [[2,"fertiliser made from ammonia helps farms grow enough food."],[12,"a catalyst and a compromise temperature cut the energy used."],[13,"less energy used means less CO₂ from burning fuel."]]],
- ["bd","Biodiesel (8A)","Biodiesel is made from plant oils, including used cooking oil, by transesterification.",
-  [[12,"a waste oil becomes a useful fuel."],[13,"it replaces some diesel made from crude oil."],[7,"it gives another fuel option for vehicles and machines."]]],
- ["rc","Rechargeable batteries (6C)","Secondary cells can be discharged and recharged many times.",
-  [[7,"they store solar and wind energy for later use."],[12,"one battery is reused many times instead of thrown away."],[11,"electric vehicles cut noise and air pollution in cities."]]],
- ["an","Analysing water and products (9–10)","Titrations, spectroscopy and chromatography tell chemists what is in a sample and how pure it is.",
-  [[6,"testing water samples shows whether water is safe to drink."],[14,"it detects pollutants before they harm life in rivers and oceans."],[12,"checking purity means less product is wasted or recalled."]]]
-];
-const topicsEl=document.getElementById("topics"),tb=document.getElementById("topicBody"),goalsEl=document.getElementById("goals"),sent=document.getElementById("sdgSentence");
-topicsEl.innerHTML=TOPICS.map(([id,l])=>`<button class="topic" type="button" data-t="${id}" aria-pressed="false">${l}</button>`).join("");
-function pickTopic(id){S.topic=id;save();const T=TOPICS.find(t=>t[0]===id);
-  topicsEl.querySelectorAll(".topic").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===id));
-  tb.hidden=false;document.getElementById("topicDesc").textContent=T[2];
-  const g=S.goals[id]||[];
-  goalsEl.innerHTML=GOALS.map(([n,l])=>`<label><input type="checkbox" id="g-${id}-${n}" value="${n}" ${g.includes(n)?"checked":""}> Goal ${n} ${l}</label>`).join("")+`<label><input type="checkbox" id="g-${id}-other" value="0" ${g.includes(0)?"checked":""}> Another goal</label>`;
-  goalsEl.querySelectorAll("input").forEach(c=>c.onchange=()=>{S.goals[id]=[...goalsEl.querySelectorAll("input:checked")].map(x=>+x.value);save();});
-  document.getElementById("topicLinks").innerHTML=T[3].map(([n,why])=>`<p><span class="sdgchip">Goal ${n}</span> ${GOALS.find(g=>g[0]===n)[1]}, because ${why}</p>`).join("");
-  sent.value=(S.sent||{})[id]||"";
-}
-topicsEl.onclick=e=>{const b=e.target.closest(".topic");if(b)pickTopic(b.dataset.t);};
-sent.oninput=()=>{S.sent=S.sent||{};S.sent[S.topic]=sent.value;save();};
-if(S.topic)pickTopic(S.topic);
-const sx=document.getElementById("sdgExtend");sx.value=S.sdgExt||"";sx.oninput=()=>{S.sdgExt=sx.value;save();};
-
-/* Evaluate */
-const Q=[
- {id:"q1",q:"Which principle is the strongest reason Route B is greener?",o:["Atom economy","Design for degradation","Use of renewable feedstocks"],a:0,
-  why:"77% of reactant atoms end up in ibuprofen, compared with 40% for Route A. Catalysis and prevention of wastes also favour Route B."},
- {id:"q2",q:"Which principle counts against Route B?",o:["Catalysis","Designing safer chemicals","Design for energy efficiency"],a:1,
-  why:"Hydrogen fluoride is very toxic. It is kept in a closed system and reused, so most chemists still judge Route B greener overall."},
- {id:"q3",q:"A shampoo bottle is made from polyethene that comes from sugarcane, not crude oil. Which principle is this?",o:["Prevention of wastes","Use of renewable feedstocks","Atom economy"],a:1,
-  why:"Sugarcane is a plant, so it is a renewable feedstock."},
- {id:"q4",q:"A factory uses heat from one reaction to warm the reactants for the next batch. Which principle is this?",o:["Design for energy efficiency","Catalysis","Designing safer chemicals"],a:0,
-  why:"Reusing heat means less extra energy is needed."},
- {id:"q5",q:"Which SDG best matches making fertiliser so farms can grow more crops?",o:["Goal 6 Clean water and sanitation","Goal 2 Zero hunger","Goal 14 Life below water"],a:1,
-  why:"More crops means more food, which supports Goal 2."}
-];
-const quiz=document.getElementById("quiz");
-quiz.innerHTML=Q.map((x,i)=>`<div class="q" id="${x.id}"><b>${i+1}. ${x.q}</b><div class="opts">${x.o.map((o,j)=>`<button class="opt" type="button" data-q="${x.id}" data-j="${j}" aria-pressed="false">${o}</button>`).join("")}</div><div class="fb" hidden></div></div>`).join("");
-function mark(id,j){const x=Q.find(q=>q.id===id),box=document.getElementById(id);S.quiz[id]=j;save();
-  box.querySelectorAll(".opt").forEach(b=>{const k=+b.dataset.j;b.setAttribute("aria-pressed",k===j);b.classList.toggle("right",k===x.a&&j===x.a);b.classList.toggle("wrong",k===j&&j!==x.a);});
-  const f=box.querySelector(".fb");f.hidden=false;f.className="fb "+(j===x.a?"ok":"no");
-  f.innerHTML=j===x.a?`<b>Correct.</b> ${x.why}`:`<b>Not quite.</b> The answer is ${x.o[x.a]}. ${x.why}`;}
-quiz.onclick=e=>{const b=e.target.closest(".opt");if(b)mark(b.dataset.q,+b.dataset.j);};
-Object.entries(S.quiz).forEach(([id,j])=>{if(Q.find(q=>q.id===id))mark(id,j);});
-function renderPick(){const y=document.getElementById("yourPick");
-  y.textContent=S.pick?`In Engage you chose Route ${S.pick}. Answer the questions below, then decide whether you would change your choice.`:"Answer the questions below, then decide which route you think is greener.";}
-const er=document.getElementById("evalReason");er.value=S.evalR||"";er.oninput=()=>{S.evalR=er.value;save();};
-if(S.pick)setPick(S.pick);else renderPick();
-
-/* Drawer */
-const dr=document.getElementById("drawer"),sc=document.getElementById("scrim");
-const openD=o=>{dr.hidden=!o;sc.hidden=!o;if(o)document.getElementById("kwClose").focus();};
-document.getElementById("kwBtn").onclick=()=>openD(true);
-document.getElementById("kwClose").onclick=()=>openD(false);sc.onclick=()=>openD(false);
-
-/* Board */
-const bd=document.getElementById("board"),bsc=document.getElementById("bSc"),bscBtn=document.getElementById("bScBtn");
-const openB=o=>{bd.hidden=!o;document.body.style.overflow=o?"hidden":"";if(o)document.getElementById("boardClose").focus();};
-document.getElementById("boardBtn").onclick=()=>openB(true);
-document.getElementById("boardClose").onclick=()=>openB(false);
-bscBtn.onclick=()=>{bsc.hidden=!bsc.hidden;bscBtn.textContent=bsc.hidden?"Show success criteria":"Hide success criteria";};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(!bd.hidden)openB(false);else if(!dr.hidden)openD(false);}});
-
-/* Start at the first unfinished part */
-progress();
-const first=PARTS.find(([p])=>!S.done[p]);
-show(S.cur&&!S.done[S.cur]?S.cur:(first?first[0]:"evaluate"));
-})();
-</script>
-
-</body></html>
+<script>window.LESSON={"key": "12che-ori-green-chem-v2", "parts": [["welcome", "Welcome"], ["warmup", "Warm up"], ["tryit", "Try it"], ["learn", "Learn"], ["apply", "Apply"], ["check", "Check"]], "pick": {"options": ["Route A is greener", "Route B is greener"], "highlight": ["routeA", "routeB"], "none": "Answer the questions below, then decide which route you think is greener."}, "sort": {"cols": [{"label": "Principle", "placeholder": "Choose a principle", "opts": ["Atom economy", "Catalysis", "Design for degradation", "Design for energy efficiency", "Designing safer chemicals", "Prevention of wastes", "Use of renewable feedstocks"]}], "cards": [{"id": "c1", "t": "Bioethanol is made by fermenting sugarcane, instead of making petrol from crude oil.", "where": "1B Biofuels", "ans": [6], "why": "Sugarcane regrows each year. Crude oil took millions of years to form."}, {"id": "c2", "t": "A hydrogen fuel cell car turns about twice as much of its fuel's chemical energy into useful energy as a petrol engine does.", "where": "3E Fuel cells", "ans": [3], "why": "Less of the fuel's energy is lost as heat, so the car is more energy efficient."}, {"id": "c3", "t": "An iron catalyst lets the Haber process make ammonia quickly without using an even higher temperature.", "where": "5D Compromise equilibrium", "ans": [1], "why": "The catalyst lowers the activation energy, so the reaction is fast enough at a lower temperature."}, {"id": "c4", "t": "Ethanol is made by adding water to ethene. Every reactant atom ends up in the ethanol.", "where": "8A Organic reactions", "ans": [0], "why": "All the reactant atoms end up in the product, so the atom economy is 100%."}, {"id": "c5", "t": "Making hydrogen by splitting water gives only oxygen as a by-product, so there is no CO₂ to capture or treat.", "where": "6D Green hydrogen", "ans": [5], "why": "No harmful by-product forms in the first place, so there is nothing to clean up."}, {"id": "c6", "t": "A medicine is sold as just one mirror-image form of its molecule, because the other form can cause side effects.", "where": "11 Medicines", "ans": [4], "why": "The product still does its job, but with less risk of harm to the patient."}, {"id": "c7", "t": "Cutlery made from the bioplastic PLA breaks down in industrial compost after it is used.", "where": "Year 11 polymers", "ans": [2], "why": "The product is designed to break down into harmless substances after use."}, {"id": "c8", "t": "Biodiesel is made from used cooking oil collected from restaurants.", "where": "8A Biodiesel", "ans": [6], "why": "The oil comes from plants, so it is renewable. Using a waste oil is a bonus."}, {"id": "c9", "t": "Artificial photosynthesis uses catalysts to split water into hydrogen and oxygen using sunlight.", "where": "6D Green hydrogen", "ans": [1], "why": "Catalysts make the water-splitting reactions happen fast enough to be useful."}], "msgs": {"left": "not answered yet", "none": "Choose a principle for at least one card first."}}, "scen": {"mode": "goals", "goals": [[2, "Zero hunger"], [6, "Clean water and sanitation"], [7, "Affordable and clean energy"], [9, "Industry, innovation and infrastructure"], [11, "Sustainable cities and communities"], [12, "Responsible consumption and production"], [13, "Climate action"], [14, "Life below water"], [15, "Life on land"]], "items": [{"id": "fc", "label": "Fuel cells (3E)", "desc": "Fuel cells turn the chemical energy of hydrogen straight into electricity. The only product is water.", "links": [[7, "they make electricity from hydrogen with water as the only product."], [13, "no CO₂ is released where the energy is used."], [11, "fuel cell buses give cleaner air in cities."]]}, {"id": "gh", "label": "Green hydrogen (6D)", "desc": "Green hydrogen is made by splitting water using electricity from solar or wind.", "links": [[7, "it stores solar and wind energy as a clean fuel."], [13, "making it releases no CO₂, unlike hydrogen made from natural gas."], [9, "it needs new electrolysers, pipelines and industries."]]}, {"id": "hb", "label": "Haber process (5D)", "desc": "The Haber process makes ammonia, which is used to make most of the world's fertiliser.", "links": [[2, "fertiliser made from ammonia helps farms grow enough food."], [12, "a catalyst and a compromise temperature cut the energy used."], [13, "less energy used means less CO₂ from burning fuel."]]}, {"id": "bd", "label": "Biodiesel (8A)", "desc": "Biodiesel is made from plant oils, including used cooking oil, by transesterification.", "links": [[12, "a waste oil becomes a useful fuel."], [13, "it replaces some diesel made from crude oil."], [7, "it gives another fuel option for vehicles and machines."]]}, {"id": "rc", "label": "Rechargeable batteries (6C)", "desc": "Secondary cells can be discharged and recharged many times.", "links": [[7, "they store solar and wind energy for later use."], [12, "one battery is reused many times instead of thrown away."], [11, "electric vehicles cut noise and air pollution in cities."]]}, {"id": "an", "label": "Analysing water and products (9–10)", "desc": "Titrations, spectroscopy and chromatography tell chemists what is in a sample and how pure it is.", "links": [[6, "testing water samples shows whether water is safe to drink."], [14, "it detects pollutants before they harm life in rivers and oceans."], [12, "checking purity means less product is wasted or recalled."]]}]}, "reveal": {"box": "aeSteps", "btn": "aeNext", "steps": ["Molar mass of ibuprofen, C<sub>13<\/sub>H<sub>18<\/sub>O<sub>2<\/sub> = (13 × 12.0) + (18 × 1.0) + (2 × 16.0) = 206.0 g mol<sup>−1<\/sup>", "Reactants: C<sub>10<\/sub>H<sub>14<\/sub> = 134.0, C<sub>4<\/sub>H<sub>6<\/sub>O<sub>3<\/sub> = 102.0, H<sub>2<\/sub> = 2.0, CO = 28.0. Total = 266.0 g mol<sup>−1<\/sup>", "Atom economy = <span class=\"frac\"><span>206.0<\/span><span>266.0<\/span><\/span> × 100% = 77.4%", "This matches the 77% in the Warm up bar. The missing 22.6% is the acetic acid by-product.", "<figure class=\"fig\"><svg viewBox=\"0 0 640 146\" role=\"img\" aria-label=\"Reactant masses add to 266.0; the ibuprofen is 206.0 and the remaining 60.0 is the acetic acid by-product\"><defs><marker id=\"ahm2\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" class=\"ah\"/><\/marker><pattern id=\"htm2\" width=\"8\" height=\"8\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><rect width=\"8\" height=\"8\" class=\"pt\"/><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"8\" class=\"pl\"/><\/pattern><\/defs><text x=\"10\" y=\"16\" class=\"tx tb\" text-anchor=\"start\" font-size=\"13.5\">Reactants: 266.0 g mol⁻¹ in total<\/text><rect x=\"10.0\" y=\"24\" width=\"312.3\" height=\"42\" rx=\"4\" class=\"nb\"/><text x=\"166.2\" y=\"41\" class=\"tx\" text-anchor=\"middle\" font-size=\"12\">C<tspan baseline-shift=\"sub\" font-size=\"9\">10<\/tspan>H<tspan baseline-shift=\"sub\" font-size=\"9\">14<\/tspan><\/text><text x=\"166.2\" y=\"58\" class=\"tx tm\" text-anchor=\"middle\" font-size=\"11.5\">134.0<\/text><rect x=\"322.3\" y=\"24\" width=\"237.7\" height=\"42\" rx=\"4\" class=\"nb\"/><text x=\"441.2\" y=\"41\" class=\"tx\" text-anchor=\"middle\" font-size=\"12\">C<tspan baseline-shift=\"sub\" font-size=\"9\">4<\/tspan>H<tspan baseline-shift=\"sub\" font-size=\"9\">6<\/tspan>O<tspan baseline-shift=\"sub\" font-size=\"9\">3<\/tspan><\/text><text x=\"441.2\" y=\"58\" class=\"tx tm\" text-anchor=\"middle\" font-size=\"11.5\">102.0<\/text><rect x=\"560.1\" y=\"24\" width=\"4.7\" height=\"42\" rx=\"4\" class=\"nb\"/><text x=\"562.4\" y=\"41\" class=\"tx\" text-anchor=\"middle\"><\/text><rect x=\"564.7\" y=\"24\" width=\"65.3\" height=\"42\" rx=\"4\" class=\"nb\"/><text x=\"597.4\" y=\"41\" class=\"tx\" text-anchor=\"middle\" font-size=\"12\">CO<\/text><text x=\"597.4\" y=\"58\" class=\"tx tm\" text-anchor=\"middle\" font-size=\"11.5\">28.0<\/text><text x=\"10\" y=\"94\" class=\"tx tb\" text-anchor=\"start\" font-size=\"13.5\">Ibuprofen 206.0 and by-product 60.0<\/text><rect x=\"10\" y=\"102\" width=\"480.2\" height=\"34\" rx=\"6\" class=\"gb\"/><text x=\"250.1\" y=\"124\" class=\"tx tb\" text-anchor=\"middle\" font-size=\"13\">Ibuprofen 206.0<\/text><rect x=\"490.2\" y=\"102\" width=\"139.8\" height=\"34\" rx=\"6\" fill=\"url(#htm2)\" stroke=\"var(--faint)\" stroke-width=\"1.2\"/><rect x=\"538.1\" y=\"108\" width=\"44\" height=\"22\" rx=\"5\" class=\"pt\" opacity=\".95\"/><text x=\"560.1\" y=\"124\" class=\"tx\" text-anchor=\"middle\" font-size=\"12.5\">60.0<\/text><\/svg><figcaption>The green part is the ibuprofen. The hatched part is the acetic acid that is not in the product.<\/figcaption><\/figure>"]}, "quiz": [{"id": "q1", "q": "Which principle is the strongest reason Route B is greener?", "o": ["Atom economy", "Design for degradation", "Use of renewable feedstocks"], "a": 0, "why": "77% of reactant atoms end up in ibuprofen, compared with 40% for Route A. Catalysis and prevention of wastes also favour Route B."}, {"id": "q2", "q": "Which principle counts against Route B?", "o": ["Catalysis", "Designing safer chemicals", "Design for energy efficiency"], "a": 1, "why": "Hydrogen fluoride is very toxic. It is kept in a closed system and reused, so most chemists still judge Route B greener overall."}, {"id": "q3", "q": "A shampoo bottle is made from polyethene that comes from sugarcane, not crude oil. Which principle is this?", "o": ["Prevention of wastes", "Use of renewable feedstocks", "Atom economy"], "a": 1, "why": "Sugarcane is a plant, so it is a renewable feedstock."}, {"id": "q4", "q": "A factory uses heat from one reaction to warm the reactants for the next batch. Which principle is this?", "o": ["Design for energy efficiency", "Catalysis", "Designing safer chemicals"], "a": 0, "why": "Reusing heat means less extra energy is needed."}, {"id": "q5", "q": "Which SDG best matches making fertiliser so farms can grow more crops?", "o": ["Goal 6 Clean water and sanitation", "Goal 2 Zero hunger", "Goal 14 Life below water"], "a": 1, "why": "More crops means more food, which supports Goal 2."}]};
+window.LESSON.pick.chosen=function(label,i){return "In Warm up you chose Route "+"AB"[i]+". Answer the questions below, then decide whether you would change your choice.";};</script>
+<script src="assets/y12-lesson.js?v=1"></script>
+</body>
+</html>
