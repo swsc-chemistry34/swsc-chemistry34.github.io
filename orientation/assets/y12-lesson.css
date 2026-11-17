@@ -46,6 +46,7 @@ button{font:inherit;color:inherit}
 .pillbtn{appearance:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--rose);font:600 14.5px var(--fb);cursor:pointer}
 .pillbtn:hover{border-color:var(--rose)}
 .pillbtn.round{width:44px;padding:0;justify-content:center}
+.pillbtn.back{margin-right:auto;text-decoration:none}
 
 .band{background:var(--band);color:#fff;border-radius:26px;padding:24px clamp(20px,3.4vw,36px);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;overflow:hidden}
 .band .txt{display:grid;gap:6px;align-content:center;min-width:0}
