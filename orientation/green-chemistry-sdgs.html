@@ -1,29 +1,14 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Green Chemistry and the SDGs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
-/* Layout: one lesson part at a time under a light header; reference in a side drawer; board view fills the screen. */
-:root{
-  --bg:#f3f6f3; --surface:#ffffff; --ink:#17231d; --muted:#55635b; --faint:#8a978f; --line:#d6ded7; --tint:#e9efea;
-  --leaf:#1d7550; --leaf-soft:#dcefe3; --sdg:#2858a8; --sdg-soft:#e0e8f6; --amber:#8f5300; --amber-soft:#fbe8c6;
-  --good:#1f7a3d; --good-soft:#dff2e5; --bad:#b3261e; --bad-soft:#fbe2df;
-  --b1:#1d7550; --b1-soft:#dcefe3; --b2:#2858a8; --b2-soft:#e0e8f6; --b3:#8f5300; --b3-soft:#fbe8c6;
-  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
-  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#111814; --surface:#18211c; --ink:#e6eee8; --muted:#a0aea6; --faint:#6f7d75; --line:#2b3730; --tint:#202a24;
-  --leaf:#6fd3a0; --leaf-soft:#173126; --sdg:#8db3ff; --sdg-soft:#1c2840; --amber:#ffc06a; --amber-soft:#382910;
-  --good:#7fd69a; --good-soft:#163222; --bad:#ff9a92; --bad-soft:#3d1c1a;
-  --b1:#6fd3a0; --b1-soft:#173126; --b2:#8db3ff; --b2-soft:#1c2840; --b3:#ffc06a; --b3-soft:#382910; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#111814; --surface:#18211c; --ink:#e6eee8; --muted:#a0aea6; --faint:#6f7d75; --line:#2b3730; --tint:#202a24;
-  --leaf:#6fd3a0; --leaf-soft:#173126; --sdg:#8db3ff; --sdg-soft:#1c2840; --amber:#ffc06a; --amber-soft:#382910;
-  --good:#7fd69a; --good-soft:#163222; --bad:#ff9a92; --bad-soft:#3d1c1a;
-  --b1:#6fd3a0; --b1-soft:#173126; --b2:#8db3ff; --b2-soft:#1c2840; --b3:#ffc06a; --b3-soft:#382910; color-scheme:dark}
+[hidden]:not([hidden=until-found i]){display:none!important}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
 .wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:22px 72px;display:grid;gap:18px}
@@ -240,83 +225,6 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 .chip2.m{background:var(--amber-soft);color:var(--amber)}
 .stack{display:grid;gap:12px}
 
-/* Friendly classroom look: warm, colourful, illustrated. Overrides the base tokens above. */
-:root{--bg:#fdf8ee;--surface:#ffffff;--ink:#1d2433;--muted:#566074;--faint:#7c8597;--line:#e6dfcd;--tint:#f6f0e2;
-  --leaf:#0f8a5f;--leaf-soft:#d9f3e6;--sdg:#2b5fd9;--sdg-soft:#e1eafc;--amber:#a85a00;--amber-soft:#ffe9bd;
-  --pink:#c2336f;--pink-soft:#fde3ee;--purple:#6d3fc7;--purple-soft:#ece3fb;--teal:#0a7f8f;--teal-soft:#d7f1f4;--orange:#c9510c;--orange-soft:#ffe4d4;
-  --b1:var(--leaf);--b1-soft:var(--leaf-soft);--b2:var(--sdg);--b2-soft:var(--sdg-soft);--b3:var(--amber);--b3-soft:var(--amber-soft);
-  --mono:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1a1d2e;--surface:#242841;--ink:#f2f2f8;--muted:#b9bdd1;--faint:#8a90ab;--line:#3a4060;--tint:#2d3250;
-  --leaf:#5fe0a8;--leaf-soft:#1f3b3a;--sdg:#93b4ff;--sdg-soft:#273561;--amber:#ffc766;--amber-soft:#43361a;
-  --pink:#ff8fbd;--pink-soft:#4a2540;--purple:#c2a6ff;--purple-soft:#36295e;--teal:#5ed6e6;--teal-soft:#1d3f4a;--orange:#ff9d6c;--orange-soft:#4a2e22}}
-:root[data-theme="dark"]{--bg:#1a1d2e;--surface:#242841;--ink:#f2f2f8;--muted:#b9bdd1;--faint:#8a90ab;--line:#3a4060;--tint:#2d3250;
-  --leaf:#5fe0a8;--leaf-soft:#1f3b3a;--sdg:#93b4ff;--sdg-soft:#273561;--amber:#ffc766;--amber-soft:#43361a;
-  --pink:#ff8fbd;--pink-soft:#4a2540;--purple:#c2a6ff;--purple-soft:#36295e;--teal:#5ed6e6;--teal-soft:#1d3f4a;--orange:#ff9d6c;--orange-soft:#4a2e22}
-.eyebrow,.hbox .lab,.task .lab,.facts .k,.steplab,.card .where,.tab span,.aosc .code{text-transform:none;letter-spacing:0;font-weight:700}
-.eyebrow{font-size:15px;color:inherit;opacity:.92}
-.hbox .lab,.task .lab{font-size:15px;color:var(--ink)}
-.facts .k{font-size:14px}
-.toprow{justify-content:flex-end}
-.hero{border-radius:22px;background:linear-gradient(115deg,#05453a 0%,#0a6b55 45%,#12808a 100%);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:24px clamp(18px,3vw,32px) 22px;overflow:hidden;position:relative}
-.hero h1{color:#fff}
-.hero .sub{color:#ffe08a;font-size:22px}
-.hero .kq{color:#fff;font-weight:700;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 14px;margin-top:6px;max-width:46ch}
-.hero .kq .ico{color:#ffe08a}
-.hero .art{width:min(280px,32vw);height:auto}
-.hero .txt{display:grid;gap:8px;align-content:center}
-@media (max-width:680px){.hero{grid-template-columns:1fr}.hero .art{width:200px;justify-self:end;margin-top:-6px}}
-.hbox{border-radius:16px;border-top:6px solid var(--orange);align-content:start}
-.hbox+.hbox{border-top-color:var(--sdg)}
-.hbox .lab{display:flex;align-items:center;gap:8px;font-size:16px}
-.hbox .lab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hbox:nth-child(1) .lab{color:var(--orange)} .hbox:nth-child(2) .lab{color:var(--sdg)}
-.pbar{height:12px} .pbar i{background:linear-gradient(90deg,var(--teal),var(--leaf),#f5b73c)}
-.tabs{gap:8px}
-.tab{border-radius:14px;border:2px solid var(--line);padding:8px 14px 8px 10px;display:flex;align-items:center;gap:8px;transition:transform .15s}
-.tab:hover{transform:translateY(-2px)}
-.tab .ti{width:34px;height:34px;border-radius:50%;background:var(--tcs);color:var(--tc);display:grid;place-items:center;flex:none}
-.tab .ti svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.tab .tt{display:grid;line-height:1.2}
-.tab[aria-selected="true"]{border-color:var(--tc);background:var(--tcs)}
-.tab[aria-selected="true"] .ti{background:var(--tc);color:var(--surface)}
-.tab[data-part=welcome]{--tc:var(--orange);--tcs:var(--orange-soft)}
-.tab[data-part=engage]{--tc:var(--pink);--tcs:var(--pink-soft)}
-.tab[data-part=explore]{--tc:var(--teal);--tcs:var(--teal-soft)}
-.tab[data-part=explain]{--tc:var(--sdg);--tcs:var(--sdg-soft)}
-.tab[data-part=elaborate]{--tc:var(--purple);--tcs:var(--purple-soft)}
-.tab[data-part=evaluate]{--tc:var(--leaf);--tcs:var(--leaf-soft)}
-.panel{border-radius:22px;border-width:1px;border-top-width:8px;box-shadow:0 6px 20px rgba(30,40,70,.07)}
-#p-welcome{border-top-color:var(--orange)} #p-engage{border-top-color:var(--pink)} #p-explore{border-top-color:var(--teal)}
-#p-explain{border-top-color:var(--sdg)} #p-elaborate{border-top-color:var(--purple)} #p-evaluate{border-top-color:var(--leaf)}
-.phead{display:flex;align-items:center;justify-content:space-between;gap:14px}
-.phead h2{font-size:clamp(24px,3.4vw,30px)}
-.phead svg{width:130px;height:auto;flex:none}
-@media (max-width:560px){.phead svg{width:80px}}
-.lead{font-size:18px}
-.aos{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.aosc{padding:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);gap:0;background:var(--surface);box-shadow:0 3px 10px rgba(30,40,70,.06)}
-.aosc .band{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cs);color:#fff}
-.aosc .band .code{font-size:14.5px;color:#fff}
-.aosc .badge{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;color:var(--cs)}
-.aosc .badge svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.aosc .body{padding:12px 14px 14px;display:grid;gap:6px}
-.aosc b{font-family:var(--display);font-size:17.5px}
-.aosc .ch{font-size:15px}
-.c1{--cs:#0f8a5f}.c2{--cs:#2b5fd9}.c3{--cs:#6d3fc7}.c4{--cs:#0a7f8f}.c5{--cs:#b8470a}
-.score{height:54px;border-radius:14px;font-size:15.5px}
-.stepup{gap:10px}
-.stepup li{align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)}
-.stepup .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--tint);color:var(--ink);font-weight:700;font-size:15px}
-.stepup li.today{background:var(--leaf-soft);border-color:var(--leaf)}
-.stepup li.today .n{background:var(--leaf);color:var(--surface)}
-.task{border-radius:14px;background:var(--amber-soft);border-left:6px solid var(--amber)}
-.finish{border-radius:999px;padding:13px 26px;font-size:17px;box-shadow:0 4px 12px rgba(15,138,95,.28)}
-.finish::after{content:" \2192"}
-.route{border-radius:18px}
-.card,.hbox{border-radius:16px}
-.sub{font-size:21px}
-.tbtn{border-width:2px}
-
 .cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 @media (max-width:680px){.cmp{grid-template-columns:1fr}}
 .cmpc{border:2px solid var(--line);border-radius:16px;padding:12px 16px;display:grid;gap:6px;align-content:start;background:var(--surface)}
@@ -330,9 +238,145 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
   .panel[hidden],.step[hidden]{display:grid!important}
   body{background:#fff}
 }
+
+/* Rose and slate */
+:root{color-scheme:light;
+  --bg:#F8F1F4;--surface:#FFFFFF;--ink:#2D1E27;--muted:#65545D;--faint:#65545D;--line:#E3D5DC;--tint:#F8F1F4;--track:#EBDDE4;
+  --rose:#8A2E5C;--rose-light:#F6D3E4;--slate-mid:#7FA3C2;
+  --leaf:#8A2E5C;--leaf-soft:#F7E3EE;--sdg:#3A5C78;--sdg-soft:#E2EBF3;--amber:#6B4500;--amber-soft:#FDE7C3;
+  --good:#1B5E34;--good-soft:#DDF1E2;--bad:#A62A22;--bad-soft:#FBE3E0;
+  --green:#2F7A62;--green-soft:#DDF0E9;
+  --b1:#3A5C78;--b1-soft:#E2EBF3;--b2:#8A2E5C;--b2-soft:#F7E3EE;--b3:#6B4500;--b3-soft:#FDE7C3;
+  --display:"Literata",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:var(--body)}
+body{font-size:16px}
+h1,h2,h3{font-family:var(--display);color:var(--rose)}
+h1{font-weight:700}
+h2,h3{font-weight:600}
+a{color:var(--sdg);text-underline-offset:3px}
+.eyebrow,.hbox .lab,.task .lab,.facts .k,.steplab,.ptable th,.bbox .bl,.card .where,.tab span,.aosc .code{text-transform:none;letter-spacing:0}
+.eyebrow{font-size:15px;font-weight:600;color:var(--muted)}
+.wrap{max-width:1040px;gap:20px}
+
+/* top row and header band */
+.toprow{justify-content:flex-start}
+.tbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 18px 8px 12px}
+.tbtn .ico{color:var(--sdg)}
+.hero{border-radius:28px;background:var(--rose);color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:28px clamp(20px,3.4vw,38px) 26px;overflow:hidden;position:relative}
+.hero h1{color:#fff}
+.hero .eyebrow{color:var(--rose-light)}
+.hero .sub{color:var(--rose-light);font-size:22px;font-weight:600}
+.hero .kq{color:#fff;background:rgba(255,255,255,.14);border-radius:18px;padding:10px 16px;margin-top:6px;max-width:46ch}
+.hero .kq .ico{color:var(--rose-light)}
+.hero .art{width:min(280px,32vw);height:auto}
+.hero .txt{display:grid;gap:8px;align-content:center}
+@media (max-width:680px){.hero{grid-template-columns:1fr;border-radius:24px}.hero .art{width:200px;justify-self:end;margin-top:-6px}}
+.hbox{border-radius:24px;border:1px solid var(--line);padding:16px 20px;align-content:start}
+.hbox .lab{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--sdg)}
+.hbox .lab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hbox details summary{color:var(--sdg)}
+
+/* progress */
+.pbar{height:12px;background:var(--track)}
+.pbar i{background:var(--slate-mid)}
+
+/* lesson parts: numbered pills, on the left on wide screens */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;counter-reset:part}
+.tab{counter-increment:part;border-radius:999px;border:1px solid var(--line);background:var(--surface);padding:7px 18px 7px 8px;display:flex;align-items:center;gap:10px;min-width:max-content;text-align:left}
+.tab:hover{border-color:var(--muted)}
+.tab .ti{width:32px;height:32px;border-radius:50%;background:var(--sdg-soft);color:var(--sdg);display:grid;place-items:center;flex:none;font-weight:700;font-size:15px}
+.tab .ti svg{display:none}
+.tab .ti::before{content:counter(part)}
+.tab .tt{display:grid;line-height:1.2}
+.tab b{font-size:15.5px}
+.tab span{font-size:13px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--leaf-soft);border-color:var(--rose)}
+.tab[aria-selected="true"] .ti{background:var(--rose);color:#fff}
+.tab[aria-selected="true"] b{color:var(--rose)}
+.tab.done b::after{content:"";display:inline-block;width:5px;height:9px;border:solid var(--good);border-width:0 2px 2px 0;transform:rotate(45deg);margin-left:9px;vertical-align:1px}
+@media (min-width:900px){
+  .wrap{grid-template-columns:216px minmax(0,1fr);column-gap:24px}
+  .head{display:contents}
+  .head>.toprow,.head>.hero,.head>.hgrid,.head>.prog{grid-column:1/-1}
+  .head>.tabs{grid-column:1;flex-direction:column;overflow:visible;align-self:start;position:sticky;top:16px}
+  .head>.tabs .tab{width:100%}
+  .wrap>.panel{grid-column:2}
+}
+
+/* panels */
+.panel{border-radius:24px;border:1px solid var(--line);padding:26px clamp(18px,3vw,32px)}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.phead h2{font-size:clamp(24px,3.4vw,30px)}
+.phead svg{width:130px;height:auto;flex:none}
+@media (max-width:560px){.phead svg{width:80px}}
+.lead{font-size:18px}
+
+/* welcome */
+.aos{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.aosc{padding:0;overflow:hidden;border-radius:22px;border:1px solid var(--line);gap:0;background:var(--surface)}
+.aosc .band{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cs);color:#fff}
+.aosc .band .code{font-size:14.5px;font-weight:700;color:#fff}
+.aosc .badge{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;color:var(--cs)}
+.aosc .badge svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.aosc .body{padding:12px 14px 14px;display:grid;gap:6px}
+.aosc b{font-family:var(--display);font-size:17.5px;font-weight:600}
+.aosc .ch{font-size:15px}
+.c1{--cs:#B4501F}.c2{--cs:#2F7A62}.c3{--cs:#4A4DB0}.c4{--cs:#9A3C80}.c5{--cs:#7A6420}
+.score{height:54px;border-radius:18px;font-size:15.5px}
+.score .s1{background:#FBE9DD;color:#8F3E15}
+.score .s2{background:#E6E7F8;color:#3B3E96}
+.score .s3{background:var(--bad-soft);color:var(--bad)}
+.stepup{gap:10px}
+.stepup li{align-items:center;border:1px solid var(--line);border-radius:18px;padding:10px 12px;background:var(--surface)}
+.stepup .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--sdg-soft);color:var(--sdg);font-weight:700;font-size:15px}
+.stepup li.today{background:var(--leaf-soft);border-color:var(--rose)}
+.stepup li.today .n{background:var(--rose);color:#fff}
+.task{border-radius:18px;background:var(--amber-soft);border-left:6px solid var(--amber)}
+.task .lab{font-size:15px;font-weight:700;color:var(--amber)}
+.finish{border-radius:999px;padding:13px 28px;font-size:17px;box-shadow:0 4px 12px rgb(138 46 92/.25)}
+.finish::after{content:" \2192"}
+.btn{border-radius:999px;padding:8px 18px}
+.btn.primary{border-color:var(--rose);color:var(--rose)}
+textarea{border-radius:16px}
+select{border-radius:12px}
+.route{border-radius:22px}
+.route.pick{border-color:var(--rose);background:var(--leaf-soft)}
+.card{border-radius:20px}
+.fb{border-radius:16px}
+.defbox{border-left-color:var(--rose)}
+.worked{border-radius:16px}
+.sub{font-size:21px}
+
+/* chips, topics, quiz */
+.pchip{background:var(--green-soft);color:var(--green)}
+.pi .ico{color:var(--green)}
+.chip2.b{background:var(--green-soft);color:var(--green)}
+.sdgchip{border-radius:999px}
+.sdgt{border-radius:18px}
+.opt{border-radius:999px;padding:7px 16px}
+.goals label{border-radius:14px}
+.ptable th{font-size:14px;font-weight:700;color:var(--sdg)}
+.steplab{font-size:14px;font-weight:700;color:var(--sdg)}
+.facts .k{font-size:14px;font-weight:700;color:var(--sdg)}
+svg .gb{fill:var(--green-soft);stroke:var(--green)}
+
+/* board */
+.bbox{border-radius:24px}
+.bbox .bl{font-size:.6em;font-weight:700}
+.board h2{color:var(--rose)}
+.drawer{border-radius:24px 0 0 24px}
+.drawer dt{color:var(--sdg)}
+.x{border-radius:50%}
+
+@media print{
+  .wrap{display:block}
+  .head{display:grid;gap:12px}
+}
 @media (prefers-reduced-motion:reduce){.pbar i{transition:none}}
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header class="head">
     <div class="toprow"><div class="toolbtns">
@@ -348,13 +392,13 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
       </div>
       <svg class="art" viewBox="0 0 280 190" aria-hidden="true" focusable="false">
 <circle cx="214" cy="46" r="30" fill="#ffd166"/><g stroke="#ffd166" stroke-width="5" stroke-linecap="round"><path d="M214 2v10M214 80v10M170 46h10M248 46h10M183 15l7 7M238 70l7 7M245 15l-7 7M183 77l7-7"/></g>
-<path d="M0 168 Q70 136 140 160 T280 150 V190 H0Z" fill="#0b5a47"/><path d="M0 178 Q90 156 170 174 T280 170 V190 H0Z" fill="#06392f"/>
+<path d="M0 168 Q70 136 140 160 T280 150 V190 H0Z" fill="#3A5C78"/><path d="M0 178 Q90 156 170 174 T280 170 V190 H0Z" fill="#2B4760"/>
 <g stroke="#fff" stroke-linecap="round"><path d="M64 160V82" stroke-width="5"/><path d="M64 82V38M64 82L102 104M64 82L26 104" stroke-width="7"/></g><circle cx="64" cy="82" r="6" fill="#ffd166"/>
 <g stroke="#fff" stroke-linecap="round" opacity=".85"><path d="M128 164V122" stroke-width="4"/><path d="M128 122V92M128 122L154 137M128 122L102 137" stroke-width="5"/></g><circle cx="128" cy="122" r="4" fill="#ffd166"/>
 <path d="M186 120h22v26l26 36h-74l26-36z" fill="#9be8c3" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
 <path d="M163 168h68l-9-13h-50z" fill="#2fc48d"/><rect x="184" y="108" width="26" height="10" rx="3" fill="#fff"/>
 <circle cx="196" cy="150" r="5" fill="#fff" opacity=".9"/><circle cx="212" cy="140" r="3.5" fill="#fff" opacity=".9"/><circle cx="203" cy="130" r="3" fill="#fff" opacity=".9"/>
-<path d="M240 118c-18 2-26 14-24 30 18-2 26-14 24-30z" fill="#7be0a7"/><path d="M216 148c8-10 14-18 24-30" stroke="#05453a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M240 118c-18 2-26 14-24 30 18-2 26-14 24-30z" fill="#7be0a7"/><path d="M216 148c8-10 14-18 24-30" stroke="#8A2E5C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 </svg>
     </div>
     <div class="hgrid">
@@ -392,7 +436,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 
   
   <section class="panel" id="p-welcome" role="tabpanel">
-    <div class="phead"><h2>Year 12 Chemistry at a glance</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="74" cy="16" r="10" fill="#ffd166"/><g stroke="#5b6b7a" stroke-linecap="round"><path d="M26 70V34" stroke-width="3"/></g><g stroke="#2b8fd9" stroke-width="4.5" stroke-linecap="round"><path d="M26 34V10M26 34l20 11M26 34L6 45"/></g><circle cx="26" cy="34" r="3.5" fill="#e0457b"/><path d="M62 38h10v12l12 18H50l12-18z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="66" cy="60" r="2.6" fill="#fff"/><circle cx="74" cy="54" r="2" fill="#fff"/></svg></div>
+    <div class="phead"><h2>Year 12 Chemistry at a glance</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="74" cy="16" r="10" fill="#ffd166"/><g stroke="#3A5C78" stroke-linecap="round"><path d="M26 70V34" stroke-width="3"/></g><g stroke="#2b8fd9" stroke-width="4.5" stroke-linecap="round"><path d="M26 34V10M26 34l20 11M26 34L6 45"/></g><circle cx="26" cy="34" r="3.5" fill="#e0457b"/><path d="M62 38h10v12l12 18H50l12-18z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2.5" stroke-linejoin="round"/><circle cx="66" cy="60" r="2.6" fill="#fff"/><circle cx="74" cy="54" r="2" fill="#fff"/></svg></div>
     <p class="lead">Each area of study is built around one big question. The SACs and the exam ask you to answer it.</p>
     <div class="aos">
       <div class="aosc c1"><div class="band"><span class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 13.5h6L10 22l9-12h-6.2z"/></svg></span><span class="code">Unit 3 · AOS 1 · Ch 1–3</span></div><div class="body"><b>What are the current and future options for supplying energy?</b><span class="ch">Fuels, food energy, calorimetry, galvanic and fuel cells</span></div></div>
@@ -425,7 +469,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 
   
   <section class="panel" id="p-engage" role="tabpanel" hidden>
-    <div class="phead"><h2>Which is greener?</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="28" cy="36" r="17" fill="#ffd166" stroke="#e09f1f" stroke-width="3"/><path d="M17 36h22" stroke="#e09f1f" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-28 66 30)"><rect x="46" y="21" width="40" height="18" rx="9" fill="#fff" stroke="#c2336f" stroke-width="3"/><path d="M66 21h-11a9 9 0 0 0 0 18h11z" fill="#ef476f"/></g><text x="58" y="68" font-family="Bricolage Grotesque,sans-serif" font-size="26" font-weight="700" fill="#2b5fd9">?</text></svg></div>
+    <div class="phead"><h2>Which is greener?</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="28" cy="36" r="17" fill="#ffd166" stroke="#e09f1f" stroke-width="3"/><path d="M17 36h22" stroke="#e09f1f" stroke-width="3" stroke-linecap="round"/><g transform="rotate(-28 66 30)"><rect x="46" y="21" width="40" height="18" rx="9" fill="#fff" stroke="#8A2E5C" stroke-width="3"/><path d="M66 21h-11a9 9 0 0 0 0 18h11z" fill="#ef476f"/></g><text x="58" y="68" font-family="Literata,Georgia,serif" font-size="26" font-weight="700" fill="#7FA3C2">?</text></svg></div>
     <p class="lead">Ibuprofen is one of the most used medicines in the world. Here are two real ways to make it. Both give the same pure ibuprofen.</p>
 <div class="stack"><figure class="fig"><svg viewBox="0 0 640 156" role="img" aria-label="Flow chart: Route A takes six reaction steps to make ibuprofen and Route B takes three"><defs><marker id="ahe1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="hte1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><text x="10" y="16" class="tx tb" text-anchor="start" font-size="14">Route A: 6 steps</text><rect x="10" y="24" width="70" height="36" rx="8" class="nb"/><text x="45.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 1</text><path d="M80 42 L92 42" class="ln" marker-end="url(#ahe1)"/><rect x="92" y="24" width="70" height="36" rx="8" class="nb"/><text x="127.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 2</text><path d="M162 42 L174 42" class="ln" marker-end="url(#ahe1)"/><rect x="174" y="24" width="70" height="36" rx="8" class="nb"/><text x="209.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 3</text><path d="M244 42 L256 42" class="ln" marker-end="url(#ahe1)"/><rect x="256" y="24" width="70" height="36" rx="8" class="nb"/><text x="291.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 4</text><path d="M326 42 L338 42" class="ln" marker-end="url(#ahe1)"/><rect x="338" y="24" width="70" height="36" rx="8" class="nb"/><text x="373.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 5</text><path d="M408 42 L420 42" class="ln" marker-end="url(#ahe1)"/><rect x="420" y="24" width="70" height="36" rx="8" class="nb"/><text x="455.0" y="46.5" class="tx" text-anchor="middle" font-size="13">Step 6</text><path d="M490 42 L508 42" class="ln" marker-end="url(#ahe1)"/><rect x="508" y="24" width="122" height="36" rx="8" class="gb"/><text x="569.0" y="46.5" class="tx tb" text-anchor="middle" font-size="13">Ibuprofen</text><text x="10" y="100" class="tx tb" text-anchor="start" font-size="14">Route B: 3 steps</text><rect x="10" y="108" width="70" height="36" rx="8" class="nb"/><text x="45.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 1</text><path d="M80 126 L92 126" class="ln" marker-end="url(#ahe1)"/><rect x="92" y="108" width="70" height="36" rx="8" class="nb"/><text x="127.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 2</text><path d="M162 126 L174 126" class="ln" marker-end="url(#ahe1)"/><rect x="174" y="108" width="70" height="36" rx="8" class="nb"/><text x="209.0" y="130.5" class="tx" text-anchor="middle" font-size="13">Step 3</text><path d="M244 126 L262 126" class="ln" marker-end="url(#ahe1)"/><rect x="262" y="108" width="122" height="36" rx="8" class="gb"/><text x="323.0" y="130.5" class="tx tb" text-anchor="middle" font-size="13">Ibuprofen</text></svg><figcaption>Each box is one reaction step. Both routes finish with the same ibuprofen.</figcaption></figure><figure class="fig"><svg viewBox="0 0 640 142" role="img" aria-label="Two bars showing how many of the reactant atoms end up in the product, ibuprofen: 40 per cent for Route A and 77 per cent for Route B"><defs><marker id="ahe2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ah"/></marker><pattern id="hte2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" class="pt"/><line x1="0" y1="0" x2="0" y2="8" class="pl"/></pattern></defs><text x="10" y="22" class="tx tb" text-anchor="start" font-size="14">Route A</text><rect x="10" y="30" width="248.0" height="34" rx="6" class="gb"/><text x="134.0" y="52" class="tx tb" text-anchor="middle" font-size="13">In the product 40%</text><rect x="258.0" y="30" width="372.0" height="34" rx="6" fill="url(#hte2)" stroke="var(--faint)" stroke-width="1.2"/><rect x="375.2" y="36" width="137.6" height="22" rx="5" class="pt" opacity=".95"/><text x="444.0" y="52" class="tx" text-anchor="middle" font-size="12">Not in the product 60%</text><text x="10" y="90" class="tx tb" text-anchor="start" font-size="14">Route B</text><rect x="10" y="98" width="477.4" height="34" rx="6" class="gb"/><text x="248.7" y="120" class="tx tb" text-anchor="middle" font-size="13">In the product 77%</text><rect x="487.4" y="98" width="142.6" height="34" rx="6" fill="url(#hte2)" stroke="var(--faint)" stroke-width="1.2"/><rect x="489.9" y="104" width="137.6" height="22" rx="5" class="pt" opacity=".95"/><text x="558.7" y="120" class="tx" text-anchor="middle" font-size="12">Not in the product 23%</text></svg><figcaption>Each bar shows all the atoms in the reactants. The green part ends up in the product and the hatched part does not.</figcaption></figure></div>
     <div class="grid2">
@@ -459,7 +503,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 
   
   <section class="panel" id="p-explore" role="tabpanel" hidden>
-    <div class="phead"><h2>Principle card sort</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="40" cy="32" r="21" fill="#d7f1f4" stroke="#0a7f8f" stroke-width="5"/><path d="M55 48l16 16" stroke="#0a7f8f" stroke-width="7" stroke-linecap="round"/><polygon points="40,19 51,25.5 51,38.5 40,45 29,38.5 29,25.5" fill="#fff" stroke="#0f8a5f" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="14" r="5" fill="#ef476f"/><circle cx="88" cy="30" r="4" fill="#ffd166"/><circle cx="78" cy="44" r="3.5" fill="#6d3fc7"/></svg></div>
+    <div class="phead"><h2>Principle card sort</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><circle cx="40" cy="32" r="21" fill="#E2EBF3" stroke="#3A5C78" stroke-width="5"/><path d="M55 48l16 16" stroke="#3A5C78" stroke-width="7" stroke-linecap="round"/><polygon points="40,19 51,25.5 51,38.5 40,45 29,38.5 29,25.5" fill="#fff" stroke="#0f8a5f" stroke-width="3" stroke-linejoin="round"/><circle cx="82" cy="14" r="5" fill="#ef476f"/><circle cx="88" cy="30" r="4" fill="#ffd166"/><circle cx="78" cy="44" r="3.5" fill="#8A2E5C"/></svg></div>
     <p class="lead">You met green chemistry in Year 11. VCE Chemistry uses seven of its twelve principles. Each card below comes from a topic you will study this year.</p>
     <div class="pchips" aria-label="The seven principles">
       <span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12V3M12 12l7.8 4.5"/></svg>Atom economy</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M3 17c4 0 4-12 9-12s5 12 9 12" stroke-dasharray="3 3"/><path d="M3 17c4 0 4-6 9-6s5 6 9 6"/></svg>Catalysis</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19L14 10"/></svg>Design for degradation</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Design for energy efficiency</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Designing safer chemicals</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13"/><path d="M4 4l16 16"/></svg>Prevention of wastes</span><span class="pchip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 15c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg>Use of renewable feedstocks</span>
@@ -575,7 +619,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
         <div class="econ">
           <figure>
             <svg viewBox="0 0 300 90" role="img" aria-label="Linear economy: take, make, use, dispose, in a straight line">
-              <g font-family="Atkinson Hyperlegible, sans-serif" font-size="13" text-anchor="middle">
+              <g font-family="Public Sans,system-ui,sans-serif" font-size="13" text-anchor="middle">
                 <rect x="4" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="35" y="50" fill="var(--ink)">Take</text>
                 <rect x="80" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="111" y="50" fill="var(--ink)">Make</text>
                 <rect x="156" y="30" width="62" height="30" rx="8" fill="var(--tint)" stroke="var(--line)"/><text x="187" y="50" fill="var(--ink)">Use</text>
@@ -587,7 +631,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
           </figure>
           <figure>
             <svg viewBox="0 0 300 150" role="img" aria-label="Circular economy: make, use, recover, remake, in a loop">
-              <g font-family="Atkinson Hyperlegible, sans-serif" font-size="13" text-anchor="middle">
+              <g font-family="Public Sans,system-ui,sans-serif" font-size="13" text-anchor="middle">
                 <ellipse cx="150" cy="75" rx="98" ry="52" fill="none" stroke="var(--leaf)" stroke-width="2" stroke-dasharray="5 5"/>
                 <rect x="112" y="8" width="76" height="30" rx="8" fill="var(--leaf-soft)" stroke="var(--leaf)"/><text x="150" y="28" fill="var(--ink)">Make</text>
                 <rect x="220" y="60" width="76" height="30" rx="8" fill="var(--leaf-soft)" stroke="var(--leaf)"/><text x="258" y="80" fill="var(--ink)">Use</text>
@@ -639,7 +683,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 
   
   <section class="panel" id="p-elaborate" role="tabpanel" hidden>
-    <div class="phead"><h2>Map the year to the SDGs</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M20 40A28 28 0 0 1 66 20" fill="none" stroke="#6d3fc7" stroke-width="6" stroke-linecap="round"/><path d="M66 8l12 14-17 4z" fill="#6d3fc7"/><path d="M76 42A28 28 0 0 1 30 60" fill="none" stroke="#2fb87f" stroke-width="6" stroke-linecap="round"/><path d="M30 72l-12-14 17-4z" fill="#2fb87f"/><path d="M48 52V36" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/><path d="M48 38c-10 0-12-8-12-12 10 0 12 6 12 12zM48 38c10 0 12-8 12-12-10 0-12 6-12 12z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2"/></svg></div>
+    <div class="phead"><h2>Map the year to the SDGs</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M20 40A28 28 0 0 1 66 20" fill="none" stroke="#8A2E5C" stroke-width="6" stroke-linecap="round"/><path d="M66 8l12 14-17 4z" fill="#8A2E5C"/><path d="M76 42A28 28 0 0 1 30 60" fill="none" stroke="#2fb87f" stroke-width="6" stroke-linecap="round"/><path d="M30 72l-12-14 17-4z" fill="#2fb87f"/><path d="M48 52V36" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/><path d="M48 38c-10 0-12-8-12-12 10 0 12 6 12 12zM48 38c10 0 12-8 12-12-10 0-12 6-12 12z" fill="#7be0a7" stroke="#0f8a5f" stroke-width="2"/></svg></div>
     <p class="lead">Each group takes one topic from this year. You will link it to the SDGs it helps with, then report back to the class in one sentence.</p>
     <div class="worked">
       <span class="steplab">Worked example</span>
@@ -670,7 +714,7 @@ svg .dia{fill:var(--amber);stroke:var(--amber)}
 
   
   <section class="panel" id="p-evaluate" role="tabpanel" hidden>
-    <div class="phead"><h2>Exit ticket</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M48 12v50" stroke="#5b6b7a" stroke-width="4" stroke-linecap="round"/><rect x="32" y="62" width="32" height="6" rx="3" fill="#5b6b7a"/><path d="M18 26L78 18" stroke="#5b6b7a" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="22" r="4" fill="#ffd166"/><path d="M18 26L9 46M18 26l17 20M78 18L67 38M78 18l17 20" stroke="#5b6b7a" stroke-width="2" fill="none"/><path d="M6 46h32a16 9 0 0 1-32 0z" fill="#2fb87f"/><path d="M64 38h32a16 9 0 0 1-32 0z" fill="#ef476f"/></svg></div>
+    <div class="phead"><h2>Exit ticket</h2><svg viewBox="0 0 96 72" aria-hidden="true" focusable="false"><path d="M48 12v50" stroke="#3A5C78" stroke-width="4" stroke-linecap="round"/><rect x="32" y="62" width="32" height="6" rx="3" fill="#3A5C78"/><path d="M18 26L78 18" stroke="#3A5C78" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="22" r="4" fill="#ffd166"/><path d="M18 26L9 46M18 26l17 20M78 18L67 38M78 18l17 20" stroke="#3A5C78" stroke-width="2" fill="none"/><path d="M6 46h32a16 9 0 0 1-32 0z" fill="#2fb87f"/><path d="M64 38h32a16 9 0 0 1-32 0z" fill="#ef476f"/></svg></div>
     <div class="fb info" id="revealBox">
       <p><b>The routes revealed.</b> Route A was the original 1960s method. Route B replaced it in the 1990s and won a US green chemistry award in 1997.</p>
       <p id="yourPick"></p>
